@@ -1,0 +1,72 @@
+.col-xs-12.col-lg-9
+	section.hotro-ct
+		h1.title Tỷ giá
+		.block-exchangeMoney
+			.row.flex.flex-wrap
+				.col-xs-12.col-md-6
+					.form-group.width-full
+						label Tôi muốn chuyển đổi: 
+						input(type="text" value="200,000").form-control
+				.col-xs-12.col-md-3
+					.form-group
+						label Loại tiền: 
+						.btn-ex
+							a(href="javascript:;" data-toggle="dropdown").dropdown-toggle
+								img(src="img/lang/us.png")
+								| USD
+							ul.dropdown-menu
+								li
+									a(href="#")
+										img(src="img/lang/vn.png")
+										| VND		
+				.col-xs-12.col-md-3
+					.form-group
+						input(type="submit" value="Chuyển đổi")
+		.block-exchangeMoney
+			.title-wrap
+				h3.title-exchange Lần cập nhật cuối ngày: 09/12/2016
+				.support-wrap
+					a(href="#").icon-share
+						img(src="img/share_icon.png")
+						span Chia sẻ
+					.social-list
+						a(href="#")
+							i.fa.fa-facebook
+						a(href="#")
+							i.fa.fa-google-plus
+			.exchange-list
+				.row
+					.col-xs-12.col-sm-6.col-md-4
+						.item-exm
+							.flag
+								img(src="img/lang/vn.png")
+							.ex-info
+								div.rate 4,226,00,000 đ
+								div.unit Đồng VietNam - VND
+								div.ex 1 USD = 22,589 VND
+					.col-xs-12.col-sm-6.col-md-4
+						.item-exm
+							.flag
+								img(src="img/lang/us.png")
+							.ex-info
+								div.rate 200,000 $
+								div.unit Đôla Mỹ - USD
+								div.ex 1 USD = 1 USD
+					.col-xs-12.col-sm-6.col-md-4
+						.item-exm
+							.flag
+								img(src="img/lang/jp.png")
+							.ex-info
+								div.rate 21,808,000 ¥
+								div.unit Yên Nhật - JPY
+								div.ex 1 USD = 2,589 JPY
+			.link-exchange
+				ul.nav
+					li
+						a(href="tygia-bieudo.html")
+							i.fa.fa-line-chart
+							span Biểu đồ
+					li
+						a(href="tygia-chuyendoi.html")
+							i.fa.fa-calculator
+							span Chuyển đổi ngoại tệ

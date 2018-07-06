@@ -1,0 +1,78 @@
+section.block-systemDealer
+		.container
+			.system-wrap
+				.row
+					.col-xs-12.col-md-8
+						.row
+							.col-xs-12.col-md-6.col-xl-3.form_desc
+								label(for="country") Chọn hình thức giao dịch
+								select.form-select
+									option(value="0") ATM
+									option(value="1") Điểm giao dịch
+							.col-xs-12.col-md-6.col-xl-3.form_desc
+								label(for="country") Chọn Tỉnh/Thành phố
+								select.form-select
+									option(value="0") TP. Hồ Chí Minh
+									option(value="1") Hà Nam
+									option(value="2") Hà Nội
+									option(value="3") Quãng Nam
+									option(value="4") Cà Mau
+							.col-xs-12.col-md-6.col-xl-3.form_desc
+								label(for="country") Chọn Quận/Huyện
+								select.form-select
+									option(value="0") Quận 1
+									option(value="1") Quận 12
+									option(value="2") Quận Gò Vấp
+					.col-xs-12.col-md-4
+						.search-text
+							label hoặc
+							input.form-text(type="text" maxlength="128" name="address" id="address" size="60" value="" autocomplete="off" placeholder="Nhập tên đường, tỉnh thành, quận huyện")
+							button.btn-search(type="submit") <i class="fa fa-search"></i>
+			.row
+				.col-xs-12.col-md-8.map-location
+					img(src="img/map.png" alt="map")
+				.col-xs-12.col-md-4
+					.dealer-list
+						.locate.mrb-15
+							| Có 
+							span 46 
+							| địa điểm 
+							span Chi nhánh 
+							| phù hợp tìm kiếm của bạn:
+						ul.list_system.mrb-15
+							li.clinic_list
+								div
+									strong Vietbank TP. HỒ CHÍ MINH
+								div
+									span 62A CMT8, Phường 6, Quận 3, TP.HCM <br/>
+									span Điện thoại: (08) 62 909 413 <br/>
+									span Fax: (08) 62 909 412
+								div.distance
+									span 0.4 km
+							li.clinic_list.active
+								div
+									strong Công ty quản lý nợ và khai thác tài sản Vietbank
+								div
+									span 90 Cao Thắng, Phường 4, Quận 3, TP. HCM <br/>
+									span Điện thoại: (08) 62 918 100 - Nội bộ 5007 <br/>
+									span Fax: (08) 62 913 621
+								div.distance
+									span 1.5 km
+							li.clinic_list
+								div
+									strong Vietbank 3 tháng 2
+								div
+									span 693 Ba Thang Hai , Phường 6 , Quận 10, TP.HCM <br/>
+									span Tel:  (08) 38 535 820 <br/>
+									span Fax: (08) 38 535 830
+								div.distance
+									span 3 km
+							li.clinic_list
+								div
+									strong Vietbank Chương Dương <br/>
+									span Tel: 04.3873.5055 <br/>
+									span Fax: 04.3873.5055
+								div
+									span 
+								div.distance
+									span 0.7 km

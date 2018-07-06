@@ -1,0 +1,31 @@
+extends _layout/layout
+
+block variables
+	- var title = 'VietBank'
+	- var bodyclass = 'thungo'
+
+block css
+
+block body
+	include _layout/header-gioithieu
+	include _layout/tool
+	section.banner-wrap
+		section.breadcrumb-wrap.brown
+			.container
+				.row
+					.col-xs-12
+						ol.breadcrumb.mrt-10
+							li
+								a(href="gioithieu.html") Về Vietbank
+							li
+								a(href="gioithieu.html") Giới thiệu
+							li.active
+								span Quá trình phát triển
+		section.vietbank-bg
+			.container
+				.row
+					.col-xs-12
+						h1.blue Quá trình phát triển
+	main
+		include _layout/quatrinhphattrien-ct
+	include _layout/footer

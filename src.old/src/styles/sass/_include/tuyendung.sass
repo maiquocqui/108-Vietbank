@@ -1,0 +1,241 @@
+.tuyendung-wrap
+	ul.nav.nav-bld
+		margin: 0 0 30px
+		li
+			a
+				padding: 12px 15px
+
+.search-job
+	background-color: $blue
+	padding: 20px 15px
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	margin-left: -5px
+	margin-right: -5px
+	margin-bottom: 15px
+	.field
+		width: 35%
+		+media-breakpoint-down(sm)
+			width: 100%
+			margin: 0 0 5px
+	.career
+		width: calc(22.5% - 20px)
+		margin: 0 10px
+		+media-breakpoint-down(sm)
+			width: 100%
+			margin: 0 0 5px
+	.address
+		width: calc(22.5% - 10px)
+		margin: 0 10px 0 0
+		+media-breakpoint-down(sm)
+			width: 100%
+			margin: 0 0 5px
+	input, select
+		height: 30px
+		line-height: 30px
+		padding: 0 10px
+		+fs(13rem)
+		font-weight: 500
+		color: $white-black
+		cursor: pointer
+	.btn-filter
+		background: #66bae2
+		border: none
+		color: $white
+		+fs(13rem)
+		font-weight: 500
+		width: 20%
+		height: 30px
+		line-height: 30px
+		+pos(rel,null)
+		+transition(all 0.4s)
+		+media-breakpoint-down(sm)
+			width: 100%
+		&:hover
+			background: darken(#66bae2, 10%)
+		&:before
+			content: '\f002'
+			font-family: "FontAwesome"
+			font-size: 14px
+			font-weight: 500
+			color: $white
+			+pos(abs, 50% null null 10px)
+			+transform(translate(0,-50%))
+		&:after
+			content: '\f105'
+			font-family: "FontAwesome"
+			font-size: 17px
+			font-weight: 500
+			color: $white
+			+pos(abs, 50% 10px null null)
+			+transform(translate(0,-50%))
+.search-items
+	+media-breakpoint-down(sm)
+		display: table
+		width: 900px
+	.jobs-title
+		+fs(17rem)
+		font-weight: 600
+		color: $black
+		padding: 0
+		border-bottom: 2px solid $blue
+		+pos(rel,null)
+		&:after
+			content: ''
+			display: table
+			clear: both
+			min-height: 1
+		.position
+			text-align: left
+			float: left
+			width: 60%
+			padding: 10px 15px
+			font-weight: 700
+		.employment
+			text-align: center
+			float: left
+			width: 15%
+			padding: 10px 15px
+			font-weight: 700
+		.date-posted
+			text-align: center
+			float: left
+			width: 25%
+			padding: 10px 10% 10px 15px
+			font-weight: 700
+	.jobs-item
+		border-bottom: 1px solid darken($white, 15%)
+		.job_head
+			+fs(15rem)
+			font-weight: 500
+			+pos(rel,null)
+			&:after
+				content: ''
+				display: table
+				clear: both
+				min-height: 1
+			.job-title
+				text-align: left
+				float: left
+				width: 60%
+				padding: 10px 15px 10px 35px
+				font-weight: 500
+				+pos(rel,null)
+				cursor: pointer
+				+transition(all 0.3s)
+				a
+					color: $link
+					&:before
+						content: '\f054'
+						font-size: 15px
+						font-weight: 500
+						font-family: "FontAwesome"
+						color: $link
+						+pos(abs, 50% null null 15px)
+						+transform(translate(0,-50%))
+					&:hover, &.active
+						color: $orange
+						&:before
+							color: $orange
+			.job-place
+				text-align: center
+				float: left
+				width: 15%
+				padding: 10px 15px
+				font-weight: 500
+				color: $white-brown
+			.job-date
+				text-align: center
+				float: left
+				width: 25%
+				padding: 10px 10% 10px 15px
+				font-weight: 500
+				color: $white-brown
+				+pos(rel,null)
+				span.status
+					+fs(13rem)
+					font-weight: 500
+					height: 25px
+					display: block
+					+bor-rad(3px)
+					width: 40px
+					text-align: center
+					line-height: 25px
+					background-color: $blue
+					color: $white
+					+pos(abs, 50% 15px null null)
+					+transform(translate(0,-50%))
+					&.hot
+						background-color: $yellow
+	.job_content
+		display: block
+		+fs(15rem)
+		font-weight: 500
+		padding: 0 0 20px 0
+		// width: 100%
+		+media-breakpoint-down(sm)
+			width: 100%
+		.title
+			+fs(22rem)
+			font-weight: 600
+			padding: 0
+			line-height: 1.5
+			margin: 0 0 15px
+			text-transform: uppercase
+			color: $link
+		.content
+			padding: 0 15px 10px
+			margin: 0 0 10px
+			border-bottom: 1px solid darken($white, 20%)
+			h4
+				+fs(17rem)
+				font-weight: 600
+				text-transform: uppercase
+				margin: 0 0 5px
+				line-height: 1.4
+			ul
+				li
+					line-height: 1.4
+					+pos(rel,null)
+					padding-left: 12px
+					&:before
+						content: '\f111'
+						font-family: "FontAwesome"
+						font-size: 5px
+						font-weight: 500
+						line-height: 1
+						+pos(abs, 8px null null 0)
+			a.btn-send
+				+fs(14rem)
+				font-weight: 500
+				display: inline-block
+				padding: 6px 15px
+				color: $white
+				background-color: $blue
+				margin: 0 10px 10px 0
+				+transition(all 0.3s)
+				&:hover
+					background-color: darken($blue, 5%)
+				.fa
+					margin-right: 5px
+			a.btn-ex
+				+fs(14rem)
+				font-weight: 500
+				display: inline-block
+				padding: 6px 15px
+				color: $white
+				background-color: #66bae2
+				margin: 0 0 10px
+				+transition(all 0.3s)
+				&:hover
+					background-color: darken(#66bae2, 5%)
+				.fa
+					margin-right: 5px
+			p
+				em
+					+fs(13rem)
+		/* &.active
+			.job_head
+				.job-title
+					color: $link */

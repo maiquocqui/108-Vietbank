@@ -1,0 +1,199 @@
+footer
+	display: block
+	width: 100%
+.footer-top
+	display: block
+	width: 100%
+	// background: linear-gradient(to right,#3493cd,#9bd8f5)
+	background: $bg1
+	+pos(rel,null)
+	.container
+		+pos(rel,null)
+		// background: url(../img/footer-bg.png) no-repeat top right
+		background-size: 40% auto
+		padding-bottom: 50px
+		+media-breakpoint-down(md)
+			background-position: bottom right
+		+media-breakpoint-down(sm)
+			padding-bottom: 30px
+		+media-breakpoint-down(xs)
+			padding-bottom: 20px
+	.footer-link
+		width: 100%
+		margin-top: 50px
+		+media-breakpoint-down(md)
+			text-align: left
+		+media-breakpoint-down(sm)
+			text-align: center
+			margin-top: 30px
+		+media-breakpoint-down(xs)
+			text-align: left
+			margin-top: 20px
+	.title
+		+fs(15rem)
+		font-weight: bold
+		color: $black
+		&:after
+			display: block
+			content: ""
+			width: 120px
+			height: 1px
+			background: $link
+			opacity: 1
+			margin-top: 15px
+			+media-breakpoint-down(md)
+				margin: 0
+				margin-top: 15px
+				clear: both
+			+media-breakpoint-down(sm)
+				margin: 0 auto
+				margin-top: 15px
+				width: 200px
+			+media-breakpoint-down(xs)
+				width: 120px
+	nav.link
+		margin-top: 15px
+		+media-breakpoint-down(md)
+			margin-top: 15px
+		ul 
+			li 
+				+fs(13rem)
+				line-height: 1.5
+				margin-bottom: 7px
+				+media-breakpoint-down(md)
+					line-height: 1.5
+				a
+					color: $white-black
+					opacity: 0.8
+					+transition(all,0.3s)
+					&:hover
+						opacity: 1
+						color: $link
+	.register-email
+		margin-top: 50px
+		+media-breakpoint-down(md)
+			text-align: center
+		+media-breakpoint-down(xs)
+			margin-top: 20px
+		.title
+			&:after
+				+media-breakpoint-down(md)
+					margin: 0 auto
+					margin-top: 15px
+		.content
+			+fs(13rem)
+			color: $white-black
+			margin-top: 30px
+			opacity: 0.8
+			+media-breakpoint-down(md)
+				margin-top: 20px
+			+media-breakpoint-down(xs)
+				+fs(12rem)
+		.form-group
+			width: 85%
+			margin: 0
+			margin-top: 20px
+			padding: 0
+			+pos(rel,null)
+			+media-breakpoint-down(lg)
+				width: 95%
+			+media-breakpoint-down(md)
+				width: 70%
+				margin: 0 auto
+				margin-top: 20px
+			+media-breakpoint-down(xs)
+				width: 100%
+				margin-top: 10px
+			label
+				display: none
+			input
+				width: 100%
+				background: $white
+				+bor-rad(100px)
+				padding: 13px 20px
+				+fs(14rem)
+				color: darken($white,60%)
+				border: none
+			input[type="submit"]
+				+pos(abs,0 0 0 null)
+				background: $btn
+				color: $black
+				width: auto
+				+fs(15rem)
+				font-weight: bold
+				+transition(all,0.3s)
+				&:hover
+					background: darken($btn, 5%)
+		.social
+			margin-top: 20px
+			width: auto
+			+media-breakpoint-down(md)
+				margin: 0 auto
+				margin-top: 20px
+			+media-breakpoint-down(xs)
+				margin-top: 10px
+			.fa
+				+fs(22rem)
+				color: $link				
+				+media-breakpoint-down(md)
+			a
+				display: block
+				float: left
+				margin-left: 10px
+				opacity: 1
+				width: 45px
+				height: 45px
+				line-height: 47.5px
+				text-align: center
+				border: 2px solid $link
+				+bor-rad(50%)
+				+transition(all,0.3s)
+				+media-breakpoint-down(md)
+					display: inline-block
+					float: none
+				&:hover
+					opacity: 1
+				&:first-child
+					margin: 0
+	.livesupport
+		// display: none
+		width: 190px
+		height: 35px
+		background: url(../img/livesupport.png) center center no-repeat
+		+pos(abs, null 15px 0 null)
+.copyright
+	width: 100%
+	background: darken($blue,7%)
+	+fs(13rem)
+	color: $white
+	padding: 15px 0 16px
+	+media-breakpoint-down(lg)
+		text-align: center
+	.location
+		float: left
+		p 
+			line-height: 1.5
+		+media-breakpoint-down(lg)
+			width: 100%
+			line-height: 1.5
+			color: lighten($blue,40%)
+	.copyright-content
+		float: right
+		+media-breakpoint-down(lg)
+			width: 100%
+			line-height: 1rem
+			color: lighten($blue,40%)
+			margin-top: 10px
+.up
+	display: block
+	width: 50px
+	height: 50px
+	background: url(../img/up.png) no-repeat center center
+	+pos(fix, null 30px 0 null)
+	z-index: 10
+	cursor: pointer
+	+media-breakpoint-down(xs)
+		width: 40px
+		height: 40px
+		background-size: 100% 100%
+		right: 0

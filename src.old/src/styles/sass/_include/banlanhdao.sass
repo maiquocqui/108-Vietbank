@@ -1,0 +1,115 @@
+ul.nav.nav-bld
+	text-align: center
+	margin: 15px 0 0
+	+media-breakpoint-up(md)
+		margin: 0
+		border-bottom: 1px solid darken($white, 15%)
+	li
+		display: block
+		margin: 0
+		+media-breakpoint-up(md)
+			display: inline-block
+		a
+			color: $white-black
+			+fs(14rem)
+			font-weight: 600
+			line-height: 1.4
+			display: block
+			text-transform: uppercase
+			padding: 12px 15px
+			border: none
+			border-bottom: 1px solid darken($white, 15%)
+			+pos(rel,null)
+			+media-breakpoint-up(md)
+				border-bottom: none
+				padding: 10px 15px
+			&:after
+				content: ''
+				width: 80px
+				height: 3px
+				background-color: $blue
+				margin: 0 auto
+				+opacity(0)
+				+transition(all 0.4s)
+				+pos(abs,null 0 -2px 0)
+			&:hover, &.active
+				color: $blue
+				font-weight: 600
+				&:after
+					+opacity(1)
+
+.banlanhdao
+	.bld-wrap
+		padding: 40px 0
+		text-align: center
+		.row.no-gutters
+			margin-left: -2.5px
+			margin-right: -2.5px
+			> [class^="col-"],> [class*=" col-"]
+				padding-left: 2.5px
+				padding-right: 2.5px
+		.item-bld
+			figure
+				margin: 0
+				a
+					display: block
+					overflow: hidden
+					line-height: 0
+				figcaption
+					padding: 10px 0 0
+					h3
+						+fs(18rem)
+						line-height: 1.5
+						margin: 0
+						color: $black
+					.note
+						+fs(15rem)
+						font-weight: 500
+		&.even
+			background-color: darken($white, 5%)
+
+.banlanhdao-ct
+	background: #e0e4e5
+	padding: 0
+	margin: 30px 0 0
+	+bor-rad(3px)
+	.content
+		margin: 15px
+		padding: 20px 25px
+		background: #ecefef
+		height: 100%
+		+pos(rel,null)
+		+bor-rad(3px)
+		+media-breakpoint-up(lg)
+			margin: 25px 0px 25px 25px
+			height: calc(100% - 50px)
+		.title
+			+fs(24rem)
+			color: $black
+			margin: 0
+			line-height: 1.4
+		.pst
+			+fs(17rem)
+			font-weight: 500
+			line-height: 1.4
+			margin: 0 0 20px
+			color: $black
+		.desc
+			+fs(14rem)
+			font-weight: 500
+			color: $black
+			text-align: justify
+		a.btn-back
+			color: $orange
+			+fs(14rem)
+			font-weight: 500
+			+pos(abs, null null 20px 25px)
+			.fa
+				margin-right: 5px
+	.avatar
+		text-align: center
+		display: flex
+		align-items: flex-end
+		height: 100%
+		img
+			margin: 0 auto

@@ -1,0 +1,41 @@
+extends _layout/layout
+
+block variables
+	- var title = 'VietBank'
+	- var bodyclass = 'bancan'
+
+block css
+
+block body
+	include _layout/header-bancan
+	include _layout/tool
+	section.banner-wrap
+		section.breadcrumb-wrap
+			.container
+				.row
+					.col-xs-12
+						ol.breadcrumb.mrt-10
+							li
+								a(href="index.html") Cá nhân
+							li
+								a(href="bancan.html") Bạn cần
+							li.active
+								span Ngôi nhà trong mơ
+		section.banner-page.imageBanner
+			.imgBg(style="background-image:url('img/banner_page/banner_bancanCT.png')")
+			.desc
+				.container
+					.row
+						.col-xs-12.col-sm-5.col-lg-5.col-xl-5
+							h1.title Ngôi nhà trong mơ
+							.content Vietbank mang giấc mơ “An cư - lạc nghiệp” đến gần hơn với mọi gia đình Việt
+	section.bancan-step
+		.container
+			nav.nav
+				a(href="#step-1").nav-item Bước 1: Chuẩn bị
+				a(href="#step-2").nav-item Bước 2: Tìm kiếm căn nhà mơ ước
+				a(href="#step-3").nav-item Bước 3: Thỏa thuận giá và ký hợp đồng mua nhà
+	main
+		include _layout/bancanct
+	include _layout/ft-guide
+	include _layout/footer

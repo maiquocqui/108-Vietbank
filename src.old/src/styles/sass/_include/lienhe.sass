@@ -1,0 +1,100 @@
+.contact
+	padding: 2.5rem 0
+
+.block-info-wrap
+	background-color: $bg1
+	padding: 1.5rem 1rem
+
+.block-addr
+	margin: 0 0 3.5rem
+	h1
+		font-size: 1.5rem
+		font-weight: 700
+		margin: 0 0 1.5rem
+		line-height: 1.5rem
+		color: $link
+	p
+		margin: 0
+		&.addr
+			margin: 0 0 1.5rem
+
+.block-atmLink
+	h2
+		font-size: 1.5rem
+		font-weight: 700
+		margin: 0 0 1.5rem
+		line-height: 1.7rem
+		color: $link
+	a
+		text-decoration: none
+		font-weight: 700
+		margin-top: 1rem
+		display: inline-block
+
+.block-form
+	+media-breakpoint-down(sm)
+		margin-top: 20px
+	.title
+		font-size: 0.875rem
+		color: $black
+		margin: 0 0 20px
+		padding: 0 0 5px
+		line-height: 1.5
+		border-bottom: 1px solid darken($white, 30%)
+	label
+		font-size: 0.875rem
+		color: darken($white, 60%)
+		display: block
+		margin: 0
+		.red
+			color: red
+	select,
+	input,
+	textarea
+		height: 30px
+		line-height: 30px
+		padding: 0 0.5rem
+		border: 1px solid darken($white, 30%)
+		font-size: 0.938rem
+		color: darken($white, 60%)
+		width: 100%
+		margin-bottom: 0.7rem
+	input
+		border: none
+		background-color: darken($white, 7%)
+	textarea
+		border: none
+		background-color: darken($white, 7%)
+		height: 7rem
+	a.confirm
+		height: 35px
+		line-height: 35px
+		text-align: center
+		background-color: #ffc114
+		display: inline-block
+		color: $white
+		+bor-rad(35px)
+		text-decoration: none
+		padding: 0 1.5rem
+		&:hover,
+		&:focus
+			background-color: lighten(#ffc114, 10%)
+
+.captcha-box
+	margin: 0 0 30px
+	input
+		width: 200px
+		display: inline-block
+		vertical-align: middle
+		margin: 0
+	a
+		padding: 0 0.75rem
+		display: inline-block
+		vertical-align: middle
+		i
+			font-size: 1.5rem
+			color: lighten($link, 5%)
+			vertical-align: middle
+	img
+		display: inline-block
+		vertical-align: middle

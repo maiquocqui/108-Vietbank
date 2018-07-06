@@ -1,0 +1,119 @@
+extends _layout/layout
+
+block variables
+	- var title = 'VietBank'
+	- var bodyclass = 'gioithieu'
+
+block css
+
+block body
+	include _layout/header-lienhe
+	include _layout/tool
+	section.banner-wrap
+		section.breadcrumb-wrap
+			.container
+				.row
+					.col-xs-12
+						ol.breadcrumb.mrt-10
+							li
+								a(href="gioithieu.html") Về Vietbank
+							li.active
+								span Liên hệ
+		section.banner-page.imageBanner
+			.imgBg(style="background-image:url('img/banner_page/banner_lienhe.png')")
+			.desc
+				.container
+					.row
+						.col-xs-12.col-sm-5.col-lg-5.col-xl-5
+							h1.title Liên hệ
+							.content Chúng tôi luôn sẵn sàng lắng nghe và phục vụ bạn mỗi khi bạn cần.
+	main
+		section.contact
+			.container
+				.row
+					.col-md-5.col-lg-4
+						.block-info-wrap
+							.block-addr
+								h1 Trụ sở Vietbank
+								p.addr
+									strong Địa chỉ: 
+									| 47 Trần Hưng Đạo, thành phố Sóc Trăng, Tỉnh Sóc Trăng 
+									a(href="#")
+										i.fa.fa-angle-right
+										|  Xem bản đồ
+								p
+									strong Điện thoại: 
+									| (079) 3 88 66 66
+								p
+									strong Fax: 
+									| (079) 3 615 666
+								p
+									strong Email: 
+									| callcenter@vietbank.com.vn 
+								p
+									strong Swift Code: 
+									| Code: VNTTVNVX
+							.block-atmLink
+								h2 Mạng lưới ATM/ Điểm giao dịch/ Điểm đổi ngoại tệ mặt
+								.row
+									.col-md-6
+										.text Tìm chi nhánh ngân hàng và mạng lưới ATM trên khắp Việt Nam
+										a(href="#")
+											<i class="fa fa-angle-right"></i>
+											| Tìm ngay
+									.col-md-6
+										img(src="img/bando_icon.png")
+					.col-md-7.col-lg-8
+						.block-form
+							p.title Quý khách vui lòng điền thông tin vào mẫu bên dưới và gửi những góp ý, thắc mắc cho Vietbank, chúng tôi sẽ phản hồi email của Quý khách trong thời gian sớm nhất.
+							.row
+								.col-md-6
+									label Họ tên người gửi 
+										|(
+										span.red *
+										|):
+									input(type="text" name="name")
+								.col-md-6
+									label Điện thoại:
+									input(type="text" name="phone")
+							.row
+								.col-md-6
+									label Ngành nghề:
+									input(type="text" name="name")
+								.col-md-6
+									label Email 
+										|(
+										span.red *
+										|):
+									input(type="text" name="phone")
+							.row
+								.col-md-6
+									label Địa chỉ:
+									input(type="text" name="name")
+								.col-md-6
+									label Tiêu đề 
+										|(
+										span.red *
+										|):
+									input(type="text" name="phone")
+							.row
+								.col-md-12
+									label Nộ dung 
+										|(
+										span.red *
+										|):
+									textarea(id="text")
+							.row
+								.col-md-12
+									label Mã xác nhận
+										|(
+										span.red *
+										|):
+									.captcha-box.clearfix
+										img(src="img/captcha.png")
+										a(href="#") <i class="fa fa-refresh"></i>
+										input(type="text" name="captcha")
+							.row.mrt-30
+								.col-sm-12
+									a(href="#").confirm Gửi
+	include _layout/footer

@@ -1,136 +1,162 @@
-body
-	padding-top: 100px
 header
-	+pos(fix, 0 0 null 0)
-	z-index: 1000
+	background: $blue
+	.header-top
+		background: $blue
+		.page-nav
+			ul
+				+flexbox
+				align-items: center
+				align-content: center
+				li
+					+ li
+						margin-left: 35px
+					a
+						display: block
+						+fs(14rem)
+						color: $white
+						text-transform: uppercase
+						font-weight: bold
+						line-height: 20px
+						padding: 10px 0
+						+pos(rel,null)
+						&:after
+							content: ''
+							+pos(abs, null null 0 50%)
+							+transform(translateX(-50%))
+							z-index: 1
+							border: 5px solid transparent
+							border-top: none
+							border-bottom-color: $white
+							opacity: 0
+							+transition(all,0.5s)
+					&:hover
+						a
+							color: $yellow
+					&.active
+						a
+							color: $yellow
+							&:after
+								opacity: 1
+
 	.header-wrap
 		+flexbox
 		align-items: center
 		align-content: center
-	.header-top
-		background: $black
-	.col-right
-		flex: auto
+		justify-content: space-between
+	.col-right, .header-tool
 		+flexbox
 		align-items: center
 		align-content: center
 		justify-content: flex-end
-	.hotline
+	.branch
 		a
-			+flexbox
-			align-items: center
-			align-content: center
+			+fs(14rem)
+			font-weight: bold
 			color: $white
-			+fs(12rem)
-			height: 30px
-			.lnr
-				+fs(14rem)
-				margin-right: 5px
-			&:hover
-				color: $red
-	.language
-		margin-left: 30px
-		.dropdown-toggle
-			+flexbox
-			align-items: center
-			align-content: center
-			+fs(12rem)
-			color: $white
-			height: 30px
-			+pos(rel,null)
-			&:after
-				content: '\f107'
-				border: none
-				width: auto
-				height: auto
+			.fa
+				+fs(16rem)
 				vertical-align: middle
-			.lnr
-				margin-right: 5px
+				margin-right: 10px
 			&:hover
-				color: $red
-		.dropdown-menu
-			background: $main
-			border: none
-			min-width: 100px
-			+bor-rad(0)
-			a
-				+fs(13rem)
-				color: $white
-				opacity: 0.8
-				&:hover
-					opacity: 1
-					background: color-rgba($white,0.1)
+				color: $yellow
+	.hotline
+		margin-left: 30px
+		a
+			+fs(14rem)
+			font-weight: bold
+			color: $white
+			.fa
+				+fs(16rem)
+				vertical-align: middle
+				margin-right: 10px
+			&:hover
+				color: $yellow
 	.search
-		.search-wrap
-			.searchbox
-				+flexbox
-				align-items: center
-				align-content: center
-				height: 30px
-				input
-					background: none
-					+fs(12rem)
-					color: darken($white,50%)
-					border: none
-				.searchbutton
-					+fs(14rem)
-					color: darken($white,50%)
-	.top-link
-		+flexbox
-		align-items: center
-		align-content: center
-		margin-left: 20px
+		margin-left: 30px
+		.searchbox
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: space-between
+			height: 25px
+			+bor-rad(50px)
+			background: darken($white,5%)
+			padding: 0px 10px
+			width: 115px
+			input
+				width: calc(100% - 20px)
+				border: none
+				+fs(14rem)
+				color: darken($white,40%)
+				background: none
+			.searchbutton
+				+fs(14rem)
+				color: darken($white,40%)
+				&:hover
+					color: $main
+			&:hover
+				background: $white
+	.language
+		margin-left: 10px
 		a
 			display: block
-			line-height: 1
 			+fs(12rem)
-			color: $white
+			color: $blue
+			line-height: 25px
 			padding: 0px 20px
-			border-left: 1px solid $white
-			&:last-child
-				border-right: 1px solid $white
+			+bor-rad(50px)
+			background: darken($white,5%)
 			&:hover
-				color: $red
+				background: $white
 	.header-main
-		background: $red
-		+pos(rel,null)
+		background: $white
 	.sitelogo
 		+flexbox
 		align-items: center
 		align-content: center
 		justify-content: center
-		+pos(abs,0 null 0 50%)
-		+transform(translateX(-50%))
-		z-index: 1
-	.menu
-		width: 100%
-		+flexbox
-		align-items: center
-		align-content: center
-		justify-content: space-between
 		height: 70px
+	.menu
 		.menu-logo
 			display: none
-		.menu-left
-			width: 35%
-		.menu-right
-			width: 35%
 		.menu-wrap
 		ul.menu-link
 			+flexbox
-			align-items: center
-			align-content: center
-			justify-content: space-between
-			li
-				// + li
-				// 	margin-left: 40px
-				a
+			> li
+				> a
 					display: block
-					+fs(16rem)
-					font-weight: 700
+					+fs(14rem)
+					line-height: 20px
+					font-weight: bold
 					text-transform: uppercase
-					color: $white
-					border-bottom: 1px solid transparent
-				&:hover, &.active
-					a
-						border-bottom-color: $white
+					color: $main
+					padding: 25px 30px
+				&.has-sub
+					> a
+						+pos(rel,null)
+						&:after
+							content: '\f0d7'
+							+pos(abs, 25px 10px null null)
+				&:hover
+					> a
+						color: $blue
+	.ebanking
+		margin-left: 30px
+		a
+			display: block
+			+fs(12rem)
+			text-transform: uppercase
+			font-weight: bold
+			color: $white
+			background: $red
+			line-height: 36px
+			padding: 0px 20px
+			border: 2px solid darken($white,10%)
+			+bor-rad(50px)
+			.fa
+				+fs(16rem)
+				margin-right: 5px
+				vertical-align: middle
+			&:hover
+				background: $yellow
+				color: $main

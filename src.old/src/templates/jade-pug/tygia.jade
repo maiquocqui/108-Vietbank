@@ -1,0 +1,184 @@
+extends _layout/layout
+
+block variables
+	- var title = 'VietBank'
+	- var bodyclass = 'tygia'
+
+block css
+
+block body
+	include _layout/header
+	include _layout/tool
+	section.banner-wrap
+		section.breadcrumb-wrap
+			.container
+				.row
+					.col-xs-12
+						ol.breadcrumb.mrt-10
+							li
+								a(href="index.html") Cá nhân
+							li.active
+								span Tỷ giá hối đoái
+		section.banner-page.imageBanner
+			.imgBg(style="background-image:url('img/banner_page/banner_tygia.png')")
+			.desc
+				.container
+					.row
+						.col-xs-12.col-sm-5.col-lg-5.col-xl-5
+							h1.title Tỷ giá hối đoái
+							.content Theo dõi và cập nhật thông tin mới về tỷ giá tiền tệ trên thế giới.
+	main
+		section.tygia
+			.container
+				.row
+					.col-xs-12
+						.block-filter
+							.filter-item
+								label Tỷ giá ngày
+								input(type="text" placeholder="03/11/2015")
+								<i class="fa fa-calendar"></i>
+							.filter-item
+								label Cập nhật lần
+								select
+									option(value="0") 4(15:32:20)
+									option(value="1") 5(15:32:20)
+							a(href="#").filter-btn Xem
+				.row
+					.col-xs-12
+						.block-table
+							.table-responsive
+								table.table
+									thead
+										tr
+											th(colspan="5") Bảng tỷ giá USD và Ngoại tệ G7
+									tbody
+										tr.title
+											td Loại ngoại tệ
+											td Mua tiền mặt
+											td Mua chuyển khoản
+											td Bán chuyển khoản
+											td Bán tiền mặt
+										tr
+											td
+												img(src="img/lang/lang_03.png")
+												| USD (50, 100)
+											td 22,270
+											td 22,290
+											td 22,360
+											td 22,453
+										tr
+											td
+												img(src="img/lang/lang_03.png")
+												| USD (1,2)
+											td 22,250
+											td &nbsp;
+											td &nbsp;
+											td &nbsp;
+										tr
+											td
+												img(src="img/lang/lang_03.png")
+												| USD (5,10,20)
+											td 22,260
+											td &nbsp;
+											td &nbsp;
+											td &nbsp;
+										tr
+											td
+												img(src="img/lang/lang_04.png")
+												| JPY
+											td 183.14
+											td 183.6
+											td 185.26
+											td &nbsp;
+										tr
+											td
+												img(src="img/lang/lang_05.png")
+												| EUR
+											td 24,308
+											td 24,369
+											td 24,590
+											td 24,787
+										tr
+											td
+												img(src="img/lang/lang_06.png")
+												| GBP
+											td &nbsp;
+											td 34,207
+											td 34,581
+											td &nbsp;
+										tr
+											td
+												img(src="img/lang/lang_07.png")
+												| CAD
+											td 16,981
+											td 17,024
+											td 17,178
+											td 17,833
+						.block-note.clearfix
+							p Đơn vị tính: VND/1 Nguyên tệ
+							p Vietbank không mua/bán ngoại tệ tiền mặt đối với những ngoại tệ không yết giá mua/bán tiền mặt trên Bảng tỷ giá
+							p (Tỷ giá chỉ mang tính chất tham khảo)
+							a(href="#").print
+								<i class="fa fa-print"></i>
+				.row
+					.col-xs-12
+						.block-table
+							.table-responsive
+								table.table
+									thead
+										tr.title
+											th(colspan="5") Bảng tỷ giá Ngoại tệ khác
+									tbody
+										tr.title
+											td Loại ngoại tệ
+											td Mua tiền mặt
+											td Mua chuyển khoản
+											td Bán chuyển khoản
+											td Bán tiền mặt
+										tr
+											td
+												img(src="img/lang/lang_08.png")
+												| CHF
+											td &nbsp;
+											td 22,426
+											td 22,630
+											td 22,543
+										tr
+											td
+												img(src="img/lang/lang_09.png")
+												| HKD
+											td &nbsp;
+											td 2,868
+											td 2,894
+											td 2,456
+										tr
+											td
+												img(src="img/lang/lang_10.png")
+												| AUD
+											td 15,915
+											td 15,979
+											td 16,124
+											td &nbsp;
+										tr
+											td
+												img(src="img/lang/lang_11.png")
+												| SGD
+											td 15,897
+											td 15,937
+											td 16,082
+											td 16,174
+										tr
+											td
+												img(src="img/lang/lang_12.png")
+												| THB
+											td &nbsp;
+											td &nbsp;
+											td 638
+											td &nbsp;
+						.block-note.clearfix
+							p Đơn vị tính: VND/1 Nguyên tệ
+							p Vietbank không mua/bán ngoại tệ tiền mặt đối với những ngoại tệ không yết giá mua/bán tiền mặt trên Bảng tỷ giá
+							p (Tỷ giá chỉ mang tính chất tham khảo)
+							a(href="#").print
+								<i class="fa fa-print"></i>
+	include _layout/footer
