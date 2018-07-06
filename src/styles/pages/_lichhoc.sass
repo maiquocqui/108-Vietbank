@@ -1,0 +1,61 @@
+.schedule-page
+	padding: 50px 0 100px
+	.room-list
+		.row
+			margin: 0px -10px
+			.col-12
+				padding: 0px 10px
+			.col-custom
+				+media-breakpoint-up(xl)
+					flex: 0 0 20%
+					max-width: 20%
+		.room
+			display: block
+			text-align: center
+			margin-bottom: 20px
+			.img
+				img
+					width: 100%
+			.name
+				+fs(12rem)
+				padding: 10px 0
+				color: darken($white,60%)
+			&:hover
+				.name
+					color: $lred
+	.calendar
+		+flexbox
+		flex-wrap: wrap
+		background: darken($white,5%)
+		.month
+			+fs(16rem)
+			text-align: center
+			text-transform: uppercase
+			color: $white
+			background: $red
+			width: 100px
+			height: 64px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			font-weight: 500
+		.date-list
+			width: calc(100% - 100px)
+			+flexbox
+			a
+				display: block
+				text-align: center
+				flex: 1
+				+fs(14rem)
+				line-height: 1
+				padding: 10px 0
+				+ a
+					border-left: 1px solid darken($white,10%)
+				strong
+					+fs(30rem)
+					font-weight: 600
+					display: block
+				&.active
+					background: $lred
+					color: $white

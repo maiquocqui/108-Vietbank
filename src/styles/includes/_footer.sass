@@ -1,0 +1,59 @@
+footer
+	+pos(rel,null)
+	&:before
+		content: ''
+		+pos(abs, null 0 100% 0)
+		z-index: 1
+		height: 60px
+		background: url(../img/home/bg5.png) bottom left no-repeat
+	.footer-top
+		background: darken($white,80%)
+		color: $white
+		padding: 80px 0px 60px
+		.footer-title
+			+fs(24rem)
+			font-weight: 500
+			text-transform: uppercase
+			margin-bottom: 25px
+		.social
+			+flexbox
+			justify-content: center
+			padding-bottom: 60px
+			margin-bottom: 40px
+			+pos(rel,null)
+			&:after
+				content: ''
+				display: block
+				width: 160px
+				height: 1px
+				background: color-rgba($white,0.3)
+				+pos(abs, 100% null null 50%)
+				+transform(translateX(-50%))
+			a
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				+fs(24rem)
+				+bor-rad(5px)
+				color: $white
+				border: 1px solid $white
+				+ a
+					margin-left: 20px
+		.footer-link
+			max-width: 600px
+			margin: 0 auto
+			a
+				display: block
+				+fs(16rem)
+				text-transform: uppercase
+				margin-bottom: 10px
+	.footer-bottom
+		background: $black
+		.copyright
+			+fs(12rem)
+			color: darken($white,40%)
+			padding: 15px 0
+			text-transform: uppercase

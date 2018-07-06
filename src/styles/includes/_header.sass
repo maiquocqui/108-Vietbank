@@ -1,0 +1,136 @@
+body
+	padding-top: 100px
+header
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	.header-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+	.header-top
+		background: $black
+	.col-right
+		flex: auto
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: flex-end
+	.hotline
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			color: $white
+			+fs(12rem)
+			height: 30px
+			.lnr
+				+fs(14rem)
+				margin-right: 5px
+			&:hover
+				color: $red
+	.language
+		margin-left: 30px
+		.dropdown-toggle
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(12rem)
+			color: $white
+			height: 30px
+			+pos(rel,null)
+			&:after
+				content: '\f107'
+				border: none
+				width: auto
+				height: auto
+				vertical-align: middle
+			.lnr
+				margin-right: 5px
+			&:hover
+				color: $red
+		.dropdown-menu
+			background: $main
+			border: none
+			min-width: 100px
+			+bor-rad(0)
+			a
+				+fs(13rem)
+				color: $white
+				opacity: 0.8
+				&:hover
+					opacity: 1
+					background: color-rgba($white,0.1)
+	.search
+		.search-wrap
+			.searchbox
+				+flexbox
+				align-items: center
+				align-content: center
+				height: 30px
+				input
+					background: none
+					+fs(12rem)
+					color: darken($white,50%)
+					border: none
+				.searchbutton
+					+fs(14rem)
+					color: darken($white,50%)
+	.top-link
+		+flexbox
+		align-items: center
+		align-content: center
+		margin-left: 20px
+		a
+			display: block
+			line-height: 1
+			+fs(12rem)
+			color: $white
+			padding: 0px 20px
+			border-left: 1px solid $white
+			&:last-child
+				border-right: 1px solid $white
+			&:hover
+				color: $red
+	.header-main
+		background: $red
+		+pos(rel,null)
+	.sitelogo
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+pos(abs,0 null 0 50%)
+		+transform(translateX(-50%))
+		z-index: 1
+	.menu
+		width: 100%
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		height: 70px
+		.menu-logo
+			display: none
+		.menu-left
+			width: 35%
+		.menu-right
+			width: 35%
+		.menu-wrap
+		ul.menu-link
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: space-between
+			li
+				// + li
+				// 	margin-left: 40px
+				a
+					display: block
+					+fs(16rem)
+					font-weight: 700
+					text-transform: uppercase
+					color: $white
+					border-bottom: 1px solid transparent
+				&:hover, &.active
+					a
+						border-bottom-color: $white
