@@ -6841,7 +6841,7 @@ main.big {
     vertical-align: middle; }
 
 .text-black {
-  color: #333333; }
+  color: #333333 !important; }
 
 .text-green {
   color: #4CAF50; }
@@ -8508,6 +8508,51 @@ header {
         .breadcrumb-wrap .page-banner .banner-caption .des {
           font-size: 0.875rem; } }
 
+.page-cate ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #e6e6e6; }
+  .page-cate ul li {
+    margin-bottom: -2px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center; }
+    .page-cate ul li:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 30px;
+      background: #cccccc;
+      -webkit-transform: rotateZ(20deg);
+      -khtml-transform: rotateZ(20deg);
+      -moz-transform: rotateZ(20deg);
+      -ms-transform: rotateZ(20deg);
+      -o-transform: rotateZ(20deg);
+      transform: rotateZ(20deg);
+      margin: 0px 20px; }
+    .page-cate ul li:last-child:after {
+      display: none; }
+    .page-cate ul li a {
+      display: block;
+      font-size: 0.875rem;
+      line-height: 46px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent; }
+    .page-cate ul li:hover a {
+      color: #ed1c24; }
+    .page-cate ul li.active a {
+      color: #ed1c24;
+      border-bottom-color: #ed1c24; }
+
 footer {
   background: #e6e6e6; }
   footer .footer-top {
@@ -9087,6 +9132,9 @@ footer {
 .landing-section {
   padding: 50px 0;
   position: relative; }
+  @media (max-width: 767.98px) {
+    .landing-section {
+      padding: 30px 0; } }
   @media (min-width: 992px) {
     .landing-section .home-title {
       margin-bottom: 40px; } }
@@ -9095,5 +9143,145 @@ footer {
     top: 0;
     left: 47%;
     z-index: 3; }
+    @media (max-width: 767.98px) {
+      .landing-section .card-drop {
+        position: static;
+        margin: -31px 0 0px 40px; } }
+
+.landing-time {
+  background: #ffcd43;
+  padding: 50px 0; }
+  @media (max-width: 767.98px) {
+    .landing-time {
+      padding: 30px 0; } }
+  .landing-time .time-content {
+    height: 100%;
+    padding: 30px 0px 0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; }
+
+.landing-award {
+  background: #333333;
+  padding: 50px 0; }
+  @media (max-width: 767.98px) {
+    .landing-award {
+      padding: 30px 0; } }
+  .landing-award .award-table table th, .landing-award .award-table table td {
+    vertical-align: middle;
+    padding: 0 5px; }
+    @media (max-width: 767.98px) {
+      .landing-award .award-table table th, .landing-award .award-table table td {
+        vertical-align: top; } }
+  .landing-award .award-table table th {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fabf00;
+    text-align: right; }
+    @media (max-width: 767.98px) {
+      .landing-award .award-table table th {
+        font-size: 0.9375rem;
+        white-space: nowrap; } }
+  .landing-award .award-table table td {
+    font-size: 0.875rem;
+    color: #fff; }
+
+.landing-policy {
+  padding: 50px 0;
+  background: #fff; }
+  .landing-policy .btn-viewdetail {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding: 0px 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background: #0054a6;
+    color: #fff;
+    border: none; }
+
+.promotion-page {
+  padding: 50px 0;
+  background: #fff; }
+  .promotion-page .ht-title {
+    margin-bottom: 100px;
+    text-align: center; }
+  @media (min-width: 992px) {
+    .promotion-page .col-12:first-child {
+      border-right: 1px solid #e6e6e6; } }
+  .promotion-page .promotion-product {
+    padding: 0px 30px; }
+    @media (max-width: 991.98px) {
+      .promotion-page .promotion-product {
+        margin-bottom: 30px; } }
+    @media (max-width: 767.98px) {
+      .promotion-page .promotion-product {
+        padding: 0px 15px; } }
+  .promotion-page .product {
+    height: 260px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center; }
+  .promotion-page .title {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  .promotion-page .des {
+    font-size: 0.875rem;
+    margin-bottom: 20px; }
+    .promotion-page .des strong {
+      font-weight: normal;
+      font-size: 2.25rem;
+      margin: 0px 10px; }
+  .promotion-page .value-slider {
+    margin-bottom: 30px; }
+  .promotion-page .value-table table th, .promotion-page .value-table table td {
+    font-size: 0.8125rem;
+    padding: 5px 15px;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    color: #fff;
+    font-weight: normal; }
+  .promotion-page .value-table table th {
+    background: #6399c8; }
+  .promotion-page .value-table table td {
+    background: #0054a6;
+    text-align: right; }
+  .promotion-page .place-filter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 30px 0;
+    max-width: 610px;
+    margin: 0 auto; }
+    .promotion-page .place-filter label {
+      font-size: 0.875rem;
+      color: #999999;
+      padding-right: 20px;
+      width: 90px; }
+    .promotion-page .place-filter .select {
+      padding: 0px 2px;
+      width: calc(50% - 45px); }
+      .promotion-page .place-filter .select select {
+        width: 100%;
+        background: #fff;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        font-size: 0.875rem;
+        padding: 8px 15px; }
 
 /*# sourceMappingURL=main.css.map */
