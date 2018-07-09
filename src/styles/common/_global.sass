@@ -109,7 +109,7 @@ main
 		list-style-type: disc
 		&.dot
 			list-style-type: none
-			li
+			> li
 				+pos(rel,null)
 				&:before
 					content: ''
@@ -121,7 +121,7 @@ main
 					+pos(abs, 7px null null -20px)
 		&.dot-green
 			list-style-type: none
-			li
+			> li
 				+pos(rel,null)
 				&:before
 					content: ''
@@ -134,7 +134,7 @@ main
 		&.note
 			list-style-type: none
 			padding-left: 0
-			li
+			> li
 				+pos(rel,null)
 				padding-left: 30px
 				.star
@@ -142,16 +142,29 @@ main
 		&.icon
 			list-style-type: none
 			padding-left: 0
-			li
+			> li
 				padding-left: 30px
 				+pos(rel,null)
 				.material-icons
 					+fs(18rem)
 					+pos(abs, 2px null null 0)
+		&.flower
+			list-style-type: none
+			padding-left: 50px
+			> li
+				+pos(rel,null)
+				margin-bottom: 40px
+				&:before
+					content: ''
+					display: block
+					width: 30px
+					height: 28px
+					+pos(abs, -4px null null -50px)
+					background: url(../img/flower.png)
 	ol
 		list-style-type: decimal
 		padding-left: 20px
-		li
+		> li
 			padding-left: 10px
 	
 	.alphabet-title

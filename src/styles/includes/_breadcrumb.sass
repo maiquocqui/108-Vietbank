@@ -1,111 +1,50 @@
 .breadcrumb-wrap
-	.breadcrumb-img
-		+pos(rel,null)
-		&:after
-			content: ''
-			+pos(abs, 0 null 0 0)
-			right: 0
-			z-index: 1
-			background: url(../img/breadcrumb/bg.png) center bottom no-repeat
-			background-size: 100% auto
-		img
-			width: 100%
-			+media-breakpoint-down(md)
-				height: 200px
-				object-fit: cover
-			+media-breakpoint-down(sm)
-				height: 180px
 	.breadcrumb-content
-		+flexbox
-		align-items: flex-end
-		align-content: flex-end
-	.pagename
-		width: 360px
-		height: 180px
-		+flexbox
-		align-items: center
-		align-content: center
-		padding: 0px 35px
-		+fs(46rem)
-		line-height: 1.2
-		font-weight: 300
-		color: $white
-		background: $green
-		margin-top: calc(-100% + 40px)
-		+media-breakpoint-down(lg)
-			+fs(36rem)
-			width: 300px
-			height: 150px
-			padding: 0px 30px
-		+media-breakpoint-down(md)
-			+fs(28rem)
-			width: 250px
-			height: 120px
-			padding: 0px 25px
-		+media-breakpoint-down(sm)
-			+fs(24rem)
-			width: 230px
-			height: 100px
-			padding: 0px 15px
-			background: color-rgba($green,0.8)
+		background: darken($white,10%)
 	.breadcrumb
 		margin: 0
-		padding: 0
+		padding: 10px 0
 		background: none
 		+bor-rad(0)
-		white-space: nowrap
-		// overflow: hidden
-		text-overflow: ellipsis
-		+media-breakpoint-down(sm)
-			display: none
+		+flexbox
 		li
-			background: darken($white,10%)
-			padding-left: 15px
+			&:after
+				content: '\f105'
+				margin: 0px 10px
 			a
-				display: block
 				+fs(13rem)
 				line-height: 20px
-				padding: 10px 15px
-				font-weight: 300
 				color: darken($white,60%)
-				background: darken($white,10%)
-				+pos(rel,null)
-				&:before
-					content: ''
-					display: block
-					width: 0
-					height: 0
-					border-top: 20px solid transparent
-					border-bottom: 20px solid transparent
-					border-right: none
-					border-left: 16px solid darken($white,10%)
-					+pos(abs, 0 null null 100%)
-					z-index: 2
-				&:after
-					content: ''
-					display: block
-					width: 0
-					height: 0
-					border-top: 20px solid transparent
-					border-bottom: 20px solid transparent
-					border-right: none
-					border-left: 16px solid $white
-					+pos(abs, 0 null null 103%)
-					z-index: 1
-			&:first-child
-				padding-left: 0
 			&:last-child
-				background: darken($white,4%)
+				&:after
+					display: none
 				a
-					background: darken($white,4%)
-					&:before, &:after
-						display: none
-					&:before
-						content: ''
-						display: block
-						width: auto
-						height: auto
-						+pos(abs, 0 null 0 100%)
-						width: 100vw
-						background: darken($white,4%)
-						border: none
+					color: $blue
+	.page-banner
+		+pos(rel,null)
+		img
+			width: 100%
+			+media-breakpoint-down(lg)
+				height: 300px
+				object-fit: cover
+			+media-breakpoint-down(md)
+				height: 250px
+			+media-breakpoint-down(sm)
+				height: 200px
+		.banner-caption
+			+pos(abs, 20% null null auto)
+			max-width: 450px
+			.big
+				+fs(40rem)
+				line-height: 1.3
+				font-weight: bold
+				color: $blue
+				margin-bottom: 10px
+				+media-breakpoint-down(md)
+					+fs(32rem)
+					margin-bottom: 5px
+			.des
+				+fs(15rem)
+				color: $main
+				+media-breakpoint-down(md)
+					+fs(14rem)

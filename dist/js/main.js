@@ -5,10 +5,7 @@ $(document).ready(function () {
     $.scrollUp();
 
     // header script
-    if ($(window).width() < 1200) {
-        $('.col-right').insertAfter('.menu-wrap');
-        $('.search').insertAfter('.menu');
-    }
+    if ($(window).width() < 1200) {}
 
     $('.btn-showmenu').click(function () {
         $('.menu').toggleClass('open');
@@ -17,6 +14,23 @@ $(document).ready(function () {
     $('.overlay').click(function () {
         $('.menu').removeClass('open');
         $(this).fadeOut(500);
+    });
+    $('.btn-closemenu').click(function () {
+        $('.menu').removeClass('open');
+        $('.overlay').fadeOut(500);
+    });
+    $('.btn-showsub').click(function () {
+        $(this).toggleClass('active');
+        $(this).siblings('.sub').slideToggle(500);
+    });
+
+    $('.toggle-pagenav').text($('.page-nav ul li.active a').text());
+    $('.toggle-pagenav').click(function () {
+        $(this).siblings('ul').slideToggle(500);
+    });
+
+    $('.search-toggle').click(function () {
+        $('.search-wrap').fadeToggle(500);
     });
 
     // header scroll event
@@ -59,24 +73,24 @@ $(document).ready(function () {
         fade: true
     });
 
-    // product slick
-    $('.product-slick').slick({
-        slidesToShow: 5,
+    // card slick
+    $('.card-slick').slick({
+        slidesToShow: 3,
         slidesToScroll: 1,
         dots: false,
         arrows: true,
-        infinite: false,
+        infinite: true,
         autoplay: true,
         autoplaySpeed: 3000,
         responsive: [{
             breakpoint: 1199,
             settings: {
-                slidesToShow: 4
+                slidesToShow: 3
             }
         }, {
             breakpoint: 991,
             settings: {
-                slidesToShow: 3
+                slidesToShow: 2
             }
         }, {
             breakpoint: 767,

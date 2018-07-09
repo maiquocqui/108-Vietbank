@@ -30,6 +30,8 @@
 	.slick-dots
 		text-align: center
 		+pos(abs, null 0 20px 0)
+		+media-breakpoint-down(sm)
+			bottom: 10px
 		li
 			display: inline-block
 			width: 10px
@@ -49,6 +51,11 @@
 		.banner-img
 			img
 				width: 100%
+				+media-breakpoint-down(lg)
+					height: 350px
+					object-fit: cover
+				+media-breakpoint-down(md)
+					height: 200px
 		.banner-caption 
 			+fs(30rem)
 			font-weight: 500
