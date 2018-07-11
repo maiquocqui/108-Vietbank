@@ -6789,6 +6789,41 @@ main.big {
           top: -4px;
           left: -50px;
           background: url(../img/flower.png); }
+    .content ul.number {
+      list-style-type: none;
+      padding-left: 0; }
+      .content ul.number > li {
+        position: relative;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        align-content: center; }
+        .content ul.number > li .number {
+          font-size: 1.5rem;
+          border-radius: 20px;
+          background: #58a4e0;
+          font-weight: bold;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          color: #fff;
+          border: 2px solid #fff;
+          box-shadow: 2px 2px 1px rgba(5, 5, 5, 0.1);
+          margin-right: 10px; }
+        .content ul.number > li p {
+          width: calc(100% - 60px); }
   .content ol {
     list-style-type: decimal;
     padding-left: 20px; }
@@ -8815,6 +8850,15 @@ footer {
     .home-des {
       margin-bottom: 10px; } }
 
+.small-title {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem; }
+  @media (max-width: 767.98px) {
+    .small-title {
+      margin-bottom: 15px; } }
+
 .home-content {
   margin: 0 auto 30px; }
   @media (max-width: 767.98px) {
@@ -9458,5 +9502,155 @@ footer {
           .promotion-page .sale-list .sale figure figcaption .btn-viewdetail:hover {
             background: #fabf00;
             color: #0054a6; }
+
+.tragop-content {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 2px 2px 1px rgba(5, 5, 5, 0.1);
+  margin-bottom: 30px; }
+  @media (max-width: 767.98px) {
+    .tragop-content {
+      padding: 15px; } }
+
+.bank-table {
+  margin-bottom: 30px; }
+  .bank-table .table1 {
+    border-top: 1px solid #e6e6e6; }
+    .bank-table .table1 td {
+      padding: 20px;
+      border-bottom: 1px solid #e6e6e6; }
+      @media (max-width: 991.98px) {
+        .bank-table .table1 td {
+          display: block;
+          width: 100%; } }
+      @media (max-width: 767.98px) {
+        .bank-table .table1 td {
+          padding: 20px 0; } }
+      .bank-table .table1 td + td {
+        border-left: 1px solid #e6e6e6; }
+        @media (max-width: 991.98px) {
+          .bank-table .table1 td + td {
+            border-left: none; } }
+      .bank-table .table1 td .bank {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap; }
+        .bank-table .table1 td .bank .logo {
+          width: 160px;
+          max-width: 100%;
+          padding-right: 15px; }
+          @media (max-width: 767.98px) {
+            .bank-table .table1 td .bank .logo {
+              width: 100%;
+              margin-bottom: 10px; } }
+        .bank-table .table1 td .bank .des-table {
+          width: calc(100% - 160px); }
+          @media (max-width: 767.98px) {
+            .bank-table .table1 td .bank .des-table {
+              width: 100%; } }
+          .bank-table .table1 td .bank .des-table td {
+            width: 40%;
+            font-size: 0.8125rem;
+            padding: 0;
+            border: none; }
+            @media (max-width: 991.98px) {
+              .bank-table .table1 td .bank .des-table td {
+                display: table-cell; } }
+            .bank-table .table1 td .bank .des-table td:last-child {
+              width: 60%; }
+
+.tragop-form {
+  background: #fff;
+  padding: 15px 20px;
+  box-shadow: 2px 2px 1px rgba(5, 5, 5, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 30px; }
+  @media (max-width: 991.98px) {
+    .tragop-form {
+      flex-wrap: wrap; } }
+  .tragop-form .module-title {
+    font-size: 0.8125rem;
+    font-weight: bold;
+    line-height: 1.3;
+    padding-right: 20px;
+    border-right: 1px solid #e6e6e6; }
+    @media (max-width: 767.98px) {
+      .tragop-form .module-title {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 10px;
+        border-right: none; } }
+    .tragop-form .module-title span {
+      display: block;
+      color: #666666; }
+  .tragop-form .form-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0px 10px;
+    margin: 0; }
+    @media (max-width: 767.98px) {
+      .tragop-form .form-group {
+        padding: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: space-between; } }
+    .tragop-form .form-group label {
+      font-size: 0.875rem;
+      color: #666666;
+      padding-right: 10px; }
+    .tragop-form .form-group input, .tragop-form .form-group select {
+      border-radius: 5px;
+      border: 1px solid #e6e6e6;
+      padding: 6px 15px;
+      font-size: 0.875rem;
+      width: 180px; }
+      @media (max-width: 1199.98px) {
+        .tragop-form .form-group input, .tragop-form .form-group select {
+          width: 150px; } }
+      @media (max-width: 767.98px) {
+        .tragop-form .form-group input, .tragop-form .form-group select {
+          width: 70%; } }
+    .tragop-form .form-group select {
+      padding: 7px 15px; }
+  @media (max-width: 991.98px) {
+    .tragop-form .result {
+      width: 100%;
+      padding: 0;
+      margin-top: 10px; } }
+
+.tragop-feature {
+  margin-bottom: 30px; }
+  .tragop-feature .feature {
+    padding: 0px 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .tragop-feature .feature + .feature {
+      border-left: 1px solid #e6e6e6; }
+      @media (max-width: 767.98px) {
+        .tragop-feature .feature + .feature {
+          border-left: none; } }
+    .tragop-feature .feature .icon {
+      width: 60px; }
+    .tragop-feature .feature .des {
+      width: calc(100% - 60px);
+      font-size: 0.8125rem; }
 
 /*# sourceMappingURL=main.css.map */

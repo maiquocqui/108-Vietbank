@@ -185,3 +185,120 @@
 						&:hover
 							background: $yellow
 							color: $blue
+.tragop-content
+	background: $white
+	padding: 30px
+	box-shadow: 2px 2px 1px color-rgba($black,0.1)
+	margin-bottom: 30px
+	+media-breakpoint-down(sm)
+		padding: 15px
+.bank-table
+	margin-bottom: 30px
+	.table1
+		border-top: 1px solid darken($white,10%)
+		td
+			padding: 20px
+			border-bottom: 1px solid darken($white,10%)
+			+media-breakpoint-down(md)
+				display: block
+				width: 100%
+			+media-breakpoint-down(sm)
+				padding: 20px 0
+			+ td
+				border-left: 1px solid darken($white,10%)
+				+media-breakpoint-down(md)
+					border-left: none
+			.bank
+				+flexbox
+				flex-wrap: wrap
+				.logo
+					width: 160px
+					max-width: 100%
+					padding-right: 15px
+					+media-breakpoint-down(sm)
+						width: 100%
+						margin-bottom: 10px
+				.des-table
+					width: calc(100% - 160px)
+					+media-breakpoint-down(sm)
+						width: 100%
+					td
+						width: 40%
+						+fs(13rem)
+						padding: 0
+						border: none
+						+media-breakpoint-down(md)
+							display: table-cell
+						&:last-child
+							width: 60%
+.tragop-form
+	background: $white
+	padding: 15px 20px
+	box-shadow: 2px 2px 1px color-rgba($black,0.1)
+	+flexbox
+	align-items: center
+	align-content: center
+	justify-content: space-between
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		flex-wrap: wrap
+	.module-title
+		+fs(13rem)
+		font-weight: bold
+		line-height: 1.3
+		padding-right: 20px
+		border-right: 1px solid darken($white,10%)
+		+media-breakpoint-down(sm)
+			width: 100%
+			padding-right: 0
+			margin-bottom: 10px
+			border-right: none
+		span
+			display: block
+			color: darken($white,60%)
+	.form-group
+		+flexbox
+		align-items: center
+		align-content: center
+		padding: 0px 10px
+		margin: 0
+		+media-breakpoint-down(sm)
+			padding: 0
+			margin-bottom: 10px
+			width: 100%
+			justify-content: space-between
+		label
+			+fs(14rem)
+			color: darken($white,60%)
+			padding-right: 10px
+		input, select
+			+bor-rad(5px)
+			border: 1px solid darken($white,10%)
+			padding: 6px 15px
+			+fs(14rem)
+			width: 180px
+			+media-breakpoint-down(lg)
+				width: 150px
+			+media-breakpoint-down(sm)
+				width: 70%
+		select
+			padding: 7px 15px
+	.result
+		+media-breakpoint-down(md)
+			width: 100%
+			padding: 0
+			margin-top: 10px
+.tragop-feature
+	margin-bottom: 30px
+	.feature
+		padding: 0px 20px
+		+flexbox
+		+ .feature
+			border-left: 1px solid darken($white,10%)
+			+media-breakpoint-down(sm)
+				border-left: none
+		.icon
+			width: 60px
+		.des
+			width: calc(100% - 60px)
+			+fs(13rem)
