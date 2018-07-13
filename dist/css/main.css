@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v4.1.1 (https://getbootstrap.com/)
+ * Bootstrap v4.1.2 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -177,7 +177,8 @@ img {
   border-style: none; }
 
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+  vertical-align: middle; }
 
 table {
   border-collapse: collapse; }
@@ -2400,10 +2401,6 @@ input[type="button"].btn-block {
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control:focus, .form-wrap .form-group .input-group > input:focus, .form-wrap .form-group .input-group > textarea:focus, .form-wrap .form-group .input-group > select:focus, .apply-frm .form-group .input-group > input:focus, .apply-frm .form-group .input-group > textarea:focus, .apply-frm .form-group .input-group > select:focus,
-    .input-group > .custom-select:focus,
-    .input-group > .custom-file:focus {
-      z-index: 3; }
     .input-group > .form-control + .form-control, .form-wrap .form-group .input-group > input + .form-control, .form-wrap .form-group .input-group > textarea + .form-control, .form-wrap .form-group .input-group > select + .form-control, .apply-frm .form-group .input-group > input + .form-control, .apply-frm .form-group .input-group > textarea + .form-control, .apply-frm .form-group .input-group > select + .form-control, .form-wrap .form-group .input-group > .form-control + input, .form-wrap .form-group .input-group > input + input, .form-wrap .form-group .input-group > textarea + input, .form-wrap .form-group .input-group > select + input, .form-wrap .form-group .input-group > .form-control + textarea, .form-wrap .form-group .input-group > input + textarea, .form-wrap .form-group .input-group > textarea + textarea, .form-wrap .form-group .input-group > select + textarea, .form-wrap .form-group .input-group > .form-control + select, .form-wrap .form-group .input-group > input + select, .form-wrap .form-group .input-group > textarea + select, .form-wrap .form-group .input-group > select + select, .apply-frm .form-group .input-group > .form-control + input, .apply-frm .form-group .input-group > input + input, .apply-frm .form-group .input-group > textarea + input, .apply-frm .form-group .input-group > select + input, .apply-frm .form-group .input-group > .form-control + textarea, .apply-frm .form-group .input-group > input + textarea, .apply-frm .form-group .input-group > textarea + textarea, .apply-frm .form-group .input-group > select + textarea, .apply-frm .form-group .input-group > .form-control + select, .apply-frm .form-group .input-group > input + select, .apply-frm .form-group .input-group > textarea + select, .apply-frm .form-group .input-group > select + select,
     .input-group > .form-control + .custom-select,
     .form-wrap .form-group .input-group > input + .custom-select,
@@ -2438,6 +2435,10 @@ input[type="button"].btn-block {
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
+  .input-group > .form-control:focus, .form-wrap .form-group .input-group > input:focus, .form-wrap .form-group .input-group > textarea:focus, .form-wrap .form-group .input-group > select:focus, .apply-frm .form-group .input-group > input:focus, .apply-frm .form-group .input-group > textarea:focus, .apply-frm .form-group .input-group > select:focus,
+  .input-group > .custom-select:focus,
+  .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
+    z-index: 3; }
   .input-group > .form-control:not(:last-child), .form-wrap .form-group .input-group > input:not(:last-child), .form-wrap .form-group .input-group > textarea:not(:last-child), .form-wrap .form-group .input-group > select:not(:last-child), .apply-frm .form-group .input-group > input:not(:last-child), .apply-frm .form-group .input-group > textarea:not(:last-child), .apply-frm .form-group .input-group > select:not(:last-child),
   .input-group > .custom-select:not(:last-child) {
     border-top-right-radius: 0;
@@ -2618,7 +2619,7 @@ input[type="button"].btn-block {
   .custom-select:focus {
     border-color: #80bdff;
     outline: 0;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(128, 189, 255, 0.5); }
+    box-shadow: 0 0 0 0.2rem rgba(128, 189, 255, 0.5); }
     .custom-select:focus::-ms-value {
       color: #495057;
       background-color: #fff; }
@@ -2663,6 +2664,8 @@ input[type="button"].btn-block {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
     .custom-file-input:focus ~ .custom-file-label::after {
       border-color: #80bdff; }
+  .custom-file-input:disabled ~ .custom-file-label {
+    background-color: #e9ecef; }
   .custom-file-input:lang(en) ~ .custom-file-label::after {
     content: "Browse"; }
 
@@ -2711,7 +2714,11 @@ input[type="button"].btn-block {
     background-color: #007bff;
     border: 0;
     border-radius: 1rem;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none; }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .custom-range::-webkit-slider-thumb {
+        transition: none; } }
     .custom-range::-webkit-slider-thumb:focus {
       outline: none;
       box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
@@ -2731,7 +2738,11 @@ input[type="button"].btn-block {
     background-color: #007bff;
     border: 0;
     border-radius: 1rem;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none; }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .custom-range::-moz-range-thumb {
+        transition: none; } }
     .custom-range::-moz-range-thumb:focus {
       outline: none;
       box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
@@ -2751,7 +2762,11 @@ input[type="button"].btn-block {
     background-color: #007bff;
     border: 0;
     border-radius: 1rem;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none; }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .custom-range::-ms-thumb {
+        transition: none; } }
     .custom-range::-ms-thumb:focus {
       outline: none;
       box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
@@ -2772,6 +2787,16 @@ input[type="button"].btn-block {
     margin-right: 15px;
     background-color: #dee2e6;
     border-radius: 1rem; }
+
+.custom-control-label::before,
+.custom-file-label,
+.custom-select {
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .custom-control-label::before,
+    .custom-file-label,
+    .custom-select {
+      transition: none; } }
 
 .nav {
   display: flex;
@@ -3769,12 +3794,12 @@ input[type="button"].btn-block {
   color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: .5; }
-  .close:hover, .close:focus {
-    color: #000;
-    text-decoration: none;
-    opacity: .75; }
   .close:not(:disabled):not(.disabled) {
     cursor: pointer; }
+    .close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {
+      color: #000;
+      text-decoration: none;
+      opacity: .75; }
 
 button.close {
   padding: 0;
@@ -4130,17 +4155,19 @@ button.close {
   display: none;
   align-items: center;
   width: 100%;
-  transition: transform 0.6s ease;
   backface-visibility: hidden;
   perspective: 1000px; }
-  @media screen and (prefers-reduced-motion: reduce) {
-    .carousel-item {
-      transition: none; } }
 
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
-  display: block; }
+  display: block;
+  transition: transform 0.6s ease; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+      transition: none; } }
 
 .carousel-item-next,
 .carousel-item-prev {
