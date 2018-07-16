@@ -6,10 +6,11 @@
 	.ht-title
 		margin-bottom: 100px
 		text-align: center
-	.col-12
-		&:first-child
-			+media-breakpoint-up(lg)
-				border-right: 1px solid darken($white,10%)
+	.promotion-list
+		.col-12
+			&:first-child
+				+media-breakpoint-up(lg)
+					border-right: 1px solid darken($white,10%)
 	.promotion-product
 		padding: 0px 30px
 		+media-breakpoint-down(md)
@@ -302,3 +303,43 @@
 		.des
 			width: calc(100% - 60px)
 			+fs(13rem)
+hr.line
+	display: block
+	width: 100%
+	height: 1px
+	background: linear-gradient(to right, color-rgba($black,0),color-rgba($black,0.3),color-rgba($black,0))
+	border: none
+.tragop-range
+	padding: 0px 15px
+	padding-top: 40px
+	max-width: 580px
+	margin: 0 auto 30px
+	.module-title
+		text-align: center
+		+fs(15rem)
+		color: darken($white,60%)
+		margin-bottom: 40px
+	.tragop-cycle
+		margin-bottom: 15px
+		label
+			+fs(14rem)
+			font-weight: bold
+			color: darken($white,40%)
+			padding-right: 10px
+		select
+			+fs(14rem)
+			padding: 5px 10px
+			+bor-rad(5px)
+			background: $white
+			border: 1px solid darken($white,10%)
+			min-width: 200px
+	.range-slider
+		margin-bottom: 15px
+		img
+			width: auto
+	.range-result
+		+fs(14rem)
+		color: darken($white,40%)
+		strong
+			color: $main
+			margin-left: 10px

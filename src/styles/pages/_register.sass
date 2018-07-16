@@ -1,0 +1,183 @@
+.register-page
+	padding: 50px 0
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.register-link
+		text-align: center
+		a
+			+fs(15rem)
+			color: $blue
+			padding: 0px 10px
+			+pos(rel,null)
+			display: inline-block
+			+ a
+				&:before
+					content: ''
+					display: block
+					width: 1px
+					background: darken($white,20%)
+					+pos(abs, 2px null 2px 0)
+			&:hover
+				color: $red
+				text-decoration: underline
+
+// register form
+.register-form
+	padding-top: 30px
+	.module-title
+		margin-bottom: 30px
+		text-align: center
+		+pos(rel,null)
+		&:after
+			content: ''
+			display: block
+			height: 1px
+			+pos(abs, 50% 0 null 0)
+			background: darken($white,10%)
+		span
+			display: inline-block
+			+fs(24rem)
+			text-transform: uppercase
+			color: darken($white,60%)
+			background: $white
+			+pos(rel,null)
+			z-index: 1
+			padding: 0px 10px
+	.card-list
+		.cre-card
+			text-align: center
+			margin-bottom: 30px
+			input
+				display: none
+				+ label
+					+pos(rel,null)
+					padding-bottom: 30px
+					&:before
+						content: ''
+						width: 18px
+						height: 18px
+						+bor-rad(5px)
+						border: 1px solid darken($white,20%)
+						+pos(abs, null null 0 50%)
+						+transform(translateX(-50%))
+					&:after
+						content: ''
+						width: 10px
+						height: 10px
+						+bor-rad(3px)
+						background: $red
+						+pos(abs, null null 4px 50%)
+						+transform(translateX(-50%))
+						z-index: 1
+						opacity: 0
+					.name
+						text-transform: uppercase
+						+fs(24rem)
+						font-weight: bold
+						letter-spacing: 10px
+				&:checked
+					+ label
+						&:before
+							border-color: darken($white,40%)
+						&:after
+							opacity: 1
+	.register-step
+		+flexbox
+		.step
+			width: 25%
+			background: darken($white,10%)
+			+fs(15rem)
+			font-weight: bold
+			text-transform: uppercase
+			color: darken($white,40%)
+			line-height: 20px
+			padding: 15px 0
+			text-align: center
+			&.active
+				background: $blue
+				color: $white
+	.form-wrap
+		padding: 30px 0
+		max-width: 920px
+		margin: 0 auto
+		line-height: 1.3
+	.form-note
+		+fs(14rem)
+		color: darken($white,40%)
+		padding: 5px 0
+		display: block
+	.form-title
+		+fs(18rem)
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: 10px
+	.form-group
+		margin-bottom: 10px
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		> label
+			+fs(14rem)
+			color: darken($white,60%)
+			width: 190px
+		.input
+			width: calc(100% - 190px)
+		input, select
+			width: 100%
+			+fs(14rem)
+			padding: 10px 15px
+			+bor-rad(5px)
+			border: 1px solid darken($white,10%)
+			color: darken($white,60%)
+		select
+			padding: 9px 15px
+		.form-sub
+			+flexbox
+			align-items: center
+			align-content: center
+			> label
+				+fs(14rem)
+				color: $main
+				width: 80px
+			input, select
+				display: block
+				width: calc(100% - 80px)
+		.card-name
+			+flexbox
+			+bor-rad(5px)
+			border: 1px solid darken($white,10%)
+			overflow: hidden
+			input
+				width: 5.263%
+				border: none
+				+bor-rad(0)
+				+ input
+					border-left: 1px solid darken($white,10%)
+		.gender
+			ul
+				+flexbox
+				li
+					width: 100px
+		.birthday
+			ul
+				+flexbox
+				align-items: center
+				align-content: center
+				+bor-rad(5px)
+				overflow: hidden
+				border: 1px solid darken($white,10%)
+				li
+					width: 30%
+					+pos(rel,null)
+					&:after
+						content: '\f073'
+						opacity: 0.8
+						+pos(abs, 9px 10px null null)
+					+ li
+						border-left: 1px solid darken($white,10%)
+					&:last-child
+						width: 40%
+					input
+						border: none
+						+bor-rad(0)

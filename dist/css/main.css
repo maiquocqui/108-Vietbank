@@ -1250,7 +1250,7 @@ pre {
   .table-responsive > .table-bordered {
     border: 0; }
 
-.form-control, .form-wrap .form-group input, .form-wrap .form-group textarea, .form-wrap .form-group select, .apply-frm .form-group input, .apply-frm .form-group textarea, .apply-frm .form-group select {
+.form-control {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -1263,28 +1263,28 @@ pre {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media screen and (prefers-reduced-motion: reduce) {
-    .form-control, .form-wrap .form-group input, .form-wrap .form-group textarea, .form-wrap .form-group select, .apply-frm .form-group input, .apply-frm .form-group textarea, .apply-frm .form-group select {
+    .form-control {
       transition: none; } }
-  .form-control::-ms-expand, .form-wrap .form-group input::-ms-expand, .form-wrap .form-group textarea::-ms-expand, .form-wrap .form-group select::-ms-expand, .apply-frm .form-group input::-ms-expand, .apply-frm .form-group textarea::-ms-expand, .apply-frm .form-group select::-ms-expand {
+  .form-control::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus, .form-wrap .form-group input:focus, .form-wrap .form-group textarea:focus, .form-wrap .form-group select:focus, .apply-frm .form-group input:focus, .apply-frm .form-group textarea:focus, .apply-frm .form-group select:focus {
+  .form-control:focus {
     color: #495057;
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .form-control::placeholder, .form-wrap .form-group input::placeholder, .form-wrap .form-group textarea::placeholder, .form-wrap .form-group select::placeholder, .apply-frm .form-group input::placeholder, .apply-frm .form-group textarea::placeholder, .apply-frm .form-group select::placeholder {
+  .form-control::placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:disabled, .form-wrap .form-group input:disabled, .form-wrap .form-group textarea:disabled, .form-wrap .form-group select:disabled, .apply-frm .form-group input:disabled, .apply-frm .form-group textarea:disabled, .apply-frm .form-group select:disabled, .form-control[readonly], .form-wrap .form-group input[readonly], .form-wrap .form-group textarea[readonly], .form-wrap .form-group select[readonly], .apply-frm .form-group input[readonly], .apply-frm .form-group textarea[readonly], .apply-frm .form-group select[readonly] {
+  .form-control:disabled, .form-control[readonly] {
     background-color: #e9ecef;
     opacity: 1; }
 
-select.form-control:not([size]):not([multiple]), .form-wrap .form-group select:not([size]):not([multiple]), .apply-frm .form-group select:not([size]):not([multiple]) {
+select.form-control:not([size]):not([multiple]) {
   height: calc(2.25rem + 2px); }
 
-select.form-control:focus::-ms-value, .form-wrap .form-group select:focus::-ms-value, .apply-frm .form-group select:focus::-ms-value {
+select.form-control:focus::-ms-value {
   color: #495057;
   background-color: #fff; }
 
@@ -1323,11 +1323,11 @@ select.form-control:focus::-ms-value, .form-wrap .form-group select:focus::-ms-v
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
-  .form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control, .form-wrap .form-group .input-group-sm > input.form-control-plaintext, .form-wrap .form-group .input-group-sm > textarea.form-control-plaintext, .form-wrap .form-group .input-group-sm > select.form-control-plaintext, .apply-frm .form-group .input-group-sm > input.form-control-plaintext, .apply-frm .form-group .input-group-sm > textarea.form-control-plaintext, .apply-frm .form-group .input-group-sm > select.form-control-plaintext,
+  .form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.btn,
-  .input-group-sm > .input-group-append > .form-control-plaintext.btn, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .form-wrap .form-group .input-group-lg > input.form-control-plaintext, .form-wrap .form-group .input-group-lg > textarea.form-control-plaintext, .form-wrap .form-group .input-group-lg > select.form-control-plaintext, .apply-frm .form-group .input-group-lg > input.form-control-plaintext, .apply-frm .form-group .input-group-lg > textarea.form-control-plaintext, .apply-frm .form-group .input-group-lg > select.form-control-plaintext,
+  .input-group-sm > .input-group-append > .form-control-plaintext.btn, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.btn,
@@ -1335,7 +1335,7 @@ select.form-control:focus::-ms-value, .form-wrap .form-group select:focus::-ms-v
     padding-right: 0;
     padding-left: 0; }
 
-.form-control-sm, .input-group-sm > .form-control, .form-wrap .form-group .input-group-sm > input, .form-wrap .form-group .input-group-sm > textarea, .form-wrap .form-group .input-group-sm > select, .apply-frm .form-group .input-group-sm > input, .apply-frm .form-group .input-group-sm > textarea, .apply-frm .form-group .input-group-sm > select,
+.form-control-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
@@ -1345,14 +1345,14 @@ select.form-control:focus::-ms-value, .form-wrap .form-group select:focus::-ms-v
   line-height: 1.5;
   border-radius: 0.2rem; }
 
-select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .form-wrap .form-group .input-group-sm > select:not([size]):not([multiple]), .apply-frm .form-group .input-group-sm > select:not([size]):not([multiple]),
+select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
 
-.form-control-lg, .input-group-lg > .form-control, .form-wrap .form-group .input-group-lg > input, .form-wrap .form-group .input-group-lg > textarea, .form-wrap .form-group .input-group-lg > select, .apply-frm .form-group .input-group-lg > input, .apply-frm .form-group .input-group-lg > textarea, .apply-frm .form-group .input-group-lg > select,
+.form-control-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
@@ -1362,7 +1362,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .form-wrap .form-group .input-group-lg > select:not([size]):not([multiple]), .apply-frm .form-group .input-group-lg > select:not([size]):not([multiple]),
+select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
@@ -1433,36 +1433,18 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   background-color: rgba(40, 167, 69, 0.8);
   border-radius: .2rem; }
 
-.was-validated .form-control:valid, .was-validated .form-wrap .form-group input:valid, .form-wrap .form-group .was-validated input:valid, .was-validated .form-wrap .form-group textarea:valid, .form-wrap .form-group .was-validated textarea:valid, .was-validated .form-wrap .form-group select:valid, .form-wrap .form-group .was-validated select:valid, .was-validated .apply-frm .form-group input:valid, .apply-frm .form-group .was-validated input:valid, .was-validated .apply-frm .form-group textarea:valid, .apply-frm .form-group .was-validated textarea:valid, .was-validated .apply-frm .form-group select:valid, .apply-frm .form-group .was-validated select:valid, .form-control.is-valid, .form-wrap .form-group input.is-valid, .form-wrap .form-group textarea.is-valid, .form-wrap .form-group select.is-valid, .apply-frm .form-group input.is-valid, .apply-frm .form-group textarea.is-valid, .apply-frm .form-group select.is-valid, .was-validated
+.was-validated .form-control:valid, .form-control.is-valid, .was-validated
 .custom-select:valid,
 .custom-select.is-valid {
   border-color: #28a745; }
-  .was-validated .form-control:valid:focus, .was-validated .form-wrap .form-group input:valid:focus, .form-wrap .form-group .was-validated input:valid:focus, .was-validated .form-wrap .form-group textarea:valid:focus, .form-wrap .form-group .was-validated textarea:valid:focus, .was-validated .form-wrap .form-group select:valid:focus, .form-wrap .form-group .was-validated select:valid:focus, .was-validated .apply-frm .form-group input:valid:focus, .apply-frm .form-group .was-validated input:valid:focus, .was-validated .apply-frm .form-group textarea:valid:focus, .apply-frm .form-group .was-validated textarea:valid:focus, .was-validated .apply-frm .form-group select:valid:focus, .apply-frm .form-group .was-validated select:valid:focus, .form-control.is-valid:focus, .form-wrap .form-group input.is-valid:focus, .form-wrap .form-group textarea.is-valid:focus, .form-wrap .form-group select.is-valid:focus, .apply-frm .form-group input.is-valid:focus, .apply-frm .form-group textarea.is-valid:focus, .apply-frm .form-group select.is-valid:focus, .was-validated
+  .was-validated .form-control:valid:focus, .form-control.is-valid:focus, .was-validated
   .custom-select:valid:focus,
   .custom-select.is-valid:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
-  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .form-wrap .form-group input:valid ~ .valid-feedback, .form-wrap .form-group .was-validated input:valid ~ .valid-feedback, .was-validated .form-wrap .form-group textarea:valid ~ .valid-feedback, .form-wrap .form-group .was-validated textarea:valid ~ .valid-feedback, .was-validated .form-wrap .form-group select:valid ~ .valid-feedback, .form-wrap .form-group .was-validated select:valid ~ .valid-feedback, .was-validated .apply-frm .form-group input:valid ~ .valid-feedback, .apply-frm .form-group .was-validated input:valid ~ .valid-feedback, .was-validated .apply-frm .form-group textarea:valid ~ .valid-feedback, .apply-frm .form-group .was-validated textarea:valid ~ .valid-feedback, .was-validated .apply-frm .form-group select:valid ~ .valid-feedback, .apply-frm .form-group .was-validated select:valid ~ .valid-feedback,
-  .was-validated .form-control:valid ~ .valid-tooltip,
-  .was-validated .form-wrap .form-group input:valid ~ .valid-tooltip,
-  .form-wrap .form-group .was-validated input:valid ~ .valid-tooltip,
-  .was-validated .form-wrap .form-group textarea:valid ~ .valid-tooltip,
-  .form-wrap .form-group .was-validated textarea:valid ~ .valid-tooltip,
-  .was-validated .form-wrap .form-group select:valid ~ .valid-tooltip,
-  .form-wrap .form-group .was-validated select:valid ~ .valid-tooltip,
-  .was-validated .apply-frm .form-group input:valid ~ .valid-tooltip,
-  .apply-frm .form-group .was-validated input:valid ~ .valid-tooltip,
-  .was-validated .apply-frm .form-group textarea:valid ~ .valid-tooltip,
-  .apply-frm .form-group .was-validated textarea:valid ~ .valid-tooltip,
-  .was-validated .apply-frm .form-group select:valid ~ .valid-tooltip,
-  .apply-frm .form-group .was-validated select:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .form-wrap .form-group input.is-valid ~ .valid-feedback, .form-wrap .form-group textarea.is-valid ~ .valid-feedback, .form-wrap .form-group select.is-valid ~ .valid-feedback, .apply-frm .form-group input.is-valid ~ .valid-feedback, .apply-frm .form-group textarea.is-valid ~ .valid-feedback, .apply-frm .form-group select.is-valid ~ .valid-feedback,
-  .form-control.is-valid ~ .valid-tooltip,
-  .form-wrap .form-group input.is-valid ~ .valid-tooltip,
-  .form-wrap .form-group textarea.is-valid ~ .valid-tooltip,
-  .form-wrap .form-group select.is-valid ~ .valid-tooltip,
-  .apply-frm .form-group input.is-valid ~ .valid-tooltip,
-  .apply-frm .form-group textarea.is-valid ~ .valid-tooltip,
-  .apply-frm .form-group select.is-valid ~ .valid-tooltip, .was-validated
+  .was-validated .form-control:valid ~ .valid-feedback,
+  .was-validated .form-control:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback,
+  .form-control.is-valid ~ .valid-tooltip, .was-validated
   .custom-select:valid ~ .valid-feedback,
   .was-validated
   .custom-select:valid ~ .valid-tooltip,
@@ -1533,36 +1515,18 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   background-color: rgba(220, 53, 69, 0.8);
   border-radius: .2rem; }
 
-.was-validated .form-control:invalid, .was-validated .form-wrap .form-group input:invalid, .form-wrap .form-group .was-validated input:invalid, .was-validated .form-wrap .form-group textarea:invalid, .form-wrap .form-group .was-validated textarea:invalid, .was-validated .form-wrap .form-group select:invalid, .form-wrap .form-group .was-validated select:invalid, .was-validated .apply-frm .form-group input:invalid, .apply-frm .form-group .was-validated input:invalid, .was-validated .apply-frm .form-group textarea:invalid, .apply-frm .form-group .was-validated textarea:invalid, .was-validated .apply-frm .form-group select:invalid, .apply-frm .form-group .was-validated select:invalid, .form-control.is-invalid, .form-wrap .form-group input.is-invalid, .form-wrap .form-group textarea.is-invalid, .form-wrap .form-group select.is-invalid, .apply-frm .form-group input.is-invalid, .apply-frm .form-group textarea.is-invalid, .apply-frm .form-group select.is-invalid, .was-validated
+.was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: #dc3545; }
-  .was-validated .form-control:invalid:focus, .was-validated .form-wrap .form-group input:invalid:focus, .form-wrap .form-group .was-validated input:invalid:focus, .was-validated .form-wrap .form-group textarea:invalid:focus, .form-wrap .form-group .was-validated textarea:invalid:focus, .was-validated .form-wrap .form-group select:invalid:focus, .form-wrap .form-group .was-validated select:invalid:focus, .was-validated .apply-frm .form-group input:invalid:focus, .apply-frm .form-group .was-validated input:invalid:focus, .was-validated .apply-frm .form-group textarea:invalid:focus, .apply-frm .form-group .was-validated textarea:invalid:focus, .was-validated .apply-frm .form-group select:invalid:focus, .apply-frm .form-group .was-validated select:invalid:focus, .form-control.is-invalid:focus, .form-wrap .form-group input.is-invalid:focus, .form-wrap .form-group textarea.is-invalid:focus, .form-wrap .form-group select.is-invalid:focus, .apply-frm .form-group input.is-invalid:focus, .apply-frm .form-group textarea.is-invalid:focus, .apply-frm .form-group select.is-invalid:focus, .was-validated
+  .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
   .custom-select:invalid:focus,
   .custom-select.is-invalid:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .form-wrap .form-group input:invalid ~ .invalid-feedback, .form-wrap .form-group .was-validated input:invalid ~ .invalid-feedback, .was-validated .form-wrap .form-group textarea:invalid ~ .invalid-feedback, .form-wrap .form-group .was-validated textarea:invalid ~ .invalid-feedback, .was-validated .form-wrap .form-group select:invalid ~ .invalid-feedback, .form-wrap .form-group .was-validated select:invalid ~ .invalid-feedback, .was-validated .apply-frm .form-group input:invalid ~ .invalid-feedback, .apply-frm .form-group .was-validated input:invalid ~ .invalid-feedback, .was-validated .apply-frm .form-group textarea:invalid ~ .invalid-feedback, .apply-frm .form-group .was-validated textarea:invalid ~ .invalid-feedback, .was-validated .apply-frm .form-group select:invalid ~ .invalid-feedback, .apply-frm .form-group .was-validated select:invalid ~ .invalid-feedback,
-  .was-validated .form-control:invalid ~ .invalid-tooltip,
-  .was-validated .form-wrap .form-group input:invalid ~ .invalid-tooltip,
-  .form-wrap .form-group .was-validated input:invalid ~ .invalid-tooltip,
-  .was-validated .form-wrap .form-group textarea:invalid ~ .invalid-tooltip,
-  .form-wrap .form-group .was-validated textarea:invalid ~ .invalid-tooltip,
-  .was-validated .form-wrap .form-group select:invalid ~ .invalid-tooltip,
-  .form-wrap .form-group .was-validated select:invalid ~ .invalid-tooltip,
-  .was-validated .apply-frm .form-group input:invalid ~ .invalid-tooltip,
-  .apply-frm .form-group .was-validated input:invalid ~ .invalid-tooltip,
-  .was-validated .apply-frm .form-group textarea:invalid ~ .invalid-tooltip,
-  .apply-frm .form-group .was-validated textarea:invalid ~ .invalid-tooltip,
-  .was-validated .apply-frm .form-group select:invalid ~ .invalid-tooltip,
-  .apply-frm .form-group .was-validated select:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .form-wrap .form-group input.is-invalid ~ .invalid-feedback, .form-wrap .form-group textarea.is-invalid ~ .invalid-feedback, .form-wrap .form-group select.is-invalid ~ .invalid-feedback, .apply-frm .form-group input.is-invalid ~ .invalid-feedback, .apply-frm .form-group textarea.is-invalid ~ .invalid-feedback, .apply-frm .form-group select.is-invalid ~ .invalid-feedback,
-  .form-control.is-invalid ~ .invalid-tooltip,
-  .form-wrap .form-group input.is-invalid ~ .invalid-tooltip,
-  .form-wrap .form-group textarea.is-invalid ~ .invalid-tooltip,
-  .form-wrap .form-group select.is-invalid ~ .invalid-tooltip,
-  .apply-frm .form-group input.is-invalid ~ .invalid-tooltip,
-  .apply-frm .form-group textarea.is-invalid ~ .invalid-tooltip,
-  .apply-frm .form-group select.is-invalid ~ .invalid-tooltip, .was-validated
+  .was-validated .form-control:invalid ~ .invalid-feedback,
+  .was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback,
+  .form-control.is-invalid ~ .invalid-tooltip, .was-validated
   .custom-select:invalid ~ .invalid-feedback,
   .was-validated
   .custom-select:invalid ~ .invalid-tooltip,
@@ -1630,7 +1594,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
       flex-flow: row wrap;
       align-items: center;
       margin-bottom: 0; }
-    .form-inline .form-control, .form-inline .form-wrap .form-group input, .form-wrap .form-group .form-inline input, .form-inline .form-wrap .form-group textarea, .form-wrap .form-group .form-inline textarea, .form-inline .form-wrap .form-group select, .form-wrap .form-group .form-inline select, .form-inline .apply-frm .form-group input, .apply-frm .form-group .form-inline input, .form-inline .apply-frm .form-group textarea, .apply-frm .form-group .form-inline textarea, .form-inline .apply-frm .form-group select, .apply-frm .form-group .form-inline select {
+    .form-inline .form-control {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -2394,56 +2358,32 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%; }
-  .input-group > .form-control, .form-wrap .form-group .input-group > input, .form-wrap .form-group .input-group > textarea, .form-wrap .form-group .input-group > select, .apply-frm .form-group .input-group > input, .apply-frm .form-group .input-group > textarea, .apply-frm .form-group .input-group > select,
+  .input-group > .form-control,
   .input-group > .custom-select,
   .input-group > .custom-file {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control + .form-control, .form-wrap .form-group .input-group > input + .form-control, .form-wrap .form-group .input-group > textarea + .form-control, .form-wrap .form-group .input-group > select + .form-control, .apply-frm .form-group .input-group > input + .form-control, .apply-frm .form-group .input-group > textarea + .form-control, .apply-frm .form-group .input-group > select + .form-control, .form-wrap .form-group .input-group > .form-control + input, .form-wrap .form-group .input-group > input + input, .form-wrap .form-group .input-group > textarea + input, .form-wrap .form-group .input-group > select + input, .form-wrap .form-group .input-group > .form-control + textarea, .form-wrap .form-group .input-group > input + textarea, .form-wrap .form-group .input-group > textarea + textarea, .form-wrap .form-group .input-group > select + textarea, .form-wrap .form-group .input-group > .form-control + select, .form-wrap .form-group .input-group > input + select, .form-wrap .form-group .input-group > textarea + select, .form-wrap .form-group .input-group > select + select, .apply-frm .form-group .input-group > .form-control + input, .apply-frm .form-group .input-group > input + input, .apply-frm .form-group .input-group > textarea + input, .apply-frm .form-group .input-group > select + input, .apply-frm .form-group .input-group > .form-control + textarea, .apply-frm .form-group .input-group > input + textarea, .apply-frm .form-group .input-group > textarea + textarea, .apply-frm .form-group .input-group > select + textarea, .apply-frm .form-group .input-group > .form-control + select, .apply-frm .form-group .input-group > input + select, .apply-frm .form-group .input-group > textarea + select, .apply-frm .form-group .input-group > select + select,
+    .input-group > .form-control + .form-control,
     .input-group > .form-control + .custom-select,
-    .form-wrap .form-group .input-group > input + .custom-select,
-    .form-wrap .form-group .input-group > textarea + .custom-select,
-    .form-wrap .form-group .input-group > select + .custom-select,
-    .apply-frm .form-group .input-group > input + .custom-select,
-    .apply-frm .form-group .input-group > textarea + .custom-select,
-    .apply-frm .form-group .input-group > select + .custom-select,
     .input-group > .form-control + .custom-file,
-    .form-wrap .form-group .input-group > input + .custom-file,
-    .form-wrap .form-group .input-group > textarea + .custom-file,
-    .form-wrap .form-group .input-group > select + .custom-file,
-    .apply-frm .form-group .input-group > input + .custom-file,
-    .apply-frm .form-group .input-group > textarea + .custom-file,
-    .apply-frm .form-group .input-group > select + .custom-file,
     .input-group > .custom-select + .form-control,
-    .form-wrap .form-group .input-group > .custom-select + input,
-    .form-wrap .form-group .input-group > .custom-select + textarea,
-    .form-wrap .form-group .input-group > .custom-select + select,
-    .apply-frm .form-group .input-group > .custom-select + input,
-    .apply-frm .form-group .input-group > .custom-select + textarea,
-    .apply-frm .form-group .input-group > .custom-select + select,
     .input-group > .custom-select + .custom-select,
     .input-group > .custom-select + .custom-file,
     .input-group > .custom-file + .form-control,
-    .form-wrap .form-group .input-group > .custom-file + input,
-    .form-wrap .form-group .input-group > .custom-file + textarea,
-    .form-wrap .form-group .input-group > .custom-file + select,
-    .apply-frm .form-group .input-group > .custom-file + input,
-    .apply-frm .form-group .input-group > .custom-file + textarea,
-    .apply-frm .form-group .input-group > .custom-file + select,
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
-  .input-group > .form-control:focus, .form-wrap .form-group .input-group > input:focus, .form-wrap .form-group .input-group > textarea:focus, .form-wrap .form-group .input-group > select:focus, .apply-frm .form-group .input-group > input:focus, .apply-frm .form-group .input-group > textarea:focus, .apply-frm .form-group .input-group > select:focus,
+  .input-group > .form-control:focus,
   .input-group > .custom-select:focus,
   .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
     z-index: 3; }
-  .input-group > .form-control:not(:last-child), .form-wrap .form-group .input-group > input:not(:last-child), .form-wrap .form-group .input-group > textarea:not(:last-child), .form-wrap .form-group .input-group > select:not(:last-child), .apply-frm .form-group .input-group > input:not(:last-child), .apply-frm .form-group .input-group > textarea:not(:last-child), .apply-frm .form-group .input-group > select:not(:last-child),
+  .input-group > .form-control:not(:last-child),
   .input-group > .custom-select:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .input-group > .form-control:not(:first-child), .form-wrap .form-group .input-group > input:not(:first-child), .form-wrap .form-group .input-group > textarea:not(:first-child), .form-wrap .form-group .input-group > select:not(:first-child), .apply-frm .form-group .input-group > input:not(:first-child), .apply-frm .form-group .input-group > textarea:not(:first-child), .apply-frm .form-group .input-group > select:not(:first-child),
+  .input-group > .form-control:not(:first-child),
   .input-group > .custom-select:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
@@ -7690,133 +7630,68 @@ input[type="reset"] {
     background: #ed1c24;
     color: #fff; }
 
-input, textarea, select {
-  font-family: inherit; }
-
-.form-wrap .form-group label, .apply-frm .form-group label {
-  font-size: 0.8125rem; }
-
-.form-wrap .form-group input, .form-wrap .form-group textarea, .form-wrap .form-group select, .apply-frm .form-group input, .apply-frm .form-group textarea, .apply-frm .form-group select {
-  background: #f2f2f2;
-  width: 100%;
-  border-radius: 0px;
-  line-height: 20px;
-  font-size: 0.875rem;
-  color: #333333;
-  padding: 0.625rem 1.25rem;
-  border-color: #f0f0f0;
-  font-family: 'Montserrat', sans-serif; }
-  .form-wrap .form-group input:active, .form-wrap .form-group input:focus, .form-wrap .form-group textarea:active, .form-wrap .form-group textarea:focus, .form-wrap .form-group select:active, .form-wrap .form-group select:focus, .apply-frm .form-group input:active, .apply-frm .form-group input:focus, .apply-frm .form-group textarea:active, .apply-frm .form-group textarea:focus, .apply-frm .form-group select:active, .apply-frm .form-group select:focus {
-    background: #e6e6e6;
-    border-color: #f47b7f;
-    box-shadow: 0 0 0 0.2rem rgba(237, 28, 36, 0.3); }
-
-.form-wrap .form-group textarea, .apply-frm .form-group textarea {
-  min-height: 110px; }
-
-.form-wrap .frm-btn, .apply-frm .frm-btn {
-  padding: 10px 5px 0; }
-
-.form-wrap input[type="submit"], .apply-frm input[type="submit"] {
-  line-height: 36px; }
-
-.frm-btnwrap label {
-  display: none; }
-
 .checkbox input {
   display: none; }
   .checkbox input + label {
-    color: #666666;
+    color: #333333;
     padding: 0 0 0 25px;
-    position: relative; }
+    position: relative;
+    font-size: 0.875rem; }
     .checkbox input + label:hover {
       color: #FF9800; }
     .checkbox input + label:before {
       content: '';
-      display: block;
-      width: 16px;
-      height: 16px;
-      border-radius: 3px;
-      border: 1px solid #e6e6e6;
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
       position: absolute;
-      top: 3px;
+      top: 0;
       left: 0; }
     .checkbox input + label:after {
-      content: '\f00c';
-      font-family: 'fontawesome';
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      width: 16px;
-      height: 16px;
-      font-size: 0.75rem;
-      border-radius: 3px;
-      color: #fff;
-      background: #4CAF50;
-      border-color: #4CAF50;
-      position: absolute;
-      top: 3px;
-      left: 0;
-      z-index: 1;
-      -webkit-transition: all, 0.5s;
-      -khtml-transition: all, 0.5s;
-      -moz-transition: all, 0.5s;
-      -ms-transition: all, 0.5s;
-      -o-transition: all, 0.5s;
-      transition: all, 0.5s;
-      opacity: 0; }
-  .checkbox input:checked + label {
-    color: #333333; }
-    .checkbox input:checked + label:after {
-      opacity: 1; }
-
-.radio input[type="radio"] {
-  display: none; }
-  .radio input[type="radio"] + label {
-    padding: 0 0 0 25px;
-    position: relative;
-    -webkit-transition: all, 0.3s;
-    -khtml-transition: all, 0.3s;
-    -moz-transition: all, 0.3s;
-    -ms-transition: all, 0.3s;
-    -o-transition: all, 0.3s;
-    transition: all, 0.3s; }
-    .radio input[type="radio"] + label:hover {
-      color: #FF9800; }
-    .radio input[type="radio"] + label:before {
       content: '';
-      display: block;
-      width: 16px;
-      height: 16px;
-      border-radius: 50px;
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      background: #ed1c24;
       position: absolute;
       top: 4px;
-      left: 0;
-      border: 2px solid #666666; }
-    .radio input[type="radio"] + label:after {
+      left: 4px;
+      z-index: 1;
+      opacity: 0; }
+  .checkbox input:checked + label:after {
+    opacity: 1; }
+
+.radio input {
+  display: none; }
+  .radio input + label {
+    color: #333333;
+    padding: 0 0 0 25px;
+    position: relative;
+    font-size: 0.875rem; }
+    .radio input + label:hover {
+      color: #FF9800; }
+    .radio input + label:before {
       content: '';
-      display: block;
-      width: 12px;
-      height: 12px;
-      background: #666666;
-      border: 3px solid #fff;
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
       position: absolute;
-      top: 6px;
-      left: 2px;
-      border-radius: 50px;
-      opacity: 0;
-      -webkit-transition: all, 0.3s;
-      -khtml-transition: all, 0.3s;
-      -moz-transition: all, 0.3s;
-      -ms-transition: all, 0.3s;
-      -o-transition: all, 0.3s;
-      transition: all, 0.3s; }
-  .radio input[type="radio"]:checked + label:after {
+      top: 0;
+      left: 0; }
+    .radio input + label:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      background: #ed1c24;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      z-index: 1;
+      opacity: 0; }
+  .radio input:checked + label:after {
     opacity: 1; }
 
 .file input[type="file"] {
@@ -8562,6 +8437,10 @@ header {
     top: 20%;
     left: auto;
     max-width: 450px; }
+    @media (max-width: 575.98px) {
+      .breadcrumb-wrap .page-banner .banner-caption {
+        right: 15px;
+        left: 15px; } }
     .breadcrumb-wrap .page-banner .banner-caption .big {
       font-size: 2.5rem;
       line-height: 1.3;
@@ -8886,6 +8765,10 @@ footer {
     .small-title {
       margin-bottom: 15px; } }
 
+.page-title {
+  font-size: 1.625rem;
+  font-weight: bold; }
+
 .home-content {
   margin: 0 auto 30px; }
   @media (max-width: 767.98px) {
@@ -9020,6 +8903,9 @@ footer {
 .product-section {
   background: #fff;
   padding: 50px 0; }
+  @media (max-width: 767.98px) {
+    .product-section {
+      padding: 30px 0; } }
   .product-section .product-list .product {
     text-align: center;
     margin-bottom: 60px; }
@@ -9318,7 +9204,7 @@ footer {
     margin-bottom: 100px;
     text-align: center; }
   @media (min-width: 992px) {
-    .promotion-page .col-12:first-child {
+    .promotion-page .promotion-list .col-12:first-child {
       border-right: 1px solid #e6e6e6; } }
   .promotion-page .promotion-product {
     padding: 0px 30px; }
@@ -9679,5 +9565,513 @@ footer {
     .tragop-feature .feature .des {
       width: calc(100% - 60px);
       font-size: 0.8125rem; }
+
+hr.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(5, 5, 5, 0), rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0));
+  border: none; }
+
+.tragop-range {
+  padding: 0px 15px;
+  padding-top: 40px;
+  max-width: 580px;
+  margin: 0 auto 30px; }
+  .tragop-range .module-title {
+    text-align: center;
+    font-size: 0.9375rem;
+    color: #666666;
+    margin-bottom: 40px; }
+  .tragop-range .tragop-cycle {
+    margin-bottom: 15px; }
+    .tragop-range .tragop-cycle label {
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: #999999;
+      padding-right: 10px; }
+    .tragop-range .tragop-cycle select {
+      font-size: 0.875rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      min-width: 200px; }
+  .tragop-range .range-slider {
+    margin-bottom: 15px; }
+    .tragop-range .range-slider img {
+      width: auto; }
+  .tragop-range .range-result {
+    font-size: 0.875rem;
+    color: #999999; }
+    .tragop-range .range-result strong {
+      color: #333333;
+      margin-left: 10px; }
+
+.sidebar-category {
+  background: #e6e6e6;
+  margin: 40px 0; }
+  @media (max-width: 991.98px) {
+    .sidebar-category {
+      margin-bottom: 0; } }
+  .sidebar-category ul.cate-link {
+    padding: 5px 15px; }
+    .sidebar-category ul.cate-link > li {
+      border-bottom: 1px solid #d9d9d9;
+      position: relative; }
+      .sidebar-category ul.cate-link > li:last-child {
+        border-bottom: none; }
+      .sidebar-category ul.cate-link > li > a {
+        display: block;
+        font-size: 0.9375rem;
+        line-height: 20px;
+        padding: 10px 0;
+        color: #666666; }
+      .sidebar-category ul.cate-link > li .btn-showsub {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 1rem;
+        z-index: 1;
+        cursor: pointer; }
+        .sidebar-category ul.cate-link > li .btn-showsub:before {
+          content: '\f107'; }
+        .sidebar-category ul.cate-link > li .btn-showsub.active {
+          -webkit-transform: scale(1, -1);
+          -khtml-transform: scale(1, -1);
+          -moz-transform: scale(1, -1);
+          -ms-transform: scale(1, -1);
+          -o-transform: scale(1, -1);
+          transform: scale(1, -1); }
+      .sidebar-category ul.cate-link > li .sub {
+        display: none; }
+        .sidebar-category ul.cate-link > li .sub ul {
+          list-style-type: disc;
+          padding-left: 15px;
+          padding-bottom: 15px; }
+          .sidebar-category ul.cate-link > li .sub ul li a {
+            font-size: 0.875rem;
+            color: #666666; }
+          .sidebar-category ul.cate-link > li .sub ul li.active a {
+            color: #0054a6; }
+      .sidebar-category ul.cate-link > li.active > a {
+        font-weight: bold;
+        color: #333333; }
+      .sidebar-category ul.cate-link > li.active .btn-showsub {
+        -webkit-transform: scale(1, -1);
+        -khtml-transform: scale(1, -1);
+        -moz-transform: scale(1, -1);
+        -ms-transform: scale(1, -1);
+        -o-transform: scale(1, -1);
+        transform: scale(1, -1); }
+      .sidebar-category ul.cate-link > li.active .sub {
+        display: block; }
+
+.support-page {
+  margin: 40px 0; }
+  .support-page .support-tabs.s2 .tabs-list .tab-item .tab-link {
+    padding: 10px 20px; }
+  .support-page .support-tabs .tabs-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px; }
+    @media (max-width: 991.98px) {
+      .support-page .support-tabs .tabs-list {
+        display: none; } }
+    .support-page .support-tabs .tabs-list .tab-item + .tab-item {
+      margin-left: 10px; }
+    .support-page .support-tabs .tabs-list .tab-item .tab-link {
+      display: block;
+      line-height: 20px;
+      font-size: 0.9375rem;
+      color: #fff;
+      width: 240px;
+      padding: 5px 20px;
+      background: #0054a6;
+      text-align: center;
+      position: relative; }
+      .support-page .support-tabs .tabs-list .tab-item .tab-link:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom: none;
+        border-top-color: #ed1c24;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -khtml-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        opacity: 0; }
+    .support-page .support-tabs .tabs-list .tab-item.r-tabs-state-active .tab-link {
+      background: #ed1c24; }
+      .support-page .support-tabs .tabs-list .tab-item.r-tabs-state-active .tab-link:before {
+        opacity: 1; }
+  .support-page .support-tabs .r-tabs-accordion-title {
+    margin-top: 10px; }
+    .support-page .support-tabs .r-tabs-accordion-title a {
+      display: block;
+      line-height: 20px;
+      font-size: 1rem;
+      color: #fff;
+      padding: 10px 20px;
+      background: #0054a6;
+      text-align: center;
+      position: relative; }
+      @media (max-width: 767.98px) {
+        .support-page .support-tabs .r-tabs-accordion-title a {
+          text-align: left; } }
+    .support-page .support-tabs .r-tabs-accordion-title.r-tabs-state-active a {
+      background: #ed1c24; }
+  .support-page .support-tabs .tab-content {
+    padding: 0; }
+  .support-page .support-ads {
+    position: relative; }
+    .support-page .support-ads img {
+      width: 100%; }
+    .support-page .support-ads .caption {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0, 84, 166, 0.75);
+      padding: 30px;
+      max-width: 400px;
+      color: #fff; }
+      @media (max-width: 767.98px) {
+        .support-page .support-ads .caption {
+          padding: 15px;
+          position: static;
+          background: #0054a6; } }
+      .support-page .support-ads .caption .title {
+        font-size: 1.125rem;
+        margin-bottom: 10px; }
+        @media (max-width: 767.98px) {
+          .support-page .support-ads .caption .title {
+            font-size: 0.875rem; } }
+      .support-page .support-ads .caption .name {
+        font-size: 2.25rem;
+        line-height: 1.1;
+        margin-bottom: 15px; }
+        @media (max-width: 767.98px) {
+          .support-page .support-ads .caption .name {
+            font-size: 1.125rem; } }
+        .support-page .support-ads .caption .name strong {
+          font-weight: bold;
+          font-size: 2.875rem;
+          display: block; }
+          @media (max-width: 767.98px) {
+            .support-page .support-ads .caption .name strong {
+              font-size: 1.5rem; } }
+      .support-page .support-ads .caption .btn-download {
+        font-size: 1.125rem; }
+        @media (max-width: 767.98px) {
+          .support-page .support-ads .caption .btn-download {
+            font-size: 0.875rem; } }
+        .support-page .support-ads .caption .btn-download:before {
+          content: '\f1c1';
+          margin-right: 10px; }
+
+.faq-list .faq .faq-title {
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e6e6;
+  color: #0054a6;
+  cursor: pointer;
+  -webkit-transition: all, 0.5s;
+  -khtml-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -ms-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s; }
+  .faq-list .faq .faq-title:before {
+    content: '\f107';
+    margin-right: 10px; }
+  .faq-list .faq .faq-title:hover {
+    color: #ed1c24; }
+
+.faq-list .faq .faq-content {
+  display: none;
+  background: #f2f2f2;
+  padding: 20px 20px 5px; }
+
+.faq-list .faq.active .faq-title {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #333333; }
+  .faq-list .faq.active .faq-title:before {
+    content: '\f106'; }
+
+.pdf-list .pdf-file {
+  max-width: 140px;
+  margin: 0 auto 30px;
+  text-align: center;
+  display: block; }
+  .pdf-list .pdf-file .icon {
+    width: 140px;
+    height: 140px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid #e6e6e6;
+    -webkit-transition: all, 0.5s;
+    -khtml-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s; }
+    .pdf-list .pdf-file .icon img {
+      max-width: 100%;
+      max-height: 100%; }
+  .pdf-list .pdf-file .name {
+    font-size: 0.8125rem;
+    line-height: 1.3;
+    padding: 15px 0; }
+  .pdf-list .pdf-file:hover .icon {
+    box-shadow: 0px 10px 30px -15px rgba(5, 5, 5, 0.5); }
+
+.register-page {
+  padding: 50px 0; }
+  @media (max-width: 767.98px) {
+    .register-page {
+      padding: 30px 0; } }
+  .register-page .register-link {
+    text-align: center; }
+    .register-page .register-link a {
+      font-size: 0.9375rem;
+      color: #0054a6;
+      padding: 0px 10px;
+      position: relative;
+      display: inline-block; }
+      .register-page .register-link a + a:before {
+        content: '';
+        display: block;
+        width: 1px;
+        background: #cccccc;
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        left: 0; }
+      .register-page .register-link a:hover {
+        color: #ed1c24;
+        text-decoration: underline; }
+
+.register-form {
+  padding-top: 30px; }
+  .register-form .module-title {
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative; }
+    .register-form .module-title:after {
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      background: #e6e6e6; }
+    .register-form .module-title span {
+      display: inline-block;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: #666666;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+      padding: 0px 10px; }
+  .register-form .card-list .cre-card {
+    text-align: center;
+    margin-bottom: 30px; }
+    .register-form .card-list .cre-card input {
+      display: none; }
+      .register-form .card-list .cre-card input + label {
+        position: relative;
+        padding-bottom: 30px; }
+        .register-form .card-list .cre-card input + label:before {
+          content: '';
+          width: 18px;
+          height: 18px;
+          border-radius: 5px;
+          border: 1px solid #cccccc;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -khtml-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%); }
+        .register-form .card-list .cre-card input + label:after {
+          content: '';
+          width: 10px;
+          height: 10px;
+          border-radius: 3px;
+          background: #ed1c24;
+          position: absolute;
+          bottom: 4px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -khtml-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+          z-index: 1;
+          opacity: 0; }
+        .register-form .card-list .cre-card input + label .name {
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          font-weight: bold;
+          letter-spacing: 10px; }
+      .register-form .card-list .cre-card input:checked + label:before {
+        border-color: #999999; }
+      .register-form .card-list .cre-card input:checked + label:after {
+        opacity: 1; }
+  .register-form .register-step {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .register-form .register-step .step {
+      width: 25%;
+      background: #e6e6e6;
+      font-size: 0.9375rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #999999;
+      line-height: 20px;
+      padding: 15px 0;
+      text-align: center; }
+      .register-form .register-step .step.active {
+        background: #0054a6;
+        color: #fff; }
+  .register-form .form-wrap {
+    padding: 30px 0;
+    max-width: 920px;
+    margin: 0 auto;
+    line-height: 1.3; }
+  .register-form .form-note {
+    font-size: 0.875rem;
+    color: #999999;
+    padding: 5px 0;
+    display: block; }
+  .register-form .form-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px; }
+  .register-form .form-group {
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center; }
+    .register-form .form-group > label {
+      font-size: 0.875rem;
+      color: #666666;
+      width: 190px; }
+    .register-form .form-group .input {
+      width: calc(100% - 190px); }
+    .register-form .form-group input, .register-form .form-group select {
+      width: 100%;
+      font-size: 0.875rem;
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: 1px solid #e6e6e6;
+      color: #666666; }
+    .register-form .form-group select {
+      padding: 9px 15px; }
+    .register-form .form-group .form-sub {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      align-content: center; }
+      .register-form .form-group .form-sub > label {
+        font-size: 0.875rem;
+        color: #333333;
+        width: 80px; }
+      .register-form .form-group .form-sub input, .register-form .form-group .form-sub select {
+        display: block;
+        width: calc(100% - 80px); }
+    .register-form .form-group .card-name {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      border-radius: 5px;
+      border: 1px solid #e6e6e6;
+      overflow: hidden; }
+      .register-form .form-group .card-name input {
+        width: 5.263%;
+        border: none;
+        border-radius: 0; }
+        .register-form .form-group .card-name input + input {
+          border-left: 1px solid #e6e6e6; }
+    .register-form .form-group .gender ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .register-form .form-group .gender ul li {
+        width: 100px; }
+    .register-form .form-group .birthday ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px solid #e6e6e6; }
+      .register-form .form-group .birthday ul li {
+        width: 30%;
+        position: relative; }
+        .register-form .form-group .birthday ul li:after {
+          content: '\f073';
+          opacity: 0.8;
+          position: absolute;
+          top: 9px;
+          right: 10px; }
+        .register-form .form-group .birthday ul li + li {
+          border-left: 1px solid #e6e6e6; }
+        .register-form .form-group .birthday ul li:last-child {
+          width: 40%; }
+        .register-form .form-group .birthday ul li input {
+          border: none;
+          border-radius: 0; }
 
 /*# sourceMappingURL=main.css.map */
