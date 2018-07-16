@@ -7,10 +7,7 @@ section.breadcrumb-wrap
 						span Thẻ
 				li
 					a(href="#!")
-						span Hỗ trợ
-				li
-					a(href="#!")
-						span Biểu phí
+						span Đăng ký thẻ
 section.register-page
 	.container
 		h1.home-title.text-blue.text-center.mb-2 Đăng ký thẻ
@@ -19,7 +16,7 @@ section.register-page
 				p Đăng ký thẻ Quốc tế Visa Vietbank để nhận ưu đãi lớn từ VietBank
 		.register-link
 			a(href="#!") Đăng ký nhanh
-			a(href="#!") Đăng ký đầy đủ
+			a.active(href="#!") Đăng ký đầy đủ
 		.register-form
 			.module-title 
 				span Chọn loại thẻ
@@ -40,12 +37,53 @@ section.register-page
 									img(src="img/dangky/c2.png", alt="")
 								.name platinum
 					.col-12.col-md-4
-						.cre-card
+						.cre-card(data-toggle="modal" data-target="#choosecard")
 							input#c3(type="radio", name="card")
 							label(for="c3")
 								.img
 									img(src="img/dangky/c3.png", alt="")
 								.name My style
+
+			#choosecard.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+				.modal-dialog.modal-card(role='document')
+					.modal-content
+						.modal-header
+							.close(data-dismiss='modal', aria-label='Close')
+								.material-icons close
+						.modal-body
+							.module-title 
+								span Chọn loại thẻ
+							.card-list
+								.row
+									.col-12.col-md-3
+										.cre-card
+											input#c21(type="radio", name="card2" checked)
+											label(for="c21")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c22(type="radio", name="card2" checked)
+											label(for="c22")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c23(type="radio", name="card2" checked)
+											label(for="c23")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+									.col-12.col-md-3
+										.cre-card
+											input#c24(type="radio", name="card2" checked)
+											label(for="c24")
+												.img
+													img(src="img/dangky/c3.png", alt="")
+												//- .name luxury
+							
 			.register-step
 				.step.active 01. Thông tin khách hàng
 				.step 02. Thông tin tài chính
@@ -62,7 +100,7 @@ section.register-page
 					label Họ và tên:
 					.input
 						input(type="text" placeholder="Tên trên CMND/CCCD/Giấy khai sinh")
-				.form-group
+				.form-group.align-items-start
 					label Họ và tên:
 					.input
 						.card-name
@@ -101,8 +139,8 @@ section.register-page
 					label Ngày sinh:
 					.input
 						.form-row
-							.col-12.col-lg-6
-								.birthday
+							.col-12.col-md-6
+								.birthday.mb-sm-10
 									ul
 										li
 											input(type="text" placeholder="Ngày")
@@ -110,7 +148,7 @@ section.register-page
 											input(type="text" placeholder="Tháng")
 										li
 											input(type="text" placeholder="Năm")
-							.col-12.col-lg-6
+							.col-12.col-md-6
 								.form-sub
 									label Quốc tịch:
 									select
@@ -123,8 +161,8 @@ section.register-page
 					label Ngày cấp:
 					.input
 						.form-row
-							.col-12.col-lg-6
-								.birthday
+							.col-12.col-md-6
+								.birthday.mb-sm-10
 									ul
 										li
 											input(type="text" placeholder="Ngày")
@@ -132,7 +170,7 @@ section.register-page
 											input(type="text" placeholder="Tháng")
 										li
 											input(type="text" placeholder="Năm")
-							.col-12.col-lg-6
+							.col-12.col-md-6
 								.form-sub
 									label Nơi cấp:
 									input(type="text")
@@ -140,9 +178,9 @@ section.register-page
 					label Số ĐTDĐ:
 					.input
 						.form-row
-							.col-12.col-lg-6
-								input(type="text")
-							.col-12.col-lg-6
+							.col-12.col-md-6
+								input.mb-sm-10(type="text")
+							.col-12.col-md-6
 								.form-sub
 									label Số ĐT bàn:
 									input(type="text")
@@ -155,15 +193,14 @@ section.register-page
 					.input
 						.form-row
 							.col-12
-								.form-sub
-									input(type="text" placeholder="Số nhà tên đường")
+								input.mb-10(type="text" placeholder="Số nhà tên đường")
 							.col-12.col-md-6.col-lg-4
-								.form-sub
+								.form-sub.mb-md-10
 									label Phường/Xã:
 									select
 										option
 							.col-12.col-md-6.col-lg-4
-								.form-sub
+								.form-sub.mb-md-10
 									label Tỉnh/TP:
 									select
 										option
@@ -172,61 +209,63 @@ section.register-page
 									label Quận/Huyện:
 									select
 										option
-				.form-group
+				.form-group.align-items-start
 					label Địa chỉ hiện tại:
 					.input
 						.form-row
 							.col-12
-								input(type="text" placeholder="Số nhà tên đường")
+								input.mb-10(type="text" placeholder="Số nhà tên đường")
 							.col-12.col-md-6.col-lg-4
-								.form-sub
+								.form-sub.mb-10
 									label Phường/Xã:
 									select
 										option
 							.col-12.col-md-6.col-lg-4
-								.form-sub
+								.form-sub.mb-10
 									label Tỉnh/TP:
 									select
 										option
 							.col-12.col-md-6.col-lg-4
-								.form-sub
+								.form-sub.mb-10
 									label Quận/Huyện:
 									select
 										option
 							.col-12.col-md-12.col-lg-3
 								.form-sub
-									label Hình thức sỡ hữu:
+									label.w-100.mt-10.mb-10 Hình thức sỡ hữu:
 							.col-12.col-md-12.col-lg-9
-								.form-row
+								.form-row.align-items-center
 									.col-12.col-md-3
-										.radio
+										.radio.mb-10
 											input#n1(type="radio", name="nha")
 											label(for="n1") Nhà riêng
 									.col-12.col-md-3
-										.radio
+										.radio.mb-10
 											input#n2(type="radio", name="nha")
 											label(for="n2") Nhà bố mẹ
 									.col-12.col-md-3
-										.radio
+										.radio.mb-10
 											input#n3(type="radio", name="nha")
 											label(for="n3") Nhà thuê
 									.col-12.col-md-3
-										.radio
+										input.mb-10(type="text" placeholder="VNĐ/Tháng")
+									.col-12.col-md-3
+										.radio.mb-10
 											input#n4(type="radio", name="nha")
 											label(for="n4") Khác
 									.col-12.col-md-9
-										input(type="text")
-									.col-12
-										.form-sub
-											label Thời gian cư trú:
-											.date-live
-												ul
-													li
-														input(type="text")
-														|Tháng
-													li
-														input(type="text")
-														|Năm
+										input.mb-10(type="text")
+							.col-12
+								.form-sub
+									label.w-auto Thời gian cư trú:
+									.date-live
+										ul
+											li
+												input(type="text")
+												|Tháng
+											li
+												input(type="text")
+												|Năm
 				.form-group
 					label Tình trạng hôn nhân:
 					.input
@@ -258,24 +297,22 @@ section.register-page
 								li.radio
 									input#h4(type="radio", name="hoc")
 									label(for="h4") Sau ĐH
-				.form-group
+				.form-group.align-items-start
 					label Thông tin xác thực:
 					.input
 						.form-row
 							.col-12.col-md-7
-								.form-sub
+								.form-sub.s2.mb-10
 									label Tên trường học đầu tiên:
 										.des (thông tin xác thực chủ thẻ)
 									input(type="text")
 							.col-12.col-md-5
-								.form-sub
+								.form-sub.s3.mb-10
 									label Màu yêu thích
 									input(type="text")
 							.col-12
-								.form-sub
+								.form-sub.s2
 									label Khác
 									input(type="text")
 				.frm-btn
-					input(type="submit", value="Đăng ký")
-
-		
+					input.btn-primary(type="submit", value="Đăng ký")

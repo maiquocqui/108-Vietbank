@@ -6861,7 +6861,7 @@ main.big {
   color: #fabf00; }
 
 .text-blue {
-  color: #0054a6; }
+  color: #0054a6 !important; }
 
 .text-silver {
   color: #999999; }
@@ -7638,7 +7638,7 @@ input[type="reset"] {
     position: relative;
     font-size: 0.875rem; }
     .checkbox input + label:hover {
-      color: #FF9800; }
+      color: #0054a6; }
     .checkbox input + label:before {
       content: '';
       width: 18px;
@@ -7670,7 +7670,7 @@ input[type="reset"] {
     position: relative;
     font-size: 0.875rem; }
     .radio input + label:hover {
-      color: #FF9800; }
+      color: #0054a6; }
     .radio input + label:before {
       content: '';
       width: 18px;
@@ -7708,82 +7708,34 @@ body.modal-open {
 
 .modal {
   padding-right: 0 !important; }
-  .modal .modal-dialog {
+  .modal .modal-dialog.modal-card {
     margin: 100px auto;
-    max-width: 1000px;
-    margin: 100px auto;
-    max-width: 1000px; }
-    .modal .modal-dialog .modal-content {
-      border-radius: 0;
+    max-width: 1110px; }
+    @media (max-width: 1199.98px) {
+      .modal .modal-dialog.modal-card {
+        margin: 80px auto; } }
+    @media (max-width: 767.98px) {
+      .modal .modal-dialog.modal-card {
+        margin: 0px auto; } }
+    .modal .modal-dialog.modal-card .modal-content {
       border: none;
-      box-shadow: none; }
-    @media (max-width: 991.98px) {
-      .modal .modal-dialog {
-        margin: 60px auto; } }
-    @media (max-width: 575.98px) {
-      .modal .modal-dialog {
-        margin: 0px; } }
-    .modal .modal-dialog .modal-content {
       border-radius: 0;
-      border: none;
-      box-shadow: none; }
-    .modal .modal-dialog.modal-order {
-      background: #333333;
-      max-width: 650px;
       position: relative; }
-      @media (max-width: 575.98px) {
-        .modal .modal-dialog.modal-order {
-          padding: 0px 30px;
-          max-width: 100%;
-          width: 100%; } }
-      .modal .modal-dialog.modal-order .modal-content {
-        background: none;
+      .modal .modal-dialog.modal-card .modal-content .modal-header {
         padding: 0;
-        position: static; }
-        .modal .modal-dialog.modal-order .modal-content .modal-header {
-          border: none;
+        margin: 0;
+        border: none; }
+        .modal .modal-dialog.modal-card .modal-content .modal-header .close {
           padding: 0;
-          margin: 0; }
-          .modal .modal-dialog.modal-order .modal-content .modal-header .close {
-            color: #fff;
-            text-shadow: none;
-            opacity: 1;
-            line-height: 1;
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            z-index: 10;
-            padding: 0;
-            margin: 0; }
-            .modal .modal-dialog.modal-order .modal-content .modal-header .close .lnr {
-              line-height: 1; }
-            @media (max-width: 575.98px) {
-              .modal .modal-dialog.modal-order .modal-content .modal-header .close {
-                top: 15px;
-                right: 15px; } }
-        .modal .modal-dialog.modal-order .modal-content .modal-body {
-          padding: 40px 0; }
-      .modal .modal-dialog.modal-order .order-form {
-        max-width: 500px;
-        margin: 0 auto; }
-        .modal .modal-dialog.modal-order .order-form .module-title {
-          color: #fff;
-          font-size: 1rem;
-          margin-bottom: 10px; }
-        .modal .modal-dialog.modal-order .order-form .form-wrap .form-group label {
-          display: block; }
-        .modal .modal-dialog.modal-order .order-form .frm-btn input[type="submit"] {
-          font-weight: 500; }
-      @media (max-width: 767.98px) {
-        .modal .modal-dialog.modal-order .inner-content {
-          padding: 40px 0px !important; } }
-      .modal .modal-dialog.modal-order .thankyou-content img {
-        height: 100px;
-        margin-bottom: 20px; }
-      .modal .modal-dialog.modal-order .thankyou-content h3 {
-        font-size: 1.5rem !important; }
-      .modal .modal-dialog.modal-order .thankyou-content h4 {
-        font-size: 0.875rem !important; }
+          margin: 0;
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          z-index: 5; }
+      .modal .modal-dialog.modal-card .modal-content .modal-body {
+        padding: 35px 0 0; }
+        .modal .modal-dialog.modal-card .modal-content .modal-body .card-list {
+          padding: 0px 50px; }
 
 body {
   padding-top: 110px; }
@@ -9872,7 +9824,7 @@ hr.line {
         top: 2px;
         bottom: 2px;
         left: 0; }
-      .register-page .register-link a:hover {
+      .register-page .register-link a:hover, .register-page .register-link a.active {
         color: #ed1c24;
         text-decoration: underline; }
 
@@ -9945,6 +9897,9 @@ hr.line {
           font-size: 1.5rem;
           font-weight: bold;
           letter-spacing: 10px; }
+          @media (max-width: 991.98px) {
+            .register-form .card-list .cre-card input + label .name {
+              font-size: 1.125rem; } }
       .register-form .card-list .cre-card input:checked + label:before {
         border-color: #999999; }
       .register-form .card-list .cre-card input:checked + label:after {
@@ -9965,9 +9920,23 @@ hr.line {
       line-height: 20px;
       padding: 15px 0;
       text-align: center; }
-      .register-form .register-step .step.active {
+      @media (max-width: 1199.98px) {
+        .register-form .register-step .step {
+          font-size: 0.8125rem;
+          padding: 10px 0; } }
+      @media (max-width: 991.98px) {
+        .register-form .register-step .step {
+          font-size: 0.75rem; } }
+      @media (max-width: 767.98px) {
+        .register-form .register-step .step {
+          display: none;
+          width: 100%; } }
+      .register-form .register-step .step.active, .register-form .register-step .step.finish {
         background: #0054a6;
         color: #fff; }
+      @media (max-width: 767.98px) {
+        .register-form .register-step .step.active {
+          display: block; } }
   .register-form .form-wrap {
     padding: 30px 0;
     max-width: 920px;
@@ -9983,6 +9952,18 @@ hr.line {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px; }
+  .register-form .mt-10 {
+    margin-top: 10px; }
+  .register-form .mb-10 {
+    margin-bottom: 10px; }
+  @media (max-width: 991.98px) {
+    .register-form .mb-md-10 {
+      margin-bottom: 10px; } }
+  @media (max-width: 767.98px) {
+    .register-form .mb-sm-10 {
+      margin-bottom: 10px; } }
+  .register-form .pb-10 {
+    padding-bottom: 10px; }
   .register-form .form-group {
     margin-bottom: 10px;
     display: -webkit-box;
@@ -9997,8 +9978,19 @@ hr.line {
       font-size: 0.875rem;
       color: #666666;
       width: 190px; }
+      @media (max-width: 991.98px) {
+        .register-form .form-group > label {
+          width: 100%;
+          padding: 10px 0; } }
+    .register-form .form-group label .des {
+      color: #999999; }
+    .register-form .form-group.align-items-start > label {
+      padding: 10px 0; }
     .register-form .form-group .input {
       width: calc(100% - 190px); }
+      @media (max-width: 991.98px) {
+        .register-form .form-group .input {
+          width: 100%; } }
     .register-form .form-group input, .register-form .form-group select {
       width: 100%;
       font-size: 0.875rem;
@@ -10016,13 +10008,44 @@ hr.line {
       display: flex;
       align-items: center;
       align-content: center; }
+      @media (max-width: 767.98px) {
+        .register-form .form-group .form-sub {
+          flex-wrap: wrap; } }
       .register-form .form-group .form-sub > label {
         font-size: 0.875rem;
         color: #333333;
-        width: 80px; }
+        width: 90px; }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub > label {
+            width: 100%;
+            padding: 10px 0;
+            color: #666666; } }
       .register-form .form-group .form-sub input, .register-form .form-group .form-sub select {
         display: block;
-        width: calc(100% - 80px); }
+        width: calc(100% - 90px); }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub input, .register-form .form-group .form-sub select {
+            width: 100%; } }
+      .register-form .form-group .form-sub.s2 > label {
+        width: 180px; }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub.s2 > label {
+            width: 100%; } }
+      .register-form .form-group .form-sub.s2 input, .register-form .form-group .form-sub.s2 select {
+        width: calc(100% - 180px); }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub.s2 input, .register-form .form-group .form-sub.s2 select {
+            width: 100%; } }
+      .register-form .form-group .form-sub.s3 > label {
+        width: 100px; }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub.s3 > label {
+            width: 100%; } }
+      .register-form .form-group .form-sub.s3 input, .register-form .form-group .form-sub.s3 select {
+        width: calc(100% - 100px); }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub.s3 input, .register-form .form-group .form-sub.s3 select {
+            width: 100%; } }
     .register-form .form-group .card-name {
       display: -webkit-box;
       display: -webkit-flex;
@@ -10073,5 +10096,100 @@ hr.line {
         .register-form .form-group .birthday ul li input {
           border: none;
           border-radius: 0; }
+    .register-form .form-group .date-live {
+      padding-left: 20px; }
+      @media (max-width: 767.98px) {
+        .register-form .form-group .date-live {
+          padding-left: 0; } }
+      .register-form .form-group .date-live ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        align-content: center; }
+        .register-form .form-group .date-live ul li {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          font-size: 0.875rem;
+          padding-right: 20px; }
+          .register-form .form-group .date-live ul li input {
+            width: 60px;
+            margin-right: 10px; }
+    .register-form .form-group .mary-status ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center; }
+      .register-form .form-group .mary-status ul li {
+        width: 25%; }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .mary-status ul li {
+            width: 100%; } }
+    .register-form .form-group .radio.has-input {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      align-content: center; }
+      .register-form .form-group .radio.has-input label {
+        width: 70px; }
+      .register-form .form-group .radio.has-input .input-text {
+        display: block;
+        flex: auto;
+        width: calc(100% - 70px); }
+      .register-form .form-group .radio.has-input.s2 label {
+        width: 130px; }
+      .register-form .form-group .radio.has-input.s2 .input-text {
+        width: calc(100% - 130px); }
+  .register-form .frm-btn {
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end; }
+  .register-form .btn-secondary {
+    display: inline-block;
+    padding: 0px 40px;
+    line-height: 44px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ed1c24;
+    background: none;
+    border-radius: 50px;
+    border: 1px solid #ed1c24; }
+    .register-form .btn-secondary:hover {
+      background: #ed1c24; }
+  .register-form .btn-primary {
+    display: inline-block;
+    padding: 0px 40px;
+    line-height: 46px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    background: #ed1c24;
+    border-radius: 50px;
+    border: none; }
+    .register-form .btn-primary:hover {
+      background: #fabf00;
+      color: #333333; }
 
 /*# sourceMappingURL=main.css.map */
