@@ -111,10 +111,10 @@ section.register-page
 					.input
 						.mary-status
 							ul
-								li.radio
+								li.radio.mb-sm-10
 									input#r1(type="radio", name="radio1")
 									label(for="r1") Toàn bộ dư nợ
-								li.radio
+								li.radio.mb-sm-10
 									input#r2(type="radio", name="radio1")
 									label(for="r2") Tối thiểu
 				.form-title Đăng ký thẻ phụ:
@@ -123,13 +123,13 @@ section.register-page
 					.input
 						.mary-status
 							ul
-								li.radio
+								li.radio.mb-sm-10
 									input#r21(type="radio", name="radio2")
 									label(for="r21") Bố / Mẹ
-								li.radio
+								li.radio.mb-sm-10
 									input#r22(type="radio", name="radio2")
 									label(for="r22") Anh / Chị / Em
-								li.radio
+								li.radio.mb-sm-10
 									input#r23(type="radio", name="radio2")
 									label(for="r23") Khác
 				.form-group
@@ -268,24 +268,27 @@ section.register-page
 					label.pb-10(for="") Địa chỉ nhận thẻ:
 					.input.w-100
 						.form-row.align-items-center
-							.col-12.col-md-2
+							.col-12.col-md-4.col-lg-2.mb-md-10
 								.radio.mb-10
 									input#r41(type="radio", name="radio4")
 									label(for="r41") Địa chỉ hộ khẩu
-							.col-12.col-md-2
+							.col-12.col-md-4.col-lg-2.mb-md-10
 								.radio.mb-10
 									input#r42(type="radio", name="radio4")
 									label(for="r42") Địa chỉ hiện tại
-							.col-12.col-md-2
+							.col-12.col-md-4.col-lg-2.mb-md-10
 								.radio.mb-10
 									input#r43(type="radio", name="radio4")
 									label(for="r43") Địa chỉ làm việc
-							.col-12.col-md-6
+							.col-12.col-lg-6
 								.radio.has-input.s2.mb-10
 									input#r44(type="radio", name="radio4")
 									label(for="r44") TTKD Vietbank:
 									select.input-text
 										option
+				.form-group.align-items-start
+					.input.w-100
+						.form-row
 							.col-12.col-md-3
 								.radio.mb-10
 									input#r45(type="radio", name="radio4")
@@ -321,16 +324,95 @@ section.register-page
 								li.radio.mb-10
 									input#r52(type="radio", name="radio5")
 									label(for="r52") Địa chỉ hiện tại
-								li.radio
+								li.radio.mb-10
 									input#r53(type="radio", name="radio5")
 									label(for="r53") Địa chỉ làm việc
 				.form-note.text-black.w-100.mb-5 Hình thức nhận thông tin ưu đãi của Vietbank:
 					br
 					|Tôi đồng ý nhận các thông tin ưu đãi, các chương trình khuyến mãi của Vietbank qua Email, SMS và các hình thức khác.
-				.register-table
+				.register-table.mb-5
 					table
 						tr
 							th
+							th Thẻ chính
+							th Thẻ phụ
+						tr
+							td Là công dân Hoa Kỳ hoặc đối tượng cư trú tại Hoa Kỳ
+							td
+								.checkbox
+									input#cb1(type="checkbox", name="checkbox")
+									label(for="cb1") yes
+							td
+								.checkbox
+									input#cb2(type="checkbox", name="checkbox")
+									label(for="cb2") yes
+						tr
+							td Có nơi sinh tại Hoa Kỳ
+							td
+								.checkbox
+									input#cb3(type="checkbox", name="checkbox")
+									label(for="cb3") yes
+							td
+								.checkbox
+									input#cb4(type="checkbox", name="checkbox")
+									label(for="cb4") yes
+						tr
+							td Có địa chỉ gửi thư hoặc nơi cư trú hiện hành ở Hoa Kỳ (bao gồm hộp nhận thư ở bưu điện Hoa Kỳ);
+							td
+								.checkbox
+									input#cb5(type="checkbox", name="checkbox")
+									label(for="cb5") yes
+							td
+								.checkbox
+									input#cb6(type="checkbox", name="checkbox")
+									label(for="cb6") yes
+						tr
+							td Có số điện thoại liên lạc tại Hoa Kỳ
+							td
+								.checkbox
+									input#cb7(type="checkbox", name="checkbox")
+									label(for="cb7") yes
+							td
+								.checkbox
+									input#cb8(type="checkbox", name="checkbox")
+									label(for="cb8") yes
+						tr
+							td Có chỉ định định kỳ chuyển khoản vào một tài khoản mở tại Hoa Kỳ hay định kỳ nhận tiền từ một tài khoản mở tại Hoa Kỳ;
+							td
+								.checkbox
+									input#cb9(type="checkbox", name="checkbox")
+									label(for="cb9") yes
+							td
+								.checkbox
+									input#cb10(type="checkbox", name="checkbox")
+									label(for="cb10") yes
+						tr
+							td Giấy ủy quyền hoặc ủy quyền ký tên hiện đang có hiệu lực cấp cho người có địa chỉ ở Hoa Kỳ;
+							td
+								.checkbox
+									input#cb11(type="checkbox", name="checkbox")
+									label(for="cb11") yes
+							td
+								.checkbox
+									input#cb1(type="checkbox", name="checkbox")
+									label(for="cb1") yes
+						tr
+							td Có địa chỉ “nhờ chuyển thư” hay địa chỉ “giữ thư” (địa chỉ nhận thư tại Hoa Kỳ) mà địa chỉ đó là địa chỉ duy nhất đối với khách hàng tại Hoa Kỳ.
+							td
+								.checkbox
+									input#cb12(type="checkbox", name="checkbox")
+									label(for="cb12") yes
+							td
+								.checkbox
+									input#cb13(type="checkbox", name="checkbox")
+									label(for="cb13") yes
+				.form-title Thông tin lưu ý
+				.content
+					ul
+						li Tôi/Chúng tôi xác nhận chi tiết các thông tin nêu trên là chính xác và đầy đủ. Tôi/Chúng tôi đồng ý để Vietbank xác thực các thông tin nêu trên ừ bất kỳ nguồn thông tin nào mà Vietbank cho là phù hợp. 
+						li Trường hợp Chủ Thẻ được Vietbank cấp tín dụng dưới bất kỳ hình thức nào (tại bất kỳ thời điểm nào) và có bảo đảm thì nghĩa vụ bảo đảm của tài sản đó đương nhiên bao gồm cả nghĩa vụ thanh toán của Chủ Thẻ phát sinh trong quá trình sử dụng thẻ. Việc Chủ Thẻ bị chấm dứt cấp tín dụng tại Vietbank vì bất cứ lý do gì có thể dẫn đến việc chấm dứt sử dụng thẻ và/hoặc xử lý tài sản bảo đảm theo quy định của Vietbank.
+						li Bằng việc ký vào Giấy đề nghị này, Tôi/Chúng tôi đã đọc và đồng ý việc sử dụng và sẽ tuân thủ nội dung của các Điều khoản và điều kiện phát hành và sử dụng thẻ tín dụng, cùng với Giấy đề nghị này sẽ tạo nên một hợp đồng ràng buộc về mặt pháp lý giữa Tôi/Chúng tôi với Vietbank và được lưu giữ bởi Vietbank. Trường hợp không được Vietbank cung ứng dịch vụ, Tôi/Chúng tôi đồng ý không yêu cầu nhận lại hồ sơ đã cung cấp.
+						li Điều khoản và điều kiện các nội dung điều chỉnh, bổ sung của việc phát hành và sử dụng thẻ tín dụng sẽ được công bố tại website chính thức của Vietbank (www.vietbank.com.vn) hoặc tại các điểm giao dịch của Vietbank. 
 				.frm-btn
 					a.btn-secondary.mr-2(href="#!") Trở về
 					input.btn-primary(type="submit", value="Đăng ký")

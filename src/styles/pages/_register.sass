@@ -288,6 +288,33 @@
 						width: 130px
 					.input-text
 						width: calc(100% - 130px)
+	.register-table
+		table
+			th, td
+				+fs(14rem)
+				padding: 5px 5px
+				&:nth-child(2), &:nth-child(3)
+					width: 100px
+					text-align: center
+					+media-breakpoint-down(sm)
+						width: 80px
+			th
+				font-weight: normal
+				background: darken($white,10%)
+			tr
+				&:nth-child(odd)
+					td
+						background: darken($white,5%)
+			.checkbox
+				label
+					display: block
+					margin: 0 auto
+					+fs(0)
+					width: 18px
+					height: 18px
+					padding-left: 18px
+	.content
+		+fs(14rem)
 	.frm-btn
 		padding-top: 20px
 		+flexbox
@@ -307,6 +334,7 @@
 		border: 1px solid $red
 		&:hover
 			background: $red
+			color: $white
 	.btn-primary
 		display: inline-block
 		padding: 0px 40px
@@ -318,6 +346,34 @@
 		background: $red
 		+bor-rad(50px)
 		border: none
+		+transition(all,0.5s)
 		&:hover
 			background: $yellow
 			color: $main
+.register-finish
+	padding: 60px 0
+	.title
+		+fs(36rem)
+		margin-bottom: 30px
+		color: darken($white,60%)
+	.content
+		+fs(14rem)
+		margin-bottom: 40px
+	.btn-wrap
+		a
+			display: inline-block
+			text-align: center
+			width: 160px
+			line-height: 46px
+			+fs(14rem)
+			text-transform: uppercase
+			color: $white
+			+bor-rad(50px)
+			font-weight: bold
+			&:hover
+				filter: brightness(120%)
+		.btn-print
+			background: $blue
+			margin-right: 10px
+		.btn-home
+			background: $red

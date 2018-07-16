@@ -10154,6 +10154,29 @@ hr.line {
         width: 130px; }
       .register-form .form-group .radio.has-input.s2 .input-text {
         width: calc(100% - 130px); }
+  .register-form .register-table table th, .register-form .register-table table td {
+    font-size: 0.875rem;
+    padding: 5px 5px; }
+    .register-form .register-table table th:nth-child(2), .register-form .register-table table th:nth-child(3), .register-form .register-table table td:nth-child(2), .register-form .register-table table td:nth-child(3) {
+      width: 100px;
+      text-align: center; }
+      @media (max-width: 767.98px) {
+        .register-form .register-table table th:nth-child(2), .register-form .register-table table th:nth-child(3), .register-form .register-table table td:nth-child(2), .register-form .register-table table td:nth-child(3) {
+          width: 80px; } }
+  .register-form .register-table table th {
+    font-weight: normal;
+    background: #e6e6e6; }
+  .register-form .register-table table tr:nth-child(odd) td {
+    background: #f2f2f2; }
+  .register-form .register-table table .checkbox label {
+    display: block;
+    margin: 0 auto;
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    padding-left: 18px; }
+  .register-form .content {
+    font-size: 0.875rem; }
   .register-form .frm-btn {
     padding-top: 20px;
     display: -webkit-box;
@@ -10176,7 +10199,8 @@ hr.line {
     border-radius: 50px;
     border: 1px solid #ed1c24; }
     .register-form .btn-secondary:hover {
-      background: #ed1c24; }
+      background: #ed1c24;
+      color: #fff; }
   .register-form .btn-primary {
     display: inline-block;
     padding: 0px 40px;
@@ -10187,9 +10211,42 @@ hr.line {
     color: #fff;
     background: #ed1c24;
     border-radius: 50px;
-    border: none; }
+    border: none;
+    -webkit-transition: all, 0.5s;
+    -khtml-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s; }
     .register-form .btn-primary:hover {
       background: #fabf00;
       color: #333333; }
+
+.register-finish {
+  padding: 60px 0; }
+  .register-finish .title {
+    font-size: 2.25rem;
+    margin-bottom: 30px;
+    color: #666666; }
+  .register-finish .content {
+    font-size: 0.875rem;
+    margin-bottom: 40px; }
+  .register-finish .btn-wrap a {
+    display: inline-block;
+    text-align: center;
+    width: 160px;
+    line-height: 46px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: bold; }
+    .register-finish .btn-wrap a:hover {
+      filter: brightness(120%); }
+  .register-finish .btn-wrap .btn-print {
+    background: #0054a6;
+    margin-right: 10px; }
+  .register-finish .btn-wrap .btn-home {
+    background: #ed1c24; }
 
 /*# sourceMappingURL=main.css.map */
