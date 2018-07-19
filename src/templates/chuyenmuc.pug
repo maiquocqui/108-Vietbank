@@ -2,15 +2,17 @@ extends _layout/layout
 
 block variables
 	- var title = 'Techzones'
-	- var bodyclass = 'product-detail-page'
+	- var bodyclass = ''
 
 block css
 
 block body 
 	include _layout/mainheader
-	include _layout/header3
+	include _layout/header2
+	+mobileheader("Thiết bị đeo tay")
 	//- include _layout/banner
 	main
 		//- .container
-		include _layout/ct-sanphamct
-	include _layout/footer
+		include _layout/ct-chuyenmuc
+		
+	//- include _layout/footer
