@@ -1,0 +1,89 @@
+.bancan-step
+	background-color: #e5e5e5
+	padding: 10px 0
+	nav
+		a
+			+fs(14rem)
+			font-weight: 500
+			line-height: 1.4
+			color: $black
+			+pos(rel,null)
+			+transition(all 0.3s)
+			+media-breakpoint-down(sm)
+				display: block
+				line-height: 1.5
+				padding: 5px 0
+			+media-breakpoint-up(md)
+				&:after
+					content: '/'
+					+fs(17rem)
+					color: #b2b2b2
+					padding: 0 10px
+				&:last-child
+					&:after
+						display: none
+			&:hover, &:focus
+				color: $link
+				font-weight: 500
+
+.yn-detail
+	padding: 2rem 0
+	&.even
+		background: $bg2
+	.title
+		+fs(22rem)
+		font-weight: 700
+		color: $black
+		padding: 0
+		line-height: 1.5
+		margin: 0 0 15px
+		border-bottom: 1px solid darken($white, 15%)
+	.content
+		+fs(15rem)
+		font-weight: 500
+		line-height: 1.5
+		margin: 0 0 15px
+		color: $white-black
+	.tag
+		padding: 0
+		display: block
+		text-align: left
+		margin: 0 0 15px
+		.tagi
+			+fs(14rem)
+			font-weight: 600
+			height: 35px
+			line-height: 35px
+			padding: 0 15px
+			color: $black
+			display: inline-block
+			background-color: darken($white, 15%)
+			margin-right: 1rem
+			margin-bottom: 0.75rem
+			+bor-rad(5px)
+			+media-breakpoint-up(lg)
+				margin-bottom: 0
+			.fa
+				margin-right: 0.5rem
+	a.btn-links
+		display: inline-block
+		height: 35px
+		line-height: 35px
+		text-align: center
+		background-color: $link
+		color: $white
+		text-decoration: none
+		padding: 0 1.5rem
+		+bor-rad(35px)
+		margin: 0 0 10px
+		.fa
+			margin-right: .5rem
+			color: $white
+		span
+			color: $white
+			font-weight: 500
+	.note
+		+fs(12rem)
+		font-weight: 500
+		line-height: 1.4
+		color: $white-black

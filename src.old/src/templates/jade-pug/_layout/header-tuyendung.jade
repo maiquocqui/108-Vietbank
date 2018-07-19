@@ -1,0 +1,263 @@
+header
+	section.top
+		.container
+			.row
+				.col-xs-12.col-sm-12.col-md-12.col-lg-5.col-xl-6
+					section.top-menu
+						ul
+							li
+								a(href="/", title="Khách hàng cá nhân") CÁ NHÂN
+							li
+								a(href="#", title="Khách hàng cá nhân") DOANH NGHIỆP
+							li.active
+								a(href="gioithieu.html", title="Khách hàng cá nhân") VỀ VIETBANK
+				.col-xs-12.col-sm-12.col-md-12.col-lg-7.col-xl-6
+					section.top-misc
+						.top-contact
+							.location
+								i.fa.fa-map-marker 
+								p
+									a(href="mangluoi.html") ATM &amp; Chi nhánh
+							.phone
+								i.fa.fa-phone
+								p Hotline: 
+									strong 
+										a(data-tel="+8419001122") 1800 1122
+						.search
+							.search-wrap
+								input(type="text", placeholder="")
+								span.btn-search 
+									i.fa.fa-search
+						.language
+							.dropdown
+								a#dropdownMenuLink.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									| ENGLISH
+								.dropdown-menu.fadeInLeft(aria-labelledby='dropdownMenuLink')
+									a.dropdown-item(href='#') Vietnamese
+									a.dropdown-item(href='#') English
+	section.main-header
+		.container
+			.logo
+				a(href="/")
+					img(src="img/logo.png", alt="")
+			.btn-showmenu 
+				i.fa.fa-bars
+			.overlay
+			.main-menu
+				.btn-closemenu X
+				.menu-content
+					ul
+						li.dropdown
+							a(href="gioithieu.html" data-toggle="dropdown").dropdown-toggle Giới thiệu
+								span.caret
+									i.fa.fa-caret-down
+							ul.dropdown-menu
+								li
+									a(href="thungo.html") Thư ngỏ của Chủ tịch
+								li
+									a(href="quatrinhphattrien.html") Quá trình phát triển
+								li
+									a(href="tamnhin-sumenh") Tầm nhìn - Sứ mệnh
+								li
+									a(href="camket.html") Chính sách chất lượng
+								li
+									a(href="camket.html") Định hướng phát triển
+						li.dropdown
+							a(href="banlanhdao.html" data-toggle="dropdown").dropdown-toggle Ban lãnh đạo
+								span.caret
+									i.fa.fa-caret-down
+							ul.dropdown-menu
+								li
+									a(href="banlanhdao.html") Hội đồng quản trị
+								li
+									a(href="#") Ban kiếm soát
+								li
+									a(href="#") Ban điều hành
+						li.dropdown
+							a(href="codong.html" data-toggle="dropdown").dropdown-toggle Cổ đông
+								span.caret
+									i.fa.fa-caret-down
+							ul.dropdown-menu
+								li
+									a(href="#") Báo cáo thường niên
+								li
+									a(href="codong.html") Báo cáo tài chính
+								li
+									a(href="#") Báo cáo bạch
+								li
+									a(href="#") Bản tin quý
+								li
+									a(href="#") Điều lệ
+						li.dropdown
+							a(href="tintuc.html" data-toggle="dropdown").dropdown-toggle Tin tức
+								span.caret
+									i.fa.fa-caret-down
+							ul.dropdown-menu
+								li
+									a(href="tintuc.html") Tin Vietbank
+								li
+									a(href="tintuc.html") Tin thị trường
+								li
+									a(href="tintuc.html") Tin khuyến mãi
+						li.active
+							a(href="tuyendung.html") Tuyển dụng
+						li
+							a(href="lienhe.html") Liên hệ
+				nav.mobile-menu
+					ul#main-nav
+						li.dropdown
+							a(href="/", title="Khách hàng cá nhân").dropdown-toggle
+								| CÁ NHÂN
+								span.caret
+									i.fa.fa-angle-down
+							ul.dropdown-menu
+								li.dropdown
+									a(href="bancan.html").dropdown-toggle
+										| Bạn Cần
+										span.caret
+											i.fa.fa-angle-down
+									ul.dropdown-menu
+										li
+											a(href="#") Chiếc xe hoàn hảo
+										li
+											a(href="#") Ngôi nhà trong mơ
+										li
+											a(href="#") Ước mơ du học
+										li
+											a(href="#") Phát triển kinh doanh
+										li
+											a(href="#") Kinh doanh chứng khoán
+										li
+											a(href="#") Tiêu dùng thông minh
+										li
+											a(href="#") Tích lũy hưu trí
+										li
+											a(href="#") Tích lũy tương lai
+								li.dropdown
+									a(href="sanpham.html").dropdown-toggle Sản phẩm
+										span.caret
+											i.fa.fa-angle-down
+									ul.dropdown-menu
+										li
+											a(href="#") Tiền gửi tiết kiệm
+										li
+											a(href="#") Tiền gửi thanh toán
+										li
+											a(href="#") Ngân hàng điện tử
+										li
+											a(href="#") Sản phẩm và dịch vụ khác
+										li
+											a(href="#") Tín dụng
+										li
+											a(href="#") Chuyển tiền quốc tế
+								li.dropdown
+									a(href="hoidap.html").dropdown-toggle Hỗ trợ
+										span.caret
+											i.fa.fa-angle-down
+									ul.dropdown-menu
+										li
+											a(href="#") Câu hỏi thường gặp
+										li
+											a(href="#") Công cụ - Tiện ích
+										li
+											a(href="#") Video hướng dẫn
+								li
+									a(href="/") ưu đãi
+						li
+							a(href="#", title="Doanh nghiệp")
+								| DOANH NGHIỆP
+						li.dropdown
+							a(href="/", title="Khách hàng cá nhân").dropdown-toggle.active
+								| VỀ VIETBANK
+								span.caret
+									i.fa.fa-angle-down
+							ul.dropdown-menu
+								li.active.dropdown
+									a(href="gioithieu.html").dropdown-toggle Giới thiệu
+										span.caret
+											i.fa.fa-angle-down
+									ul.dropdown-menu
+										li
+											a(href="thungo.html") Thư ngỏ của Chủ tịch
+										li
+											a(href="quatrinhphattrien.html") Quá trình phát triển
+										li
+											a(href="tamnhin-sumenh") Tầm nhìn - Sứ mệnh
+										li
+											a(href="camket.html") Chính sách chất lượng
+										li
+											a(href="camket.html") Định hướng phát triển
+								li.dropdown
+									a(href="banlanhdao.html").dropdown-toggle Ban lãnh đạo
+										span.caret
+											i.fa.fa-angle-down
+									ul.dropdown-menu
+										li
+											a(href="banlanhdao.html") Hội đồng quản trị
+										li
+											a(href="#") Ban kiếm soát
+										li
+											a(href="#") Ban điều hành
+								li.dropdown
+									a(href="codong.html").dropdown-toggle Cổ đông
+										span.caret
+											i.fa.fa-angle-down
+									ul.dropdown-menu
+										li
+											a(href="#") Báo cáo thường niên
+										li
+											a(href="codong.html") Báo cáo tài chính
+										li
+											a(href="#") Báo cáo bạch
+										li
+											a(href="#") Bản tin quý
+										li
+											a(href="#") Điều lệ
+								li.dropdown
+									a(href="tintuc.html").dropdown-toggle Tin tức
+										span.caret
+											i.fa.fa-angle-down
+									ul.dropdown-menu
+										li
+											a(href="tintuc.html") Tin Vietbank
+										li
+											a(href="tintuc.html") Tin thị trường
+										li
+											a(href="tintuc.html") Tin khuyến mãi
+								li.active
+									a(href="tuyendung.html") Tuyển dụng
+								li
+									a(href="lienhe.html") Liên hệ
+				a.btn-ibanking(href="")
+					i.fa.fa-unlock-alt
+					span ngân hàng trực tuyến
+				.top-contact
+					.location
+						i.fa.fa-map-marker 
+						p
+							a(href="") ATM &amp; Chi nhánh
+					.phone
+						i.fa.fa-phone
+						p Hotline: 
+							strong 
+								a(data-tel="+8419001122") 1800 1122
+				nav.tool-link.clearfix
+					ul
+						li 
+							i.fa.fa-usd
+							a(href="#", title="title") Tỷ giá
+						li 
+							i.fa.fa-map-marker
+							a(href="#", title="title") Mạng lưới
+						li 
+							i.fa.fa-file-text-o
+							a(href="#", title="title") Biểu mẫu
+						li 
+							i.fa.fa-gift
+							a(href="#", title="title") Khuyến mãi
+						li 
+							i.fa.fa-comments-o
+							a(href="#", title="title") Hỗ trợ
+						li 
+							i.fa.fa-phone
+							a(href="#", title="title") Liên hệ

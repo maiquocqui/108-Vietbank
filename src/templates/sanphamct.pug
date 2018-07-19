@@ -1,16 +1,11 @@
 extends _layout/layout
 
 block variables
-	- var title = 'Techzones'
-	- var bodyclass = 'product-detail-page'
-
-block css
+	- var title = "VietBank"
+	- var bodyclass = ""
 
 block body 
-	include _layout/mainheader
-	include _layout/header3
-	//- include _layout/banner
+	include _layout/header
 	main
-		//- .container
-		include _layout/ct-sanphamct
+		include _pages/ct-sanphamct
 	include _layout/footer

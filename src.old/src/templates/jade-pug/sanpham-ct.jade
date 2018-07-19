@@ -1,0 +1,35 @@
+extends _layout/layout
+
+block variables
+	- var title = 'VietBank'
+	- var bodyclass = 'sanpham-ct'
+
+block css
+
+block body 
+	include _layout/header-sanpham
+	include _layout/tool
+	section.banner-wrap
+		section.breadcrumb-wrap
+			.container
+				.row
+					.col-xs-12
+						ol.breadcrumb.mrt-10
+							li
+								a(href="index.html") Cá nhân
+							li
+								a(href="sanpham.html") Sản phẩm
+							li.active
+								span Sản phẩm cho vay
+		section.banner-page.imageBanner
+			.imgBg(style="background-image:url('img/banner_page/banner_sanphamCT.png')")
+			.desc
+				.container
+					.row
+						.col-xs-12.col-sm-5.col-lg-5.col-xl-5
+							h1.title Vay vốn ngay, <br/>Ưu đãi khác biệt
+							.content Với mục tiêu mang lại lợi ích cao nhất cho khách hàng, đáp ứng nhu cầu vay vốn với nhiều ưu đãi khác biệt, Vietbank mang tới sản phẩm "Vay vốn ngay - Ưu đãi khác biệt".
+	main
+		include _layout/sanphamct
+	include _layout/ft-guide
+	include _layout/footer

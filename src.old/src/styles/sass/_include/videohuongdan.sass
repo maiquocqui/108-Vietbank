@@ -1,0 +1,30 @@
+.video-huongdan
+	margin: 0 0 20px
+	iframe
+		width: 100%!important
+
+.video-guide
+	.nav-sp
+		a
+			+pos(rel,null)
+			padding-left: 50px
+			text-align: left
+			+media-breakpoint-up(md)
+				max-width: 225px
+			.fa
+				font-size: 26px
+				font-weight: 500
+				color: $white
+				+pos(abs, 50% null null 15px)
+				+transform(translate(0,-50%))
+			&:after
+				top: inherit
+				bottom: 100%
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 7.5px 7px 7.5px
+				border-color: transparent transparent transparent transparent
+			&:hover, &.active
+				&:after
+					border-color: transparent transparent #d3232d transparent

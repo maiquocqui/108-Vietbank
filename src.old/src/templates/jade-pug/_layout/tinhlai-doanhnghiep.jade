@@ -1,0 +1,115 @@
+.col-xs-12.col-lg-9
+	section.hotro-ct
+		h1.title Công cụ tính toán
+		nav.nav.nav-sp
+			a(href="congcu-tinhtoan-vay.html") Tôi có thể vay bao nhiêu
+			a(href="congcu-tinhtoan.html") Tính lịch trả nợ theo dư nợ giảm dần
+			a(href="tinhlai-doanhnghiep.html").active Tính lãi tiền gửi
+		.block-revive
+			.row.flex.flex-wrap
+				.col-xs-12.col-md-5
+					h3.title-deposits Chọn Loại sản phẩm của bạn:
+					.box-deposits
+						.checkbox
+							input(type="radio" name="kind" id="kind_1")
+							label(for="kind_1") Tiền gửi có kỳ hạn
+						.checkbox
+							input(type="radio" name="kind" id="kind_2")
+							label(for="kind_2") Tiền gửi đầu tư siêu linh hoạt
+						.checkbox
+							input(type="radio" name="kind" id="kind_3")
+							label(for="kind_3") Tiền gửi đa tiện ích
+				.col-xs-12.col-md-7
+					h3.title-table Tiền gửi đa tiện ích
+					.table-responsive
+						table.table.table-bordered
+							thead
+								tr
+									th Kỳ hạn
+									th Lãi cuối kỳ
+									th Lãi hàng quý
+									th Lãi hàng tháng
+									th Lãi trả trước
+							tbody
+								tr
+									td 1 tuần
+									td 0.30 %
+									td -
+									td -
+									td -
+								tr
+									td 2 tuần
+									td 0.30 %
+									td -
+									td -
+									td -
+								tr
+									td 3 tuần
+									td 0.60 %
+									td -
+									td -
+									td -
+								tr
+									td 1 tháng
+									td 5.00 %
+									td -
+									td 5.00 %
+									td 5.00 %
+								tr
+									td 2 tháng (*)
+									td 5.20 %
+									td -
+									td 5.20 %
+									td 5.20 %
+								tr
+									td 3 tháng (*)
+									td 7.00 %
+									td 6.00 %
+									td 6.00 %
+									td 6.00 %
+								tr
+									td 4 tháng
+									td 7.30 %
+									td 7.30 %
+									td 7.30 %
+									td 7.30 %
+			.row.flex.flex-wrap
+				.col-xs-12.col-md-5
+					.form-group
+						label Số tiền gửi:
+						.group
+							input(type="text" value="100,000,000").form-control
+							span.unit VND
+					.form-group
+						label Kỳ hạn gửi:
+						.group
+							select.form-control
+								option(value="3") 3 tháng
+								option(value="6") 6 tháng
+								option(value="12") 12 tháng
+					.form-group
+						label Lãi suất:
+						.group
+							input(type="text" value="6").form-control
+							span.unit %
+					.form-group
+						label Kỳ lãnh lãi:
+						.group
+							select.form-control
+								option(value="1") Hàng tuần
+								option(value="2") Hàng tháng
+								option(value="3") Hàng năm
+					.form-group
+						input(type="submit" value="Ước tính")
+				.col-xs-12.col-md-7
+					.result
+						h3 Kết Quả
+						.item-result
+							strong Tiền lãi định kỳ: 
+							span 20,000,000 VND
+						.item-result
+							strong Tổng tiền lãi: 
+							span 20,000,000 VND
+						.item-result
+							strong Tổng số tiền nhận: 
+							span 200,000,000 VND

@@ -1,0 +1,119 @@
+#map-canvas
+	position: absolute
+	height: 100%
+	width: 100%
+
+.block-systemDealer
+	position: relative
+	padding: 40px 0
+	.map-location
+		.map_system
+			height: 450px
+	.system-wrap
+		margin: 0 0 20px
+		.form_desc
+			margin-top: 1.5rem
+			+media-breakpoint-up(xl)
+				margin-top: 0
+			label
+				font-size: 12px
+				font-weight: 700
+				color: darken($white, 80%)
+				margin: 0 0 10px
+				display: block
+			select
+				width: 100%
+				height: 30px
+				line-height: 30px
+				color: $black
+				padding: 0 10px
+				font-size: 12px
+				border: 1px solid darken($white, 15%)
+				option
+					line-height: 1.5em
+					color: darken($white, 40%)
+		.search-text
+			margin-top: 1.5rem
+			+media-breakpoint-up(xl)
+				margin-top: 0
+			label
+				font-size: 12px
+				font-weight: 700
+				color: darken($white, 80%)
+				margin: 0 0 10px
+				display: block
+			input
+				color: $black
+				padding: 0 40px 0 10px
+				width: 100%
+				height: 30px
+				line-height: 30px
+				font-size: 12px
+				border: 1px solid darken($white, 15%)
+			.btn-search
+				position: absolute
+				right: 17px
+				bottom: 2px
+				background-color: $yellow
+				color: $white
+				padding: 0
+				height: 26px
+				width: 26px
+				line-height: 26px
+				border: none
+				text-align: center
+				+transition(all 0.4s)
+				&:hover
+					background-color: darken($yellow, 10%)
+	.dealer-list
+		background: transparent
+		padding: 0
+		position: relative
+		.locate
+			padding: 0
+			font-size: 13px
+			color: darken($white, 80%)
+			line-height: 1.4em
+			margin: 0 0 10px
+			span
+				color: $link
+				font-weight: 700
+		.list_system
+			margin: 0
+			padding: 0
+			max-height: 418px
+			overflow-y: auto
+			background-color: darken($white, 10%)
+			li
+				display: block
+				padding: 10px 0 10px 15px
+				margin: 0
+				+transition(all 0.3s)
+				div
+					font-size: 14px
+					color: darken($white, 40%)
+					strong
+						color: darken($white, 80%)
+					span
+						color: darken($white, 60%)
+				.distance
+					span
+						color: $link
+						font-weight: 500
+						font-size: 14px
+				&:hover,
+				&.active
+					cursor: pointer
+					background-color: $white
+		.find_address
+			input[type=text]
+				background: darken($white, 10%)
+				color: $black
+				padding: 5px 3px
+				font-size: 12px
+				+border-radius(5px)
+				width: 100%
+				border: 1px solid darken($white, 20%)
+	.maps_popup 
+		h1
+			font-size: 20px

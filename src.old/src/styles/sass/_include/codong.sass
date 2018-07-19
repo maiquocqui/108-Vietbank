@@ -1,0 +1,78 @@
+.codong
+	margin: 20px 0 30px
+	+media-breakpoint-up(lg)
+		margin: 40px 0 30px
+	.title
+		+fs(16rem)
+		font-weight: 700
+		color: $black
+		margin: 0 0 15px
+	.tabs-wrap
+		padding: 0
+		ul.tab-list
+			margin: 0 0 30px
+			li
+				display: block
+				margin: 0
+				float: none
+				+media-breakpoint-up(lg)
+					float: left
+					margin: 0 0.2rem 0 0
+				a
+					border-top: 1px solid darken($white, 15%)
+					border-left: 1px solid darken($white, 15%)
+					border-right: 1px solid darken($white, 15%)
+					background-color: darken($white, 7%)
+					font-weight: 600
+					margin-bottom: 0
+					position: relative
+					padding: 6px 25px
+					+fs(15rem)
+					@include border-radius(0)
+					&:hover,
+					&:focus,
+					&.active
+						background-color: transparent
+						border-bottom: none
+						color: darken($white, 80%)
+						&:after
+							content: ''
+							position: absolute
+							left: 0
+							bottom: -2px
+							width: 100%
+							height: 2px
+							background-color: $bg
+	.tab-content
+		margin: 0
+		ul
+			padding: 0
+			li
+				list-style-type: none
+				a
+					text-decoration: none
+					+transition(all 0.3s)
+					&:hover
+						color: $orange
+					span.text-xs
+						+fs(14rem)
+						color: darken($white, 40%)
+		.finance
+			margin: 0 0 30px
+			h3
+				+fs(16rem)
+				font-weight: 600
+				color: darken($white, 80%)
+				margin: 0 0 0.5rem
+			ul
+				li
+					position: relative
+					padding: 0 0 0 10px
+					&:before
+						content: '\f111'
+						position: absolute
+						top: 8px
+						left: 0
+						font-family: "FontAwesome"
+						font-size: 4px
+						color: $link

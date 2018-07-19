@@ -1,0 +1,37 @@
+extends _layout/layout
+
+block variables
+	- var title = 'VietBank'
+	- var bodyclass = 'sanpham'
+
+block css
+
+block body 
+	include _layout/header-sanpham
+	include _layout/tool
+	section.banner-wrap
+		section.breadcrumb-wrap
+			.container
+				.row
+					.col-xs-12
+						ol.breadcrumb.mrt-10
+							li
+								a(href="index.html") Cá nhân
+							li
+								a(href="sanpham.html") Sản phẩm
+							li.active
+								span Tín dụng
+		section.banner-page.imageBanner
+			.imgBg(style="background-image:url('img/banner_page/banner_sanphamDS2.png')")
+			.desc
+				.container
+					.row
+						.col-xs-12.col-sm-5.col-lg-5.col-xl-5
+							h1.title Tín dụng
+							.content Chúng tôi mang đến hàng loạt những sản phẩm đa dạng và tiện ích để phục vụ tốt hơn mong muốn của tất cả khách hàng.
+	main
+		.container
+			.row
+				include _layout/sidebar
+				include _layout/sanphamds2
+	include _layout/footer

@@ -1,0 +1,125 @@
+.hotro-ct, .video-guide
+	margin: 20px 0 30px
+	+media-breakpoint-up(lg)
+		margin: 40px 0 15px
+	.title
+		+fs(26rem)
+		font-weight: 500
+		color: $black
+		margin: 0 0 20px
+		line-height: 1.5
+		border-bottom: 1px solid darken($white, 15%)
+.nav-sp
+	margin: 0 0 20px
+	+media-breakpoint-up(md)
+		display: flex
+		flex: 1
+		flex-direction: wrap		
+	a
+		+fs(14rem)
+		font-weight: 600
+		display: block
+		padding: 7px 10px
+		text-align: center
+		color: $white
+		background-color: $link
+		border-bottom: 1px solid darken($white, 5%)
+		+transition(all 0.3s)
+		+pos(rel,null)
+		+media-breakpoint-up(md)
+			margin-right: 15px
+			display: inline-block
+			min-width: 150px
+			max-width: 150px
+			border-bottom: none
+			&:after
+				content: ''
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 7px 7.5px 0 7.5px
+				border-color: transparent transparent transparent transparent
+				margin: 0 auto
+				+pos(abs, 100% 0 null 0)
+				+transition(all 0.3s)
+		+media-breakpoint-up(lg)
+			min-width: 160px
+			max-width: 160px
+		+media-breakpoint-up(xl)
+			min-width: 175px
+			max-width: 175px
+		&:hover, &.active
+			background-color: $orange
+			color: $black
+			&:after
+				border-color: $orange transparent transparent transparent
+
+.thetindung
+	.panel, .panel-faqs
+		border-bottom: 1px solid darken($white, 15%)
+		.title
+			+fs(15rem)
+			color: $link
+			font-weight: 500
+			line-height: 1.4
+			padding: 8px 15px
+			display: block
+			cursor: pointer
+			margin: 0
+			border: none
+			+pos(rel,null)
+			span
+				font-weight: 500
+			&:before
+				content: '\f107'
+				font-family: "FontAwesome"
+				font-size: 14px
+				font-weight: 500
+				color: $link
+				text-align: center
+				display: block
+				+pos(abs, 50% null null 0)
+				+transform(translate(0,-50%))
+			&:hover
+				color: $black
+				&:before
+					color: $black
+		.content
+			display: none
+			+fs(15rem)
+			font-weight: 500
+			line-height: 1.4
+			padding: 15px 20px
+			border-top: 1px solid darken($white, 15%)
+			background-color: darken($white, 7%)
+			margin: 0 0 15px
+			p
+				margin: 0 0 15px
+			a
+				color: $link
+				text-decoration: underline
+		&.active
+			.title
+				color: $black
+				+fs(18rem)
+				span
+					font-weight: 600
+				&:before
+					content: '\f106'
+					font-family: "FontAwesome"
+					color: $black
+					font-size: 18px
+.bieumau-bieuphi
+	a
+		+fs(16rem)
+		color: $link
+		display: block
+		line-height: 1.4
+		margin: 0 0 5px
+		+transition(all 0.3s)
+		&:hover
+			text-decoration: underline
+		span
+			+fs(15rem)
+			font-weight: 500
+			color: $white-brown

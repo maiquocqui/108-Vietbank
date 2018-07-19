@@ -1,0 +1,64 @@
+.col-xs-12.col-lg-9
+	section.hotro-ct
+		h1.title Công cụ tính toán
+		nav.nav.nav-sp
+			a(href="#").active Chuyển đổi ngoại tệ
+			a(href="#") Tính lịch trả nợ với dư nợ ban đầu
+			a(href="#") Tính lịch trả nợ với dư nợ giảm dần
+			a(href="#") Tính lãi tiết kiệm
+		.congcu-tinhtoan
+			.item-ex
+				label Nếu tôi có
+				.sl-group
+					input(type="text" placeholder="30,000,000")
+					.btn-ex
+						a(href="javascript:;" data-toggle="dropdown").dropdown-toggle
+							img(src="img/lang/vn.png")
+							| VND
+						ul.dropdown-menu
+							li
+								a(href="#")
+									img(src="img/lang/us.png")
+									| USD
+				a.btn-change(href="javascript:;")
+					span Chuyển đổi 
+					i.fa.fa-retweet
+				a.btn-refesh(href="javascript:;")
+					span Làm lại 
+					i.fa.fa-refresh
+			.ex-box
+				h3 Tôi sẽ được
+				.row
+					.col-xs-12.col-sm-6
+						.rst-group
+							input(type="text" placeholder="1,419.782" value="1,419.782")
+							.btn-ex
+								.unit
+									img(src="img/lang/us.png")
+									| USD
+						.rst-group
+							input(type="text" placeholder="1,621.534" value="1,621.534")
+							.btn-ex
+								.unit
+									img(src="img/lang/aud.png")
+									| AUD
+						.rst-group
+							input(type="text" placeholder="868.591" value="868.591")
+							.btn-ex
+								.unit
+									img(src="img/lang/gbp.png")
+									| GBP
+					.col-xs-12.col-sm-6
+						.rst-group
+							input(type="text" placeholder="156,380.317" value="156,380.317")
+							.btn-ex
+								.unit
+									img(src="img/lang/jp.png")
+									| JPY
+						.rst-group
+							input(type="text" placeholder="1,120.783" value="1,120.783")
+							.btn-ex
+								.unit
+									img(src="img/lang/eur.png")
+									| EUR
+				.note Số tiền quy đổi được Vietbank tính toán dựa trên Tỷ giá mua/bán chuyển khoản và chỉ mang tính chất tham khảo

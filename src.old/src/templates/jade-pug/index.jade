@@ -1,0 +1,15 @@
+extends _layout/layout
+
+block variables
+	- var title = 'VietBank'
+	- var bodyclass = 'home'
+
+block css
+
+block body 
+	include _layout/header
+	include _layout/tool
+	main
+		include _layout/banner
+		include _layout/ct-home
+	include _layout/footer
