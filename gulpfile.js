@@ -29,7 +29,8 @@ gulp.task('concat-js', function() {
             "bower_components/scrollup/dist/jquery.scrollUp.js",
             "bower_components/parallax.js/parallax.js",
             "bower_components/responsive-tabs/js/jquery.responsiveTabs.js",
-            "bower_components/page-scroll-to-id/jquery.malihu.PageScroll2id.js"
+            "bower_components/page-scroll-to-id/jquery.malihu.PageScroll2id.js",
+            "bower_components/rangeslider.js/dist/rangeslider.js"
         ])
         .pipe(concat('core.js'))
         .pipe(gulp.dest('./dist/js'));
@@ -46,7 +47,8 @@ gulp.task('concat-css', function() {
             "bower_components/slick-carousel/slick/slick.css",
             "bower_components/k-flex/dist/css/k-flex.css",
             "bower_components/jquery-bar-rating/dist/themes/fontawesome-stars.css",
-            "bower_components/responsive-tabs/css/responsive-tabs.css"
+            "bower_components/responsive-tabs/css/responsive-tabs.css",
+            "bower_components/rangeslider.js/dist/rangeslider.css"
         ])
         .pipe(concat('core.css'))
         .pipe(gulp.dest('./dist/css'));

@@ -83,6 +83,8 @@ section.register-page
 												.img
 													img(src="img/dangky/c3.png", alt="")
 												//- .name luxury
+							.btn-wrap.text-center.mb-5
+								a.btn-primary(href="#!") Chọn thẻ
 							
 			.register-step
 				.step.finish 01. Thông tin khách hàng
@@ -255,10 +257,11 @@ section.register-page
 										li.radio
 											input#r31(type="radio", name="radio3")
 											label(for="r31") Bằng thẻ chính
-										li.radio.has-input
+										li.radio.has-input.has-sublabel
 											input#r32(type="radio", name="radio3")
 											label(for="r32") Khác
-											input.input-text(type="text" placeholder="triệu đồng")
+											input.input-text(type="text" placeholder="")
+											.sub-label triệu đồng
 							.col-12
 								.form-sub.s2
 									label Hạn mức bằng chữ
@@ -330,6 +333,7 @@ section.register-page
 				.form-note.text-black.w-100.mb-5 Hình thức nhận thông tin ưu đãi của Vietbank:
 					br
 					|Tôi đồng ý nhận các thông tin ưu đãi, các chương trình khuyến mãi của Vietbank qua Email, SMS và các hình thức khác.
+				.form-title Tuân thủ FATCA:
 				.register-table.mb-5
 					table
 						tr
@@ -415,4 +419,4 @@ section.register-page
 						li Điều khoản và điều kiện các nội dung điều chỉnh, bổ sung của việc phát hành và sử dụng thẻ tín dụng sẽ được công bố tại website chính thức của Vietbank (www.vietbank.com.vn) hoặc tại các điểm giao dịch của Vietbank. 
 				.frm-btn
 					a.btn-secondary.mr-2(href="#!") Trở về
-					input.btn-primary(type="submit", value="Đăng ký")
+					input.btn-primary(type="submit", value="Hoàn tất")

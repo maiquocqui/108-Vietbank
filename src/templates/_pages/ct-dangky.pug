@@ -83,6 +83,8 @@ section.register-page
 												.img
 													img(src="img/dangky/c3.png", alt="")
 												//- .name luxury
+							.btn-wrap.text-center.mb-5
+								a.btn-primary(href="#!") Chọn thẻ
 							
 			.register-step
 				.step.active 01. Thông tin khách hàng
@@ -91,15 +93,18 @@ section.register-page
 				.step 04. Hoàn thành
 			.form-wrap
 				.form-note.text-blue.mb-4 Điền đầy đủ thông tin của bạn bên dưới, chúng tôi sẽ gọi lại để hỗ trợ bạn đăng ký.
-				.form-group.mb-4
-					label Hạn mức tín dụng mong muốn:
-					.input
-						input.w-auto(type="text" placeholder="VND")
+				.form-group.has-sublabel.mb-4
+					label.pt-0.pb-0 Hạn mức tín dụng mong muốn:
+					.input.flex
+						input.w-auto(type="text" placeholder="")
+						.sub-label VND
+						.form-error.w-100 Vui lòng không bỏ trống mục này
 				.form-title Thông tin khách hàng:
 				.form-group
 					label Họ và tên:
 					.input
 						input(type="text" placeholder="Tên trên CMND/CCCD/Giấy khai sinh")
+						.form-error Vui lòng không bỏ trống mục này
 				.form-group.align-items-start
 					label Họ và tên:
 					.input
@@ -124,6 +129,7 @@ section.register-page
 							input(type="text" placeholder="")
 							input(type="text" placeholder="")
 						em.form-note.text-silver (Tối đa 19 ký tự không dấu kể cả khoảng trắng)
+						.form-error Vui lòng không bỏ trống mục này
 				.form-group
 					label Giới tính:
 					.input
@@ -135,6 +141,7 @@ section.register-page
 								li.radio
 									input#nu(type="radio", name="gender")
 									label(for="nu") Nữ
+						.form-error Vui lòng không bỏ trống mục này
 				.form-group
 					label Ngày sinh:
 					.input
@@ -148,15 +155,18 @@ section.register-page
 											input(type="text" placeholder="Tháng")
 										li
 											input(type="text" placeholder="Năm")
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6
 								.form-sub
 									label Quốc tịch:
 									select
 										option 
+								.form-error Vui lòng không bỏ trống mục này
 				.form-group
 					label Số CMND/CCCD/HC:
 					.input
 						input(type="text" placeholder="")
+						.form-error Vui lòng không bỏ trống mục này
 				.form-group
 					label Ngày cấp:
 					.input
@@ -170,66 +180,79 @@ section.register-page
 											input(type="text" placeholder="Tháng")
 										li
 											input(type="text" placeholder="Năm")
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6
 								.form-sub
 									label Nơi cấp:
 									input(type="text")
+								.form-error Vui lòng không bỏ trống mục này
 				.form-group
 					label Số ĐTDĐ:
 					.input
 						.form-row
 							.col-12.col-md-6
 								input.mb-sm-10(type="text")
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6
 								.form-sub
 									label Số ĐT bàn:
 									input(type="text")
+								.form-error Vui lòng không bỏ trống mục này
 				.form-group
 					label Email:
 					.input
 						input(type="text" placeholder="Email cá nhân")
+						.form-error Vui lòng không bỏ trống mục này
 				.form-group.align-items-start
 					label Địa chỉ hộ khẩu:
 					.input
 						.form-row
 							.col-12
 								input.mb-10(type="text" placeholder="Số nhà tên đường")
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6.col-lg-4
 								.form-sub.mb-md-10
 									label Phường/Xã:
 									select
 										option
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6.col-lg-4
 								.form-sub.mb-md-10
 									label Tỉnh/TP:
 									select
 										option
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6.col-lg-4
 								.form-sub
 									label Quận/Huyện:
 									select
 										option
+								.form-error Vui lòng không bỏ trống mục này
 				.form-group.align-items-start
 					label Địa chỉ hiện tại:
 					.input
 						.form-row
 							.col-12
 								input.mb-10(type="text" placeholder="Số nhà tên đường")
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6.col-lg-4
 								.form-sub.mb-10
 									label Phường/Xã:
 									select
 										option
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6.col-lg-4
 								.form-sub.mb-10
 									label Tỉnh/TP:
 									select
 										option
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-6.col-lg-4
 								.form-sub.mb-10
 									label Quận/Huyện:
 									select
 										option
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12.col-md-12.col-lg-3
 								.form-sub
 									label.w-100.mt-10.mb-10 Hình thức sỡ hữu:
@@ -255,8 +278,9 @@ section.register-page
 											label(for="n4") Khác
 									.col-12.col-md-9
 										input.mb-10(type="text")
+								.form-error Vui lòng không bỏ trống mục này
 							.col-12
-								.form-sub
+								.form-sub.s2
 									label.w-auto Thời gian cư trú:
 									.date-live
 										ul
@@ -266,8 +290,9 @@ section.register-page
 											li
 												input(type="text")
 												|Năm
+								.form-error Vui lòng không bỏ trống mục này
 				.form-group
-					label Tình trạng hôn nhân:
+					label.pt-0.pb-0 Tình trạng hôn nhân:
 					.input
 						.mary-status
 							ul
@@ -280,8 +305,9 @@ section.register-page
 								li.radio
 									input#h3(type="radio", name="honnhan")
 									label(for="h3") Khác
+						.form-error Vui lòng không bỏ trống mục này
 				.form-group
-					label Học vấn:
+					label.pt-0.pb-0 Học vấn:
 					.input
 						.mary-status
 							ul
@@ -297,6 +323,7 @@ section.register-page
 								li.radio
 									input#h4(type="radio", name="hoc")
 									label(for="h4") Sau ĐH
+						.form-error Vui lòng không bỏ trống mục này
 				.form-group.align-items-start
 					label Thông tin xác thực:
 					.input
@@ -311,8 +338,11 @@ section.register-page
 									label Màu yêu thích
 									input(type="text")
 							.col-12
+								.form-error Vui lòng không bỏ trống mục này
+							.col-12
 								.form-sub.s2
 									label Khác
 									input(type="text")
+								.form-error Vui lòng không bỏ trống mục này
 				.frm-btn
 					input.btn-primary(type="submit", value="Đăng ký")

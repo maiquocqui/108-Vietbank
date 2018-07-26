@@ -460,4 +460,46 @@ $(document).ready(function() {
         }
     });
 
+    // range slider script
+    function addCommas(nStr) {
+        nStr += '';
+        var x = nStr.split('.');
+        var x1 = x[0];
+        var x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, '$1' + '.' + '$2');
+        }
+        return x1 + x2;
+    }
+
+    var $document = $(document),
+        $inputRange = $('input[type="range"]');
+
+    // Example functionality to demonstrate a value feedback
+    function valueOutput(element) {
+        var value = element.value,
+            output = element.parentNode.getElementsByTagName('output')[0];
+        output.innerHTML = addCommas(value);
+    }
+    for (var i = $inputRange.length - 1; i >= 0; i--) {
+        valueOutput($inputRange[i]);
+    };
+    $document.on('input', 'input[type="range"]', function(e) {
+        valueOutput(e.target);
+    });
+    // end
+
+    $inputRange.rangeslider({
+        polyfill: false
+    });
+
+    // checking form submit
+    // $('input[type="submit"').click(function(){
+    //     if($(this).parent('.form-wrap').children('input').value() == null){
+
+    //     }
+    // });
+
+
 });

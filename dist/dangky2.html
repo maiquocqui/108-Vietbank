@@ -204,6 +204,7 @@
                           </div>
                         </div>
                       </div>
+                      <div class="btn-wrap text-center mb-5"><a class="btn-primary" href="#!">Chọn thẻ</a></div>
                     </div>
                   </div>
                 </div>
@@ -353,7 +354,7 @@
                           <input id="r2" type="radio" name="radio2">
                           <label for="r2">Bán thời gian</label>
                         </li>
-                        <li class="radio">
+                        <li class="radio mb-10">
                           <input id="r3" type="radio" name="radio2">
                           <label for="r3">Toàn thời gian</label>
                         </li>
@@ -382,11 +383,11 @@
                           <input id="r34" type="radio" name="radio3">
                           <label for="r34">Cổ phần</label>
                         </li>
-                        <li class="radio mb-10">
+                        <li class="radio mb-10 mt-10">
                           <input id="r35" type="radio" name="radio3">
                           <label for="r35">Doanh nghiệp nhà nước</label>
                         </li>
-                        <li class="radio mb-10">
+                        <li class="radio mb-10 mt-10">
                           <input id="r36" type="radio" name="radio3">
                           <label for="r36">Cơ quan HC-SN</label>
                         </li>
@@ -484,52 +485,73 @@
                 </div>
                 <div class="form-title">Thông tin Tài chính:</div>
                 <div class="row mb-5">
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
+                  <div class="col-12 col-md-7">
+                    <div class="form-group has-sublabel has-sublabel2">
                       <label>Tổng thu nhập:</label>
                       <div class="input">
-                        <input type="text" placeholder="triệu đồng / tháng">
+                        <input type="text" placeholder="">
+                        <div class="sub-label">triệu đồng / tháng</div>
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group has-sublabel has-sublabel2">
                       <label>Tổng chi phí:</label>
                       <div class="input">
-                        <input type="text" placeholder="triệu đồng / tháng">
+                        <input type="text" placeholder="">
+                        <div class="sub-label">triệu đồng / tháng</div>
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group has-sublabel has-sublabel2">
                       <label>Số người phụ thuộc:</label>
                       <div class="input">
                         <input type="text" placeholder="người">
+                        <div class="sub-label">người</div>
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label>Số lượng thẻ tín dụng đang sở hữu:</label>
+                    <div class="form-group has-sublabel has-sublabel2">
+                      <label class="pt-0 pb-0 mb-sm-10 mt-sm-10">Số lượng thẻ tín dụng đang sở hữu:</label>
                       <div class="input">
-                        <input type="text" placeholder="thẻ">
+                        <input type="text" placeholder="">
+                        <div class="sub-label">thẻ</div>
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label>Hạn mức thẻ tín dụng cao nhất:</label>
+                    <div class="form-group has-sublabel has-sublabel2">
+                      <label class="pt-0 pb-0">Hạn mức thẻ tín dụng cao nhất:</label>
                       <div class="input">
-                        <input type="text" placeholder="triệu đồng">
+                        <input type="text" placeholder="">
+                        <div class="sub-label">triệu đồng</div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-md-6">
+                  <div class="col-12 col-md-5 col-hr">
                     <div class="form-group">
-                      <label class="pb-2">Khoản vay khác:</label>
+                      <label class="pb-2 mb-4">Khoản vay khác:</label>
                       <div class="input w-100">
                         <div class="rent">
                           <ul>
-                            <li class="radio mb-2">
+                            <li class="radio mb-4">
                               <input id="r61" type="radio" name="radio6">
                               <label for="r61">Không có khoản vay nào</label>
+                              <div class="pb-2"></div>
                             </li>
-                            <li class="radio has-input">
+                            <li class="radio">
                               <input id="r62" type="radio" name="radio6">
                               <label for="r62">Có</label>
-                              <input type="text" placeholder="Tín chấp (hạn mức triệu đồng)">
+                              <div class="rent-amount pt-3 mb-0">
+                                <ul>
+                                  <li class="mb-3">
+                                    <input id="rdo1" type="radio" name="rdo1">
+                                    <label for="rdo1">Tín chấp (hạn mức</label>
+                                    <input class="input-text" type="text" placeholder="">
+                                    <div class="sub-label">triệu đồng)</div>
+                                  </li>
+                                  <li class="mb-3">
+                                    <input id="rdo2" type="radio" name="rdo1">
+                                    <label for="rdo2">Tín chấp (hạn mức</label>
+                                    <input class="input-text" type="text" placeholder="">
+                                    <div class="sub-label">triệu đồng)</div>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -627,7 +649,7 @@
                 </div>
                 <div class="form-title">Thông tin người thân:</div>
                 <div class="form-group">
-                  <label for="">Mối quan hệ</label>
+                  <label class="pb-0 pt-0" for="">Mối quan hệ</label>
                   <div class="input">
                     <div class="mary-status">
                       <ul>
@@ -639,7 +661,7 @@
                           <input id="r72" type="radio" name="radio7">
                           <label for="r72">Anh / Chị / Em</label>
                         </li>
-                        <li class="radio">
+                        <li class="radio mb-10">
                           <input id="r73" type="radio" name="radio7">
                           <label for="r73">Khác</label>
                         </li>

@@ -37,7 +37,11 @@ section.promotion-page
 								span.text-red 700.000VND
 							p.text-silver(style="font-size:14px") (Ví dụ: Hoàn 10 đồng khi chi tiêu 1.000 đồng, tối đa 60.000 đồng.)
 						.value-slider
-							img(src="img/landing/range.png", alt="")
+							.input-range
+								.min 0
+								.max 100000000
+								input#slider_range_1(type="range" min="0" max="100000000" step="1000000" value="5000000")
+								output#output_1
 						.value-table
 							table
 								tr
@@ -63,7 +67,11 @@ section.promotion-page
 								span.text-red 700.000VND
 							p.text-silver(style="font-size:14px") (Ví dụ: Hoàn 10 đồng khi chi tiêu 1.000 đồng, tối đa 60.000 đồng.)
 						.value-slider
-							img(src="img/landing/range.png", alt="")
+							.input-range
+								.min 0
+								.max 100.000.000
+								<input type="range" min="0" max="50000000" step="5000000" value="3000000">
+								output
 						.value-table
 							table
 								tr

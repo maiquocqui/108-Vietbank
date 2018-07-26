@@ -7700,6 +7700,61 @@ input[type="reset"] {
 .file label:hover {
   color: #050505; }
 
+.input-range {
+  position: relative;
+  padding-top: 25px; }
+  .input-range .min {
+    font-size: 0.75rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #999999; }
+  .input-range .max {
+    font-size: 0.75rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999999; }
+  .input-range output {
+    display: block;
+    text-align: center;
+    padding: 10px 0 0;
+    font-size: 0.75rem;
+    color: #666666; }
+
+.rangeslider {
+  background: #cccccc;
+  height: 9px; }
+
+.rangeslider--horizontal .rangeslider__fill {
+  background: none;
+  margin: 0;
+  padding: 0;
+  height: 4px;
+  top: 3px;
+  left: 3px;
+  border-radius: 50px;
+  overflow: hidden; }
+  .rangeslider--horizontal .rangeslider__fill:before {
+    content: '';
+    background: #005baa;
+    height: 4px;
+    right: 14px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.rangeslider--horizontal .rangeslider__handle {
+  width: 22px;
+  height: 22px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: url(../img/range.png) center center no-repeat;
+  margin-left: 0px;
+  margin-top: 4px;
+  box-shadow: none; }
+
 body.modal-open {
   padding-right: 0 !important;
   overflow: hidden; }
@@ -9008,6 +9063,13 @@ footer {
 
 .product-register {
   background: #0054a6; }
+  @media (min-width: 1200px) {
+    .product-register {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100; } }
   @media (max-width: 991.98px) {
     .product-register {
       padding: 20px 0; } }
@@ -9070,6 +9132,11 @@ footer {
       @media (max-width: 991.98px) {
         .product-register .register-wrap .register-pr {
           margin-top: 0; } }
+
+.hr-lines {
+  border: none;
+  background: #d9d9d9;
+  height: 1px; }
 
 .landing-section {
   padding: 50px 0;
@@ -9956,14 +10023,24 @@ hr.line {
     margin-top: 10px; }
   .register-form .mb-10 {
     margin-bottom: 10px; }
+  .register-form .mb-20 {
+    margin-bottom: 20px; }
   @media (max-width: 991.98px) {
     .register-form .mb-md-10 {
       margin-bottom: 10px; } }
+  @media (max-width: 767.98px) {
+    .register-form .mt-sm-10 {
+      margin-top: 10px; } }
   @media (max-width: 767.98px) {
     .register-form .mb-sm-10 {
       margin-bottom: 10px; } }
   .register-form .pb-10 {
     padding-bottom: 10px; }
+  .register-form .col-hr {
+    border-left: 1px solid #e6e6e6; }
+    @media (max-width: 767.98px) {
+      .register-form .col-hr {
+        border-left: none; } }
   .register-form .form-group {
     margin-bottom: 10px;
     display: -webkit-box;
@@ -9971,21 +10048,34 @@ hr.line {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center; }
+    flex-wrap: wrap; }
     .register-form .form-group > label {
       font-size: 0.875rem;
       color: #666666;
-      width: 190px; }
+      width: 190px;
+      padding: 10px 0; }
       @media (max-width: 991.98px) {
         .register-form .form-group > label {
           width: 100%;
           padding: 10px 0; } }
     .register-form .form-group label .des {
       color: #999999; }
-    .register-form .form-group.align-items-start > label {
-      padding: 10px 0; }
+    .register-form .form-group.has-sublabel .input {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap; }
+    .register-form .form-group.has-sublabel2 input {
+      width: calc(100% - 120px); }
+    .register-form .form-group.has-sublabel2 .sub-label {
+      width: auto; }
+    .register-form .form-group .sub-label {
+      font-size: 0.875rem;
+      color: #666666;
+      padding: 10px 0;
+      margin-left: 10px; }
     .register-form .form-group .input {
       width: calc(100% - 190px); }
       @media (max-width: 991.98px) {
@@ -9998,6 +10088,8 @@ hr.line {
       border-radius: 5px;
       border: 1px solid #e6e6e6;
       color: #666666; }
+      .register-form .form-group input::-webkit-input-placeholder, .register-form .form-group select::-webkit-input-placeholder {
+        opacity: 0.5; }
     .register-form .form-group select {
       padding: 9px 15px; }
     .register-form .form-group .form-sub {
@@ -10006,6 +10098,7 @@ hr.line {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       align-content: center; }
       @media (max-width: 767.98px) {
@@ -10026,6 +10119,13 @@ hr.line {
         @media (max-width: 767.98px) {
           .register-form .form-group .form-sub input, .register-form .form-group .form-sub select {
             width: 100%; } }
+      .register-form .form-group .form-sub .form-error {
+        width: calc(100% - 90px);
+        margin-left: 90px; }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub .form-error {
+            width: 100%;
+            margin-left: 0; } }
       .register-form .form-group .form-sub.s2 > label {
         width: 180px; }
         @media (max-width: 767.98px) {
@@ -10036,6 +10136,20 @@ hr.line {
         @media (max-width: 767.98px) {
           .register-form .form-group .form-sub.s2 input, .register-form .form-group .form-sub.s2 select {
             width: 100%; } }
+      .register-form .form-group .form-sub.s2 .form-error {
+        width: calc(100% - 180px);
+        margin-left: 180px; }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub.s2 .form-error {
+            width: 100%;
+            margin-left: 0; } }
+      .register-form .form-group .form-sub.s2 .date-live {
+        width: 300px; }
+        .register-form .form-group .form-sub.s2 .date-live input {
+          width: 100%;
+          text-align: center; }
+        .register-form .form-group .form-sub.s2 .date-live + .form-error {
+          margin-left: 103px; }
       .register-form .form-group .form-sub.s3 > label {
         width: 100px; }
         @media (max-width: 767.98px) {
@@ -10046,6 +10160,13 @@ hr.line {
         @media (max-width: 767.98px) {
           .register-form .form-group .form-sub.s3 input, .register-form .form-group .form-sub.s3 select {
             width: 100%; } }
+      .register-form .form-group .form-sub.s3 .form-error {
+        width: calc(100% - 100px);
+        margin-left: 100px; }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .form-sub.s3 .form-error {
+            width: 100%;
+            margin-left: 0; } }
     .register-form .form-group .card-name {
       display: -webkit-box;
       display: -webkit-flex;
@@ -10121,7 +10242,10 @@ hr.line {
           padding-right: 20px; }
           .register-form .form-group .date-live ul li input {
             width: 60px;
-            margin-right: 10px; }
+            margin-right: 10px;
+            padding-right: 0;
+            padding-left: 0;
+            text-align: center; }
     .register-form .form-group .mary-status ul {
       display: -webkit-box;
       display: -webkit-flex;
@@ -10136,6 +10260,13 @@ hr.line {
         @media (max-width: 767.98px) {
           .register-form .form-group .mary-status ul li {
             width: 100%; } }
+        .register-form .form-group .mary-status ul li.has-sublabel {
+          width: 40%; }
+          @media (max-width: 767.98px) {
+            .register-form .form-group .mary-status ul li.has-sublabel {
+              width: 100%; } }
+          .register-form .form-group .mary-status ul li.has-sublabel .input-text {
+            width: 100px; }
     .register-form .form-group .radio.has-input {
       display: -webkit-box;
       display: -webkit-flex;
@@ -10154,6 +10285,38 @@ hr.line {
         width: 130px; }
       .register-form .form-group .radio.has-input.s2 .input-text {
         width: calc(100% - 130px); }
+    .register-form .form-group .rent-amount {
+      padding-left: 30px; }
+      .register-form .form-group .rent-amount li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        align-content: center; }
+        .register-form .form-group .rent-amount li label {
+          font-size: 0.875rem; }
+      .register-form .form-group .rent-amount .input-text {
+        display: inline-block;
+        width: 80px;
+        font-size: 0.875rem;
+        padding: 10px 0px;
+        margin: 0px 10px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid #e6e6e6;
+        color: #666666; }
+        .register-form .form-group .rent-amount .input-text::-webkit-input-placeholder {
+          opacity: 0.5; }
+        @media (max-width: 767.98px) {
+          .register-form .form-group .rent-amount .input-text {
+            width: 100%; } }
+    .register-form .form-group .form-error {
+      font-size: 0.8125rem;
+      color: #ed1c24;
+      font-style: italic;
+      padding: 5px 0; }
   .register-form .register-table table th, .register-form .register-table table td {
     font-size: 0.875rem;
     padding: 5px 5px; }

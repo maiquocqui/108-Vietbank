@@ -83,6 +83,8 @@ section.register-page
 												.img
 													img(src="img/dangky/c3.png", alt="")
 												//- .name luxury
+							.btn-wrap.text-center.mb-5
+								a.btn-primary(href="#!") Chọn thẻ
 							
 			.register-step
 				.step.finish 01. Thông tin khách hàng
@@ -182,7 +184,7 @@ section.register-page
 								li.radio.mb-10
 									input#r2(type="radio", name="radio2")
 									label(for="r2") Bán thời gian
-								li.radio
+								li.radio.mb-10
 									input#r3(type="radio", name="radio2")
 									label(for="r3") Toàn thời gian
 								//- li.radio
@@ -205,10 +207,10 @@ section.register-page
 								li.radio.mb-10
 									input#r34(type="radio", name="radio3")
 									label(for="r34") Cổ phần
-								li.radio.mb-10
+								li.radio.mb-10.mt-10
 									input#r35(type="radio", name="radio3")
 									label(for="r35") Doanh nghiệp nhà nước
-								li.radio.mb-10
+								li.radio.mb-10.mt-10
 									input#r36(type="radio", name="radio3")
 									label(for="r36") Cơ quan HC-SN
 								li.radio.has-input
@@ -276,40 +278,57 @@ section.register-page
 									label(for="r53") > 100 người
 				.form-title Thông tin Tài chính:
 				.row.mb-5
-					.col-12.col-md-6
-						.form-group
+					.col-12.col-md-7
+						.form-group.has-sublabel.has-sublabel2
 							label Tổng thu nhập:
 							.input
-								input(type="text" placeholder="triệu đồng / tháng")
-						.form-group
+								input(type="text" placeholder="")
+								.sub-label triệu đồng / tháng
+						.form-group.has-sublabel.has-sublabel2
 							label Tổng chi phí:
 							.input
-								input(type="text" placeholder="triệu đồng / tháng")
-						.form-group
+								input(type="text" placeholder="")
+								.sub-label triệu đồng / tháng
+						.form-group.has-sublabel.has-sublabel2
 							label Số người phụ thuộc:
 							.input
 								input(type="text" placeholder="người")
-						.form-group
-							label Số lượng thẻ tín dụng đang sở hữu:
+								.sub-label người
+						.form-group.has-sublabel.has-sublabel2
+							label.pt-0.pb-0.mb-sm-10.mt-sm-10 Số lượng thẻ tín dụng đang sở hữu:
 							.input
-								input(type="text" placeholder="thẻ")
-						.form-group
-							label Hạn mức thẻ tín dụng cao nhất:
+								input(type="text" placeholder="")
+								.sub-label thẻ
+						.form-group.has-sublabel.has-sublabel2
+							label.pt-0.pb-0 Hạn mức thẻ tín dụng cao nhất:
 							.input
-								input(type="text" placeholder="triệu đồng")
-					.col-12.col-md-6
+								input(type="text" placeholder="")
+								.sub-label triệu đồng
+					.col-12.col-md-5.col-hr
 						.form-group
-							label.pb-2 Khoản vay khác:
+							label.pb-2.mb-4 Khoản vay khác:
 							.input.w-100
 								.rent
 									ul
-										li.radio.mb-2
+										li.radio.mb-4
 											input#r61(type="radio", name="radio6")
 											label(for="r61") Không có khoản vay nào
-										li.radio.has-input
+											.pb-2
+										li.radio
 											input#r62(type="radio", name="radio6")
 											label(for="r62") Có
-											input(type="text" placeholder="Tín chấp (hạn mức triệu đồng)")
+											.rent-amount.pt-3.mb-0
+												ul
+													li.mb-3
+														input#rdo1(type="radio", name="rdo1")
+														label(for="rdo1") Tín chấp (hạn mức
+														input.input-text(type="text" placeholder="")
+														.sub-label triệu đồng)
+													li.mb-3
+														input#rdo2(type="radio", name="rdo1")
+														label(for="rdo2") Tín chấp (hạn mức
+														input.input-text(type="text" placeholder="")
+														.sub-label triệu đồng)
 				.form-title Thông tin người hôn phối
 				.form-group
 					label(for="") Họ và tên:
@@ -369,7 +388,7 @@ section.register-page
 									input(type="text")
 				.form-title Thông tin người thân:
 				.form-group
-					label(for="") Mối quan hệ
+					label.pb-0.pt-0(for="") Mối quan hệ
 					.input
 						.mary-status
 							ul
@@ -379,7 +398,7 @@ section.register-page
 								li.radio.mb-10
 									input#r72(type="radio", name="radio7")
 									label(for="r72") Anh / Chị / Em
-								li.radio
+								li.radio.mb-10
 									input#r73(type="radio", name="radio7")
 									label(for="r73") Khác
 				.form-group

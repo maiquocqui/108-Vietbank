@@ -130,10 +130,51 @@
 	label
 		&:hover
 			color: $black
-// label
-// 	a
-// 		color: $blue
-// 		text-decoration: underline
-// 		&:hover
-// 			color: $purple
-// 			text-decoration: underline
+
+// range slider
+.input-range
+	+pos(rel,null)
+	padding-top: 25px
+	.min 
+		+fs(12rem)
+		+pos(abs, 0 null null 0)
+		color: darken($white,40%)
+	.max
+		+fs(12rem)
+		+pos(abs, 0 0 null null)
+		color: darken($white,40%)
+	output
+		display: block
+		text-align: center
+		padding: 10px 0 0
+		+fs(12rem)
+		color: darken($white,60%)
+.rangeslider
+	background: darken($white,20%)
+	height: 9px
+.rangeslider--horizontal
+	.rangeslider__fill
+		background: none
+		margin: 0
+		padding: 0
+		height: 4px
+		top: 3px
+		left: 3px
+		+bor-rad(50px)
+		overflow: hidden
+		&:before
+			content: ''
+			background: #005baa
+			height: 4px
+			right: 14px
+			+pos(abs, 0 null null 0)
+	.rangeslider__handle
+		width: 22px
+		height: 22px
+		border: none
+		margin: 0
+		padding: 0
+		background: url(../img/range.png) center center no-repeat
+		margin-left: 0px
+		margin-top: 4px
+		box-shadow: none

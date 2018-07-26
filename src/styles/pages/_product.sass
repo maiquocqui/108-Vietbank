@@ -130,6 +130,9 @@
 						+fs(15rem)
 .product-register
 	background: $blue
+	+media-breakpoint-up(xl)
+		+pos(fix, null 0 0 0)
+		z-index: 100
 	+media-breakpoint-down(md)
 		padding: 20px 0
 	.register-wrap
@@ -178,3 +181,8 @@
 			+media-breakpoint-down(md)
 				margin-top: 0
 			img
+
+.hr-lines
+	border: none
+	background: darken($white,15%)
+	height: 1px
